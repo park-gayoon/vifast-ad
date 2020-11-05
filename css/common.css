@@ -4,12 +4,10 @@
 @font-face {font-family:'notokrL';src:url('../font/notokr-demilight.eot');src:url('../font/notokr-demilight.eot?#iefix') format('embedded-opentype'),url('../font/notokr-demilight.woff2') format('woff2'),url('../font/notokr-demilight.woff') format('woff'),url('../font/notokr-demilight.ttf') format('truetype'),url('/css../font/notokr-demilight.svg#notokr-demilight') format('svg');font-weight:normal;font-style:normal}
 @font-face {font-family:'notokrR';src:url('../font/notokr-regular.eot');src:url('../font/notokr-regular.eot?#iefix') format('embedded-opentype'),url('../font/notokr-regular.woff2') format('woff2'),url('../font/notokr-regular.woff') format('woff'),url('../font/notokr-regular.ttf') format('truetype'),url('/css../font/notokr-regular.svg#notokr-regular') format('svg');font-weight:normal;font-style:normal}
 @font-face {font-family:'notokrM';src:url('../font/notokr-medium.eot');src:url('../font/notokr-medium.eot?#iefix') format('embedded-opentype'),url('../font/notokr-medium.woff2') format('woff2'),url('../font/notokr-medium.woff') format('woff'),url('../font/notokr-medium.ttf') format('truetype'),url('/css../font/notokr-medium.svg#notokr-medium') format('svg');font-weight:normal;font-style:normal}
-.notoM {font-family:'notokrM', 'sans-serif' !important}
-.notoR {font-family:'notokrR', 'sans-serif' !important}
 
 /* reset */
 html,body {margin:0;padding:0;width:100%;height:100%}
-body {min-width:1280px;color:#444;font-family:'notokrR','맑은 고딕','Malgun Gothic','HelveticaNeue','sans-serif';font-size:14px}
+body {min-width:1600px;color:#444;font-family:'notokrR','맑은 고딕','Malgun Gothic','HelveticaNeue','sans-serif';font-size:14px}
 ul,ol,li,dl,dd,dt,input,h1,h2,h3,h4,h5,h6,p,b,input,button,textarea,fieldset,legend,td,th {margin:0;padding:0;font-weight:normal;word-break:break-all}
 li {list-style:none}
 fieldset,img,a {border:0}
@@ -24,7 +22,6 @@ table th, table td {text-align:left}
 legend {font-size:0;text-indent:-99999em;line-height:0}
 header, section, footer, article, nav, aside {display:block}
 img {max-width:100%;vertical-align:top}
-
 header, footer, section, article, aside, nav, address { display:block; margin:0; } /* ie8 */
 
 /* ETC */
@@ -33,11 +30,7 @@ header, footer, section, article, aside, nav, address { display:block; margin:0;
 /* ico sprite */
 .ico_com {font-size:0;color:transparent;line-height:0}
 .ico_com, [type='checkbox']:checked + label:after,
-.sel:after, .checkbox2 label:after {content:"";display:inline-block;background:url('../images/common/ico_com.png') no-repeat}
-.ico_plus {display:inline-block;position:relative;top:1px;margin-right:7px;width:12px;height:12px}
-.ico_plus:before, .ico_plus:after {content:"";display:block;position:absolute;background-color:#444}
-.ico_plus:before {width:12px;height:2px;left:0;top:5px}
-.ico_plus:after {width:2px;height:12px;left:5px;top:0}
+.sel:after, .checkbox2 label:after, .ui-datepicker .ui-datepicker-title:after, .ui-datepicker .ui-datepicker-title:before, .datepicker_box .ui-datepicker-trigger:after {content:"";display:inline-block;background:url('../images/common/ico_com.png') no-repeat}
 
 /* font size */
 .tit_type1 {font-size:20px}
@@ -57,9 +50,6 @@ header, footer, section, article, aside, nav, address { display:block; margin:0;
 .align-l, .align-r {position:absolute}
 .align-l {left:0}
 .align-r {right:0}
-
-/* block */
-.m_block {display:inline-block}
 
 /* select */
 .sel {position:relative;display:inline-block;min-width:110px;height:34px;background:#fff;vertical-align:top}
@@ -162,7 +152,7 @@ input.big {width:270px}
 .checkbox2 label {padding-left:36px;line-height:28px;color:#999}
 .checkbox2 label:before {top:0;width:27px;height:27px;background-color:#d2d2d2;border:1px solid #d2d2d2;border-radius:50%}
 .checkbox2 label:after {position:absolute;top:8px;left:5px;width:16px;height:12px;background-position:-60px -60px}
-.checkbox2 input[type='checkbox']:checked + label:before {border-color:#43425d;background-color:#43425d}
+.checkbox2 input[type='checkbox']:checked + label:before {border-color:#29bb9c;background-color:#29bb9c}
 .checkbox2 input[type='checkbox']:checked + label:after {position:absolute;top:8px;left:5px;width:16px;height:12px;background-position:-60px -60px}
 .checkbox2 input[type='checkbox']:disabled + label {color:#999}
 .checkbox2 input[type='checkbox']:disabled + label:before {background-color:#ddd;border-color:#ddd;cursor:not-allowed}
@@ -238,13 +228,37 @@ input.big {width:270px}
 .form_box .cols.small {width:74px}
 
 /* datepicker */
-.box_datepicker-area {display:inline-block;vertical-align:middle}
-.datepicker_box {position:relative;display:inline-block;background-color:#fff;font-size:0;vertical-align:top}
-.datepicker_box input[type='text'] {vertical-align:middle}
-.datepicker_box input[disabled='disabled'], .datepicker_box input[disabled] {background-color:#fff}
-.btn_calendar {margin-left:4px;font-size:0;line-height:0;color:transparent;vertical-align:middle}
-.btn_calendar .ico_com {width:26px;height:26px;background-position:0 -78px}
-.txt_date-line {display:inline-block;margin:6px 8px 0 6px;font-size:16px;color: #6e6e6e;vertical-align:top}
+.ui-datepicker {background-color:#fff}
+.ui-datepicker {width:264px;background-color:#fff}
+.ui-datepicker .ui-widget-header {background-color:transparent;border-color:transparent}
+.ui-datepicker .ui-state-default,
+.ui-datepicker .ui-widget-content .ui-state-default {font-size:14px;border-color:transparent}
+.ui-datepicker-unselectable.ui-state-disabled {background-color:transparent}
+.ui-datepicker-unselectable.ui-state-disabled .ui-state-default {opacity:.3}
+.ui-datepicker-calendar .ui-state-active,
+.ui-datepicker-calendar .ui-widget-content .ui-state-active {height:30px;background-color:#2f67a2;border-color:#2f67a2;color:#fff}
+.ui-datepicker-calendar .ui-state-highlight,
+.ui-datepicker-calendar .ui-widget-content .ui-state-highlight,
+.ui-datepicker-calendar .ui-widget-header .ui-state-highlight {height:30px;color:#333;border:2px solid #2f67a2;background-color:transparent}
+.ui-datepicker .ui-state-default.ui-state-hover,
+.ui-datepicker-calendar .ui-datepicker-week-end .ui-state-default.ui-state-active {color:#fff !important;background-color:#2f67a2}
+.ui-datepicker .ui-state-highlight.ui-state-hover {color:#333 !important;border:2px solid #2f67a2;background-color:transparent}
+.ui-datepicker-calendar .ui-datepicker-week-end .ui-state-default {color:#ff5959}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next {display:none}
+.ui-datepicker .ui-datepicker-title {position:relative}
+.ui-datepicker .ui-datepicker-title:after,
+.ui-datepicker .ui-datepicker-title:before {content:'';position:absolute;top:50%;z-index:2;display:block;margin-top:-6px;width:12px;height:12px;background-color:transparent;background-position:-30px -60px}
+.ui-datepicker .ui-datepicker-title:before {left:106px}
+.ui-datepicker .ui-datepicker-title:after {right:56px}
+.ui-datepicker .ui-datepicker-title select {width:80px;height:32px;color:#666;background:transparent;border:1px solid #cbccce;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;-webkit-appearance:none;-moz-appearance:none;padding:0 24px 0 10px}
+.ui-datepicker .ui-datepicker-title select:disabled{background:#f5f5f5;border-color:#ddd;color:#666}
+
+.datepicker_box {position:relative;display:inline-block;background-color:#fff;}
+.datepicker_box .datepicker {padding-right:20px}
+.datepicker_box .ui-datepicker-trigger {position:absolute;right:0;top:50%;width:100%;height:34px;margin-top:-17px;font-size:0}
+.datepicker_box .ui-datepicker-trigger:after {content:'';position:absolute;top:50%;right: 10px;width:24px;height:24px;margin-top:-12px;background-position:0 -80px}
+.ui-widget-overlay {cursor:pointer}
 
 /* button */
 .box_btn_tb {width:100%;text-align:center}
@@ -295,17 +309,6 @@ button.btn_basic1:disabled {color:#c5c5c5;background:#3d3d44}
 button.btn_basic2:disabled {color:#c5c5c5;background:#888}
 button.btn_basic3:disabled {color:#8b2626;background-color:#b35c5c}
 button.btn_basic4:disabled {color:#4f6d9a;background-color:#13376c}
-
-.btn_basic.btn_excel {padding:0 15px;border:1px solid #d8dce6;background-color:#fff;color:#444;border-radius:4px;font-size:14px}
-.btn_basic.btn_excel .ico_com {margin:3px 8px 0 0;width:26px;height:26px;background-position:-26px -78px;vertical-align:top}
-
-.btn_type01 {display:inline-block;padding:1px 5px;min-width:36px;text-align:center;border:1px solid #1ec16f;border-radius:4px;color:#1ec16f;font-size:14px}
-.btn_type01.type_a {border-color:#d7dae2;background-color:#f8f8f8;color:#6e6e6e}
-
-.btn_list-more {padding:6px 20px;background-color:#fff;color:#3b86ff;box-shadow:0 1px 6px 0 rgba(0,0,0,.16);font-family:'notokrM';font-size:14px}
-.btn_list-more .ico_com {position:relative;top:3px;margin-right:4px;width:14px;height:14px;background-position:-56px -105px}
-
-.btn_update .ico_com {position:relative;top:4px;margin-right:8px;width:18px;height:18px;background-position:-180px -60px}
 
 /* layout */
 .wrapper {height:100%;min-height: 100%;}
@@ -391,10 +394,3 @@ button.btn_basic4:disabled {color:#4f6d9a;background-color:#13376c}
 .size-b .gnb_contents .txt_menu-name {display:inline-block;padding-left:14px;font-size:16px;line-height:32px}
 .size-b .gnb_contents .txt_copy-area {display:block;position:absolute;bottom:26px}
 .size-b .gnb_contents .txt_copy:before {width:100%;background-color:#616076}
-
-/* error */
-.wrapper_error {display:table;table-layout:fixed;width:100%;height:100%}
-.box_error-wrap {display:table-cell;padding-top:200px;text-align:center}
-.ico_error {display:block;margin:auto;width:48px;height:48px;background:url('../images/common/ico_com.png') no-repeat -88px -92px}
-.txt_error {margin:20px 0 0;font-size:20px}
-.txt_error-desc {display:block;margin-top:18px;font-size:16px;font-family:'notokrR';color:#747474}
