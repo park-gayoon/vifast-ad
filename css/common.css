@@ -330,8 +330,6 @@ button.btn_basic4:disabled {color:#4f6d9a;background-color:#13376c}
 .size-s .gnb_contents .gnb_menu {width:80px}
 .logo {padding:60px 0 52px;color:transparent;font-size:0;}
 .logo .ico-logo {display:block;margin:auto;width:152px;height:44px;background:url("../images/common/logo.png") no-repeat 0 0}
-.gnb_inner {position:relative}
-.size-s .gnb_inner {padding-top:8px}
 .list_item {position:relative}
 .list_item ~ .list_item {margin-top:10px}
 .btn_gnb-menu {display:block;padding:18px 30px;width:100%;text-align:left;font-size:0}
@@ -358,12 +356,9 @@ button.btn_basic4:disabled {color:#4f6d9a;background-color:#13376c}
 .btn_gnb-open {position:absolute;right:50%;bottom:20px;z-index:10;width:30px}
 .btn_gnb-open .line {display:block;margin:4px auto;width:30px;height:4px;background-color:#fff}
 
-.size-s .gnb_contents .sub_menu-list {position:fixed;z-index:-1;visibility:hidden;opacity:0}
-.size-s .gnb_contents .txt_menu-name {display:block;width:100%}
-.size-s .gnb_contents .btn_gnb-menu {padding:0 6px;text-align:center}
-.size-s .gnb_contents .txt_menu-name:after {display:none}
 .size-s .gnb_contents .logo {padding:24px 10px}
 .size-s .gnb_contents .logo .ico-logo {width:50px;height:50px;background:url("../images/common/logo_s.png") no-repeat 0 0}
+.size-s .gnb_inner {display:none}
 
 .size-b .gnb_contents .sub_menu-list {padding:30px;background:#272b31}
 .size-b .btn_gnb-menu .txt_menu-name {display:inline-block;font-size:18px;font-family:'notoSansT';line-height:24px}

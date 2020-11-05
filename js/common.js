@@ -23,44 +23,8 @@ $(document).ready(function(){
         }else {
             tar.attr('class','layout_wrap size-s');
         }
-
-        $('.size-s .btn_gnb-menu').removeClass('on').next().css('display','none');
+        //$('.size-s .btn_gnb-menu').removeClass('on').next().css('display','none');
     });
-
-    /* 해상도 체크 */
-    function dipCheck() {
-        var windowWidth = $(window).width();
-        var tar = $('.layout_wrap');
-        var tarClass = tar.attr('class');
-        if (windowWidth <= 1024) {
-            $('.wrapper').addClass('dpi');
-            $('.btn_gnb-open').click(function () {
-                $('.gnb_contents').addClass('dpi_gnb');
-            });
-            if (tarClass != 'layout_wrap size-b') {
-                tar.attr('class', 'layout_wrap size-s');
-            } else {
-                tar.attr('class', 'layout_wrap size-s');
-            }
-        } else {
-            $('.wrapper').removeClass('dpi');
-            $('.gnb_contents').removeClass('dpi_gnb');
-            $('.layout_wrap').removeClass('dpi_size');
-            if (tarClass == 'layout_wrap size-b') {
-                tar.attr('class', 'layout_wrap size-b');
-            } else {
-                tar.attr('class', 'layout_wrap size-b');
-            }
-            $('.btn_gnb-open').click(function () {
-                $('.gnb_contents').removeClass('dpi_gnb');
-            });
-        }
-    }
-
-    /* 리사이즈 체크 */
-    $(window).resize(function(){
-        dipCheck();
-    }).resize();
 
     /* menu 클릭 시 */
     $('.btn_gnb-menu').click(function(){
