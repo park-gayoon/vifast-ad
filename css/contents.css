@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* main dashBoard */
-.main_layout [class*="box_item-"] ~ [class*="box_item-"] {margin-top:10px}
+[class*="box_item-"] ~ [class*="box_item-"] {margin-top:10px}
 [class*="box_item-"] {display:flex;width:100%;flex-wrap:wrap;justify-content:space-between}
 [class*="box_item-"] > [class*="item_"], .box_item-graph {box-shadow:18px 0px 80px 0 rgba(0,0,0,.05);border:solid 1px #f3f3f3;background-color:#fff}
 [class*="box_item-"] > [class*="item_"] {flex:1}
@@ -9,42 +9,14 @@
 .box_section-hd {position:relative;padding:0 12px;height:36px;border:solid 1px #f3f3f3;box-shadow:18px 0 80px 0 rgba(0,0,0,.04)}
 .tit_item-hd {line-height:36px}
 .tit_item-hd .link {display:inline-block;margin-left:4px;font-size:12px}
-.box_section-hd .align-r {right:8px;top:8px;font-size:0}
-.box_section-hd .align-r .radio {vertical-align:middle}
 .btn_blank {margin-left:10px;width:18px;height:18px;background:url('../images/common/ico_com.png') no-repeat -70px -104px;font-size:0}
 [class*="item_"] .link {text-decoration:underline;color:#3b86ff}
 
 .box_item-progress {}
-.item_progress {display:flex;padding:8px 20px;align-items:center;justify-content:space-around}
-.box_progress {width:102px;height:102px;border:1px solid #b9b6fc;box-sizing:border-box;border-radius:50%;text-align:center}
-.box_progress.type02 {border-color:#7fb0ff}
-.box_progress.type03 {border-color:#f1c98d}
-.item_progress .circle-percent-text-body {font-size:14px;font-family:'notokrM'}
-.item_progress .percent-text {color:#ff7285;font-size:14px !important}
-.item_progress .percent-text[_v-31e92f67] {font-weight:normal}
-.box_progress-info {font-size:16px}
-.box_progress-info p {min-width:130px;line-height:22px}
-.box_progress-info p ~ p {margin-top:4px}
-.box_progress-info .txt_item {display:inline-block;margin-right:8px;min-width:60px}
-.box_progress-info .txt_data {color:#3b86ff;font-weight:normal;text-decoration:underline}
+.item_progress {display:flex;padding:8px 20px;height:170px;align-items:center;justify-content:space-around}
 
 .box_item-graph {display:block;height:282px;width:100%}
-.box_item-graph .box_section-hd .align-r {right:14px;top:6px}
-.box_item-graph .align-r button[class*="btn_basic"].xsmall {padding:0 8px;height:22px;line-height:22px;font-size:12px;border-radius:4px}
-.box_item-graph .align-r button ~ button {margin-left:10px}
 .box_graph {position:relative;height:calc(100% - 36px)}
-
-.list_status-receipt {text-align:center}
-.item_receipt {display:flex;justify-content:space-around;align-items:center;padding:9px 12px 10px;box-shadow:18px 0 80px 0 rgba(0,0,0,.04)}
-.item_receipt ~ .item_receipt {border-top:1px solid #f3f3f3}
-.txt_receipt-info {min-width:120px;line-height:34px;text-align:left}
-.txt_receipt-info .ico_bg {display:inline-block;position:relative;margin-right:20px;width:34px;height:34px;border-radius:50%;background-color:#9493c4;vertical-align:top}
-.txt_receipt-info .ico_bg:after {content:'';display:block;position:absolute;left:4px;top:6px;width:26px;height:22px;background:url('../images/main/ico_main.png') no-repeat}
-.item_receipt.case01 .ico_bg:after {background-position:-60px 0}
-.item_receipt.case02 .ico_bg:after {background-position:-86px 0}
-.item_receipt.case03 .ico_bg:after {background-position:-112px 0}
-.item_receipt.case04 .ico_bg:after {background-position:-138px 0}
-.item_receipt .link {display:inline-block;width:60px;text-align:center;font-size:16px}
 
 .box_line-graph, .box_circle-graph {position:relative;padding:10px 0;height:217px}
 .box_line-graph #bar {width:100% !important;height:calc(100% - 24px) !important}
@@ -68,14 +40,6 @@
 .box_notice {position:absolute;right:-240px;top:0;height:100%;width:262px;z-index:10;-webkit-transition:all .25s, -webkit-transform .25s;transition:all .25s, transform .25s}
 .box_notice.is-show {right:0}
 .box_notice-container {position:relative;left:22px;top:0;padding:0 6px;width:240px;height:100%;z-index:1;background:#fff;box-shadow:0 0 6px 0 rgba(0,0,0,.16)}
-.box_notice-hd {padding:12px 0 12px 10px;font-family:'notokrM';font-size:16px;border-bottom:1px solid #444;line-height:24px}
-.box_notice-hd .align-r {top:18px;right:16px;font-size:14px;line-height:20px}
-.box_notice-hd .align-r .link {color:#3b86ff}
-.box_notice-cont {padding:14px 0}
-.list_notice-area {display:block;padding:4px 10px;line-height:20px;border-radius:4px;border:solid 1px #d8dce6;cursor:pointer}
-.list_notice-area + .list_notice-area {margin-top:6px}
-.txt_notice-date span {display:inline-block;margin-left:12px}
-.txt_notice {margin-top:5px;color:#3b86ff;text-decoration:underline;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .btn_notice {position:absolute;left:0;top:50%;margin-top:-49px;width:24px;height:98px;background:#fff;box-shadow:0 0 4px 0 rgba(0,0,0,.3);font-size:0;border-top-left-radius:12px;border-bottom-left-radius:12px}
 .ico_notice {display:inline-block;position:relative;top:-5px;
     animation-name:btnClick;
@@ -123,7 +87,7 @@
 .login_form >div {position:relative;margin:0 0 30px}
 .input_box {display:block;overflow:hidden}
 .input_box label {display:block;margin-bottom:4px;text-align:left;font-size:18px;font-family:'notoSansM';line-height:24px}
-.login_wrap input[type='text'], .login_wrap input[type='password'] {position:relative;width:100%;height:36px;padding:6px 10px;font-size:14px;background:#fff;-webkit-appearance:none;border:none;border-radius:0}
+.login_wrap input[type='text'], .login_wrap input[type='password'] {position:relative;width:100%;height:36px;padding:6px 10px;font-size:14px;background:#f8f9fa;-webkit-appearance:none;border:none}
 .txt_form-error {margin:4px 0 0;font-size:12px;text-align:left;color:#c4161c}
 
 .chk_id-area {margin-top:40px}
@@ -213,7 +177,7 @@
 .box_modal-area .box_btn_tb {margin-top:16px}
 
 /* contents */
-.layout_contents {position:relative;width:100%;overflow:hidden}
+.layout_contents {position:relative;width:100%;overflow:hidden;background-color:#f8f9fa}
 .layout_contents.type_a {min-width:1500px}
 .layout_contents.type_b {min-width:1600px}
 .layout_contents-hd {position:relative;padding:16px 0 15px;height:70px;background-color:#fff;box-shadow: 0 1px 4px 0 rgba(0,0,0,.16)}
@@ -248,8 +212,7 @@ button[class*="btn_basic"].btn_manager {padding:0 28px;margin:6px 0 0;vertical-a
 .list_manager li a {display:block;padding:5px 10px;font-size:14px;cursor:pointer;color:#444;transition:all 0.3s}
 .list_manager li a:hover, .list_manager li a.is-active {/*color:#3b86ff;*/text-decoration:underline;background-color:#e9e9e9}
 
-.layout_contents-inner {padding:20px 64px 46px}
-.layout_contents-inner.main_layout {padding:20px 64px}
+.layout_contents-inner {padding:60px 40px 66px}
 .layout_contents-inner > .tit_hd-area:first-child {margin-top:10px}
 .tit_hd-area {position:relative;margin:26px 0 10px}
 .tit_hd-area .align-r {top:0;font-size:0}
