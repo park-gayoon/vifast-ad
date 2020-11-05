@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>관리자페이지 UI-Guide</title>
+<title>Vinfast admin UI-Guide</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <script src="../../js/jquery-1.12.4.min.js"></script>
 <script src="../../js/jquery-ui.js"></script>
@@ -17,17 +17,17 @@
 .btnTop a {display:block;width:30px;height:30px;background:url("../../btn_top.png") no-repeat 0 0;text-indent:-9999em;opacity:.7}
 .btnTop a:hover {opacity:1}
 .list_box_wrap {padding:0}
-.tabs {position:fixed;top:0;right:0;left:0;z-index:1000;height:50px;background:#3b3b53}
+.tabs {position:fixed;top:0;right:0;left:0;z-index:1000;height:50px;background:#3d4146}
 .tabs .logo {display:none;height:50px;line-height:50px;color:#fff;font-weight:bold;text-align:center;background-color:#4a525f;font-size:16px}
 .tabs ul li {float:left}
-.tabs ul li a {position:relative;z-index:2;display:block;text-align:center;height:35px;width:35px;text-align:center;line-height:35px;font-weight:bold;color:#fff;font-size:13px;position:relative;font-family:'verdana';border-radius:50%;background-color:#a3a0fb}
+.tabs ul li a {position:relative;z-index:2;display:block;text-align:center;height:35px;width:35px;text-align:center;line-height:35px;font-weight:bold;color:#333;font-size:13px;position:relative;font-family:'verdana';border-radius:50%;background-color:#ffdfe0}
 .tabs ul li ~ li {margin:0 0 0 5px}
-.tabs ul li a.active {z-index:3;background-color:#fff;color:#a3a0fb}
+.tabs ul li a.active {z-index:3;background-color:#fff;color:#c4161c}
 .tabs ul li a.active span {display:block}
 .tabs ul li a span {display:none;position:absolute;left:50%;top:30px;margin-left:-38px;width:76px;color:#333;background-color:#ffffff;border:1px solid #46675c;height:20px;line-height:18px;padding:0;border-radius:10px;white-space:nowrap;font-weight:normal;font-size:11px}
 
-.h1 {background-color:#3b3b53;padding-left:10px;font-size:18px;color:#fff;font-family:'verdana', 'sans-serif';padding-bottom:10px;padding-top:60px}
-.h2 {background-color:#43425d;margin:0 -10px 10px -10px;height:30px;line-height:30px;color:#fff;padding:0 10px;font-weight:bold;font-size:15px}
+.h1 {background-color:#959aa1;padding-left:10px;font-size:18px;color:#fff;font-family:'verdana', 'sans-serif';padding-bottom:10px;padding-top:60px}
+.h2 {background-color:#ffdfe0;margin:0 -10px 10px -10px;height:30px;line-height:30px;color:#6e6e6e;padding:0 10px;font-weight:bold;font-size:15px}
 .sbt {font-size:1.2rem;margin:10px 0 5px}
 .box_wrap {border-top:1px solid #ddd;border-bottom:1px solid #ddd;padding:0 10px 0 10px;background-color:#fff}
 .type_view {padding-bottom:10px}
@@ -42,10 +42,10 @@
 .demo_contents {margin-bottom:10px}
 .type_view pre {display:none;margin:0;padding:0;overflow:auto;font-size:13px;font-family:'tahoma', 'sans-serif';background-color:#333;color:#f2f2f2}
 .type_view code .code-indent {display:inline-block;width:30px;font-size:0}
-.btn-expand {display:block;width:100%;border-top:1px solid #eaeefb;height:34px;box-sizing:border-box;background-color:#e9e9e9;text-align:center;font-size:12px;color:#a3a0fb;cursor:pointer;position:relative}
+.btn-expand {display:block;width:100%;border-top:1px solid #eaeefb;height:34px;box-sizing:border-box;background-color:#e9e9e9;text-align:center;font-size:12px;color:#c4161c;cursor:pointer;position:relative}
 .btn-expand:before {content:'▼';display:inline;margin-right:5px;transition:all .2s}
 .btn-expand span {opacity:0;margin-right:-30px;transition:all .2s}
-.btn-expand:hover {color:#a3a0fb;background-color:#dcdcdc}
+.btn-expand:hover {color:#c4161c;background-color:#dcdcdc}
 .btn-expand:hover span {font-size:12px;opacity:1;margin-right:0}
 .btn-expand.on:before {content:'▲'}
 .btn-expand.on span {font-size:12px;opacity:1;margin-right:0}
@@ -169,7 +169,7 @@ function redrawDotNav(){
 <body style="overflow:auto">
 <div class="list_box_wrap">
 	<div class="tabs">
-		<p class="logo">TLK 관리자</p>
+		<p class="logo">Vinfast admin</p>
 		<ul class="tab_nav">
 			<li><a href="#group01" class="p01">H<span>H Tag</span></a></li>
 			<li><a href="#group02" class="p02">F<span>Form Tag</span></a></li>

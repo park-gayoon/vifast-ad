@@ -136,24 +136,25 @@
 .box_notice .box_btn_tb {margin:10px 0}
 
 /* login */
-.login_content {display:table;width:100%;min-height:100%;height:100%;background:url('../images/contents/@bg_login.png') no-repeat center center}
-.login_contains {display:table-cell;vertical-align:middle;text-align:center}
-.login_contains h2 {margin:14px 0 34px;font-size:30px;font-family:'notokrM';line-height:45px}
-.login_inner {margin:0 auto;padding:68px 34px 24px;max-width:480px;border:1px solid #ddd;background-color:#fff;box-shadow:0 2px 3px 0 rgba(0,0,0,.05)}
-.login_form >div {position:relative;margin:0 0 10px}
+.login_wrap {display:table;table-layout:fixed;width:100%;height:100%;background:url('../images/contents/bg_login.png') no-repeat center center}
+.login_content {display:table-cell;padding:70px 0;min-height:100%;height:100%;vertical-align:middle}
+.login_contains {position:relative;margin:0 auto;width:1200px;height:800px;background:url('../images/contents/login_visual.png') no-repeat left top}
+.login_contains h1 {display:inline-block;margin:40px 0 0 32px}
+.login_inner {float:right;height:100%;padding:0 122px;width:600px;background-color:#fff;text-align:center}
+.login_inner h2 {margin:230px 0 50px;font-size:28px;font-family:'notoSansM';line-height:38px;color:#111}
+.login_inner h2 .point-color01 {display:inline-block;margin-right:4px;font-family:'notoSansB'}
+.login_form >div {position:relative;margin:0 0 30px}
 .input_box {display:block;overflow:hidden}
-.input_box label {display:block;margin-bottom:5px;text-align:left}
-input[type='text'].input_txt, input[type='password'].input_txt {position:relative;z-index:9;width:100%;height:50px;padding:10px 15px;border-radius:0;font-size:14px;background:#fff;-webkit-appearance:none}
-.pw_area {margin-top:12px}
+.input_box label {display:block;margin-bottom:4px;text-align:left;font-size:18px;font-family:'notoSansM';line-height:24px}
+.login_wrap input[type='text'], .login_wrap input[type='password'] {position:relative;width:100%;height:36px;padding:6px 10px;font-size:14px;background:#fff;-webkit-appearance:none;border:none;border-radius:0}
+
 .chk-id-area {margin-top:40px}
-.btn_login {margin:20px 0 0;padding:0 100px;width:100%;height:50px;border-radius:38px;background:linear-gradient(260deg, #4cd964, #29bb9c);box-shadow:0 16px 24px rgba(57, 202, 116, 0.3);color:#fff;font-size:16px}
+.btn_login {padding:0 50px;width:350px;height:40px;border-radius:4px;background:#c4161c;box-shadow:0 3px 6px 0 rgba(196, 22, 28, 0.3);color:#fff;font-size:14px}
 .find_info {margin-top:36px;font-size:0}
 .find_info a {display:inline-block;position:relative;color:#999;line-height:20px;font-size:14px}
 .find_info a:before {content:"";display:block;position:absolute;left:0;top:50%;margin-top:-6px;width:1px;height:12px;background:#dedede}
 .find_info a ~ a {padding-left:10px;margin-left:10px}
 .find_info a:first-child:before {display:none}
-.ft_address {margin-top:40px}
-.ft_address p {line-height:26px}
 
 /* id. pass fid */
 .login_content.login_find {background:#43425d}
@@ -177,8 +178,6 @@ input[type='text'].input_txt, input[type='password'].input_txt {position:relativ
 .login_find .tab_view-box [class*=item_form-box] {display:table-cell;position:relative;padding-right:20px;background:transparent}
 .login_find .tab_view-box [class*=item_form-box] ~ [class*=item_form-box] {padding:0 0 0 20px}
 .login_find .tab_view-box button[class*="btn_basic"].big {padding:0 20px;min-width:132px}
-.login_find .ft_address {color:#e9e9e9}
-
 .txt_id-desc {margin:16px 0 46px;font-size:16px;line-height:24px;text-align:center}
 
 /* join */
@@ -558,10 +557,6 @@ td .txt_tbl-desc:first-child {margin-left:0}
 .tab_type.type2 ul li button {text-align:left}
 .tab_type ul li button span {float:right}
 .tab_type ul li button.active span {color:#3b86ff}
-
-@media (max-height:900px) {
-    .login_content {padding:70px 0}
-}
 
 /* IE10+ */
 @media screen   and (-ms-high-contrast: active), (-ms-high-contrast: none) {

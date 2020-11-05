@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>관리자 Coding List</title>
+<title>Vinfast admin Coding List</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <script src="js/jquery-1.12.4.min.js"></script>
 <style>
@@ -10,10 +10,9 @@ body {margin:0;color:#333;font-size:12px;font-family:"맑은 고딕", "돋움", 
 a:hover {color:#e60012;text-decoration:underline}
 a, img {border:none}
 
-.list_box_wrap {min-width:1280px}
-.list_box_wrap h1 {padding-left:10px;margin:10px 0 0 0}
+.list_box_wrap {padding:0 20px}
 .list_box_wrap h1 img {height:40px}
-.information {position:absolute;right:10px;top:35px;margin-left:100px;color:#666;font-size:14px;font-weight:bold}
+.information {position:absolute;right:20px;top:50px;color:#666;font-size:14px;font-weight:bold}
 .information p {padding:0;margin:0;text-align:right}
 .information p + p {margin-top:5px}
 .information p span {position:relative;display:inline-block;padding:0 11px 0 10px}
@@ -24,10 +23,10 @@ a, img {border:none}
 
 table {width:100%;border-collapse:collapse;border-spacing:0;background-color:#fff;border-bottom:1px solid #ccc;table-layout:fixed}
 caption {display:none}
-th {padding:5px 0;color:#fff;background:#2f67a2;border-top:1px solid #ccc;border-left:1px solid #ccc}
-th.co01 {background:#002060}
+th {padding:5px 0;color:#fff;background:#959aa1;border-top:1px solid #ccc;border-left:1px solid #ccc}
+th.co01 {background:#c4161c}
 td {padding:7px 5px;border-top:1px solid #e5e5e5;border-left:1px solid #ccc;line-height:16px}
-.guide tr th, .guide tr td {background-color:#d0eff9/*rgba(70,103,92,.4);border-color:#999*/}
+.guide tr th, .guide tr td {background-color:#ffdfe0}
 tr:first-child td {border-top:1px solid #e5e5e5}
 th:first-child, td:first-child {border-left:0}
 td:first-child {font-weight:bold}
@@ -37,7 +36,7 @@ table tbody tr.on td a {color:#e60012}
 table tbody tr.on th,
 table tbody tr.on td {background-color:#f1f1f1 !important}
 table tbody.guide tr.on th,
-table tbody.guide tr.on td {background-color:#c4e0e9 !important/*background-color:rgba(196,224,223,.5) !important*/}
+table tbody.guide tr.on td {background-color:#ffdfe0 !important/*background-color:rgba(196,224,223,.5) !important*/}
 table tbody td p.psd {text-align:center;font-weight:bold;padding:0;margin:0;color:#ff1874}
 
 .guide tr:last-child td {border-bottom:3px double #d1d1d1}
@@ -46,15 +45,32 @@ table tbody td p.psd {text-align:center;font-weight:bold;padding:0;margin:0;colo
 .skip td {background-color:#f4f4f4}
 .hold td, .hold {background-color:#fef3fd}
 .ing td, .ing {background-color:#FC6}
-.alignC {text-align:center}
-.red {color:#e60012 !important}
-.blue {color:#0f59ac !important}
+.red {color:#c4161c !important}
 
-.dNotice {overflow:hidden;width:100%;color:#666}
-.dNotice > p {font-weight:bold;color:#11387f}
-.dNotice > ul li {margin-bottom:5px}
-
-.btnTop {position:fixed;z-index:50;overflow:hidden;width:30px;height:30px;right:10px;bottom:10px}
+.btnTop {position:fixed;z-index:50;overflow:hidden;width:30px;height:30px;right:10px;bottom:20px;
+	animation-name:btnTop;
+	animation-duration:.6s;
+	animation-iteration-count:4;
+	animation-direction:alternate;
+	animation-fill-mode: forwards
+}
+@-webkit-keyframes btnTop {
+	0% {
+		bottom:20px;
+	}
+	40% {
+		bottom:18px;
+	}
+	60% {
+		bottom:15px;
+	}
+	80% {
+		bottom:18px;
+	}
+	100% {
+		bottom:20px;
+	}
+}
 .btnTop a {display:block;width:30px;height:30px;background:url("./btn_top.png") no-repeat 0 0;text-indent:-9999em;opacity:.7}
 .btnTop a:hover {opacity:1}
 
@@ -86,17 +102,10 @@ ul,  li, dl, dt, dd {padding:0;margin:0;list-style:none}
 .end {display:block;text-align:center}
 xmp {font-family:'맑은 고딕','Malgun Gothic';margin:0;padding:0;color:#555}
 xmp.change {font-weight:bold;color:#000}
-.txt_complete {color:#ff00d2;font-weight:600}
+.txt_complete {color:#c4161c;font-weight:600}
 .txt_desc {color:red;font-style:italic;text-decoration:underline}
 .point-font {font-size:15px;font-weight:600;-webkit-animation:colorchange .35s infinite alternate}
-@-webkit-keyframes colorchange {
-	0% {
-		color:#1800ff;
-	}
-	100% {
-		color:#ff0000;text-decoration:underline;
-	}
-}
+
 </style>
 <script type="text/javascript">
 <!--
@@ -157,7 +166,7 @@ $(function(){
 </head>
 <body>
 <div class="list_box_wrap">
-	<h1><img src="./images/logo_login.png" alt="TLK logo"></h1>
+	<h1><img src="./images/common/logo.png" alt="VINFAST logo"></h1>
 	<div class="information">
 		<p>
 			<span>총 <strong id="total-page"></strong>페이지</span>
@@ -166,7 +175,7 @@ $(function(){
 		</p>
 	</div>
 	<table>
-		<caption>임직원 관리자 List</caption>
+		<caption>VINFAST 관리자</caption>
 		<colgroup>
 			<col style="width:10%">
 			<col style="width:15%">
@@ -210,7 +219,7 @@ $(function(){
 				<td></td>
 				<td><a href="./html/login/login.html" target="_blank">login.html</a></td>
 				<td class="txt_complete">완료</td>
-				<td style="color:green;font-weight:600">&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt; 추가(공통)</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td></td>
