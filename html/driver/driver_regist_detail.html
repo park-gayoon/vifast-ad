@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="layout_wrap">
+            <!-- S : gnb Menu -->
+            <script src="../include/gnb_menu.js"></script>
+            <!-- E : gnb Menu -->
+            <section class="layout_contents">
+                <!-- S : content header -->
+                <script src="../include/content_hd.js"></script>
+                <!-- E : content header -->
+                <div class="layout_contents-inner">
+                    <div class="box_bread_crumb">
+                        <h2 class="tit_type1">기사승인관리</h2>
+                        <ul class="bread_crumb">
+                            <li>기사관리 &gt;</li>
+                            <li>기사승인관리</li>
+                        </ul>
+                    </div>
+                    <article class="bbs_form-content">
+                        <table class="search_table">
+                            <colgroup>
+                                <col style="width:97px">
+                                <col style="width:36%">
+                                <col style="width:97px">
+                                <col style="width:46%">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>기사구분</th>
+                                <td>
+                                    <span class="checkbox1">
+                                        <input type="checkbox" name="" id="term01">
+                                        <label for="term01">배송기사</label>
+                                    </span>
+                                    <span class="checkbox1">
+                                        <input type="checkbox" name="" id="term02">
+                                        <label for="term02">회수기사</label>
+                                    </span>
+                                </td>
+                                <th>차종</th>
+                                <td>
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>화물차</option>
+                                            <option>승용차</option>
+                                            <option>이륜차</option>
+                                            <option>오토바이</option>
+                                            <option>기타</option>
+                                        </select>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>승인여부</th>
+                                <td>
+                                    <span class="radio">
+                                        <input type="radio" name="f03" id="f0_1">
+                                        <label for="f0_1">전체</label>
+                                    </span>
+                                    <span class="radio">
+                                        <input type="radio" name="f03" id="f1_1" checked="checked">
+                                        <label for="f1_1">승인완료</label>
+                                    </span>
+                                    <span class="radio">
+                                        <input type="radio" name="f03" id="f1_2">
+                                        <label for="f1_2">보류</label>
+                                    </span>
+                                    <span class="radio">
+                                        <input type="radio" name="f03" id="f1_3">
+                                        <label for="f1_3">미승인</label>
+                                    </span>
+                                </td>
+                                <th>검색</th>
+                                <td>
+                                    <div class="box_sch-area type1">
+                                        <span class="sel">
+                                            <select>
+                                                <option selected="selected">전체</option>
+                                                <option>이름</option>
+                                                <option>아이디</option>
+                                            </select>
+                                        </span>
+                                        <input type="text" class="big" value="">
+                                    </div>
+                                    <button type="button" class="btn_basic1">조회</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </article>
+
+                    <!-- bbs -->
+                    <div class="bbs_area">
+                        <div class="bbs_header">
+                            <div class="bbs_list">
+                                <p class="total"><strong>회원 상태 :</strong> 승인완료 <span class="point-color01">12,345</span>건 <em class="txt_division-area">승인대기 <span class="point-color01">245</span></em>건</p>
+                            </div>
+                        </div>
+
+                        <!-- bbs -->
+                        <table class="bbs">
+                            <colgroup>
+                                <col style="width:60px">
+                                <col style="width:10%">
+                                <col style="width:9%">
+                                <col style="width:10%">
+                                <col style="width:12%">
+                                <col style="width:12%">
+                                <col style="width:8%">
+                                <col style="width:8%">
+                                <col style="width:8%">
+                                <col style="width:12%">
+                                <col style="width:12%">
+                                <col style="width:10%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <span class="checkbox1 no_label">
+                                            <input type="checkbox" name="" id="all">
+                                            <label for="all">전체선택</label>
+                                        </span>
+                                    </th>
+                                    <th>기사구분</th>
+                                    <th>이동</th>
+                                    <th>아이디</th>
+                                    <th>소속</th>
+                                    <th>연락처</th>
+                                    <th>차종</th>
+                                    <th>지역(시)</th>
+                                    <th>지역(구)</th>
+                                    <th>업무시간</th>
+                                    <th>최근접속시간</th>
+                                    <th>관리</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="checkbox1 no_label">
+                                            <input type="checkbox" name="" id="chk01" checked>
+                                            <label for="chk01">선택</label>
+                                        </span>
+                                    </td>
+                                    <td>배송/회수</td>
+                                    <td class="link"><a href="" title="기사등록페이지로 이동">박지선</a></td>
+                                    <td>neotaday3</td>
+                                    <td>써모랩코리아</td>
+                                    <td>010-2985-1234</td>
+                                    <td>이륜차</td>
+                                    <td>서울시</td>
+                                    <td>관악구</td>
+                                    <td>18:00 ~ 22:00</td>
+                                    <td>2020-02-07</td>
+                                    <td><button type="button" class="btn_basic6 xsmall">승인</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="checkbox1 no_label">
+                                            <input type="checkbox" name="" id="chk02" checked>
+                                            <label for="chk02">선택</label>
+                                        </span>
+                                    </td>
+                                    <td>회수</td>
+                                    <td class="link"><a href="" title="기사등록페이지로 이동">박지선</a></td>
+                                    <td>neotaday3</td>
+                                    <td>써모랩코리아</td>
+                                    <td>010-2985-1234</td>
+                                    <td>승용차</td>
+                                    <td>서울시</td>
+                                    <td>은평구</td>
+                                    <td>18:00 ~ 22:00</td>
+                                    <td>2020-02-07</td>
+                                    <td><button type="button" class="btn_basic7 xsmall">대기</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="checkbox1 no_label">
+                                            <input type="checkbox" name="" id="chk03">
+                                            <label for="chk03">선택</label>
+                                        </span>
+                                    </td>
+                                    <td>배송</td>
+                                    <td class="link"><a href="" title="기사등록페이지로 이동">박지선</a></td>
+                                    <td>neotaday3</td>
+                                    <td>써모랩코리아</td>
+                                    <td>010-2985-1234</td>
+                                    <td>화물차</td>
+                                    <td>서울시</td>
+                                    <td>은평구</td>
+                                    <td>18:00 ~ 22:00</td>
+                                    <td>2020-02-07</td>
+                                    <td><button type="button" class="btn_basic8 xsmall">보류</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="box_bbs-footer">
+                            <!-- 버튼 영역 -->
+                            <div class="align-l type1">
+                                <button type="button" class="btn_basic3 type1">일괄승인</button>
+                                <button type="button" class="btn_basic3 type1">일괄대기</button>
+                                <button type="button" class="btn_basic3 type1">일괄보류</button>
+                            </div>
+                            <button type="button" class="btn_basic btn_excel align-r"><i class="ico_com"></i>엑셀 다운로드</button>
+                        </div>
+                        <!-- 페이징 -->
+                        <div class="bbs_page">
+                            <button type="button" class="btn_page prev">이전</button>
+                            <button type="button" class="btn_page active">1</button>
+                            <button type="button" class="btn_page">2</button>
+                            <button type="button" class="btn_page">3</button>
+                            <button type="button" class="btn_page">4</button>
+                            <button type="button" class="btn_page">5</button>
+                            <button type="button" class="btn_page">6</button>
+                            <button type="button" class="btn_page">7</button>
+                            <button type="button" class="btn_page">8</button>
+                            <button type="button" class="btn_page">9</button>
+                            <button type="button" class="btn_page">10</button>
+                            <button type="button" class="btn_page next">다음</button>
+                        </div>
+                    </div>
+                    <!-- //bbs -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/common.js"></script>
+</body>
+</html>

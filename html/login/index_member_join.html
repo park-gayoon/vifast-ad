@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+</head>
+<body>
+<div class="login_wrap">
+    <div class="login_content login_find">
+        <div class="login_contains">
+            <div class="login_inner">
+                <h1><img src="../../images/logo_login.png" alt="TLK logo"></h1>
+                <p class="txt_find-desc">관리자 회원가입<span>관리자 아이디는 승인완료 이후 로그인이 가능합니다.</span></p>
+
+                <div class="box_join-area">
+                    <!-- bbs -->
+                    <table class="bbs type1">
+                        <colgroup>
+                            <col style="width:16%">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>소속</th>
+                            <td>
+                                <span class="sel big02">
+                                    <select>
+                                        <option selected="selected">선택해주세요.</option>
+                                        <option>써모랩코리아</option>
+                                        <option>써모랩코리아</option>
+                                    </select>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>아이디</th>
+                            <td>
+                                <input type="text" placeholder="아이디를 입력하세요" maxlength="10">
+                                <button type="button" class="btn_basic2">중복체크</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>이름</th>
+                            <td>
+                                <input type="text" placeholder="이름을 입력하세요">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>생년월일</th>
+                            <td>
+                                <input type="text" placeholder="주민번호 앞 6자리 입력" maxlength="6">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>성별</th>
+                            <td>
+                                <span class="radio">
+                                    <input type="radio" name="genderType" id="genderType1" checked="">
+                                    <label for="genderType1">남자</label>
+                                </span>
+                                <span class="radio">
+                                    <input type="radio" name="genderType" id="genderType2">
+                                    <label for="genderType2">여자</label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>비밀번호</th>
+                            <td>
+                                <input type="password" maxlength="8">
+                                <span class="txt_form-desc">8자리이상 영문(소문자),숫자로만 작성</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>비밀번호 확인</th>
+                            <td><input type="password" maxlength="8"></td>
+                        </tr>
+                        <tr>
+                            <th>휴대폰번호</th>
+                            <td>
+                                <input type="tel" maxlength="11">
+                                <button type="button" class="btn_basic2">인증요청</button>
+                                <!-- S: 회원가입 활성화 시 나오는 영역 -->
+                                <div class="form_active">
+                                    <input type="tel" maxlength="11">
+                                    <button type="button" class="btn_basic5 type1">확인</button>
+                                </div>
+                                <!-- E: 회원가입 활성화 시 나오는 영역 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>이메일</th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="email" class="small">
+                                    <span class="txt_date-line">@</span>
+                                    <!-- S: 회원가입 직접 입력 선택시 활성화 -->
+                                    <div class="form_active">
+                                        <input type="text" class="small" disabled>
+                                    </div>
+                                    <!-- E: 회원가입 직접 입력 선택시 활성화 -->
+                                    <div class="sel">
+                                        <select name="">
+                                            <option value="">직접입력</option>
+                                            <option value="">naver.com</option>
+                                            <option value="">daum.net</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tbody>
+                    </table>
+                    <div class="box_btn_tb">
+                        <span class="col"><button type="button" class="btn_basic3 big">취소하기</button></span>
+                        <span class="col"><button type="button" class="btn_basic1 big">등록하기</button></span>
+                    </div>
+                </div>
+            </div>
+            <div class="ft_address">
+                <p>(주) 써모랩코리아</p>
+                <p>주소 : 경기도 화성시 동탄순환대로 823, 9층 901호(영천동, 에이팩시티) TEL : 031-374-7102   FAX : 031-374-7103</p>
+                <p>Copyright&copy;2020 THERMO LAB KOREA. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+</body>
+</html>

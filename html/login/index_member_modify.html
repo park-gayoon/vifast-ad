@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+</head>
+<body>
+<div class="wrapper" id="app">
+    <div class="layout_wrap size-b">
+        <!-- S : gnb Menu -->
+        <script src="../include/gnb_menu.js"></script>
+        <!-- E : gnb Menu -->
+        <section class="layout_contents">
+            <!-- S : content header -->
+            <script src="../include/content_hd.js"></script>
+            <!-- E : content header -->
+            <div class="layout_contents-inner">
+                <div class="box_bread_crumb">
+                    <h2 class="tit_type1">회원정보수정</h2>
+                    <ul class="bread_crumb">
+                        <li>main &gt;</li>
+                        <li>회원정보수정</li>
+                    </ul>
+                </div>
+                <div class="tit_hd-area">
+                    <h2 class="tit_type2">회원정보수정</h2>
+                </div>
+
+                <!-- bbs -->
+                <div class="bbs_area">
+                    <!-- bbs -->
+                    <table class="bbs type1">
+                        <colgroup>
+                            <col style="width:12%">
+                            <col style="width:auto">
+                            <col style="width:12%">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>소속</th>
+                            <td colspan="3">
+                                <span class="sel big02">
+                                    <select disabled>
+                                        <option selected="selected">써모랩코리아</option>
+                                        <option>써모랩코리아</option>
+                                        <option>써모랩코리아</option>
+                                    </select>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>아이디</th>
+                            <td>
+                                <input type="text" value="moonzzang92" class="big" disabled>
+                            </td>
+                            <th>이름</th>
+                            <td>
+                                <input type="text" value="홍길동" class="small">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>생년월일</th>
+                            <td>
+                                <input type="text" value="000101" class="small" disabled>
+                            </td>
+                            <th>성별</th>
+                            <td>
+                                <span class="radio">
+                                    <input type="radio" name="genderType" id="genderType1" checked>
+                                    <label for="genderType1">남자</label>
+                                </span>
+                                <span class="radio">
+                                    <input type="radio" name="genderType" id="genderType2">
+                                    <label for="genderType2">여자</label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>비밀번호</th>
+                            <td>
+                                <input type="password" class="small" value="1231414">
+                            </td>
+                            <th>비밀번호 확인</th>
+                            <td>
+                                <input type="password" class="small" value="1231414">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>연락처</th>
+                            <td colspan="3">
+                                <input type="tel" class="small" title="연락처 입력" maxlength="11">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>이메일</th>
+                            <td colspan="3">
+                                <div class="form_box">
+                                    <input type="email" class="small">
+                                    <span class="txt_date-line">@</span>
+                                    <!-- S: 회원가입 직접 입력 선택시 활성화 -->
+                                    <div class="form_active">
+                                        <input type="text" class="small" disabled>
+                                    </div>
+                                    <!-- E: 회원가입 직접 입력 선택시 활성화 -->
+                                    <div class="sel">
+                                        <select name="">
+                                            <option value="">직접입력</option>
+                                            <option value="">naver.com</option>
+                                            <option value="">daum.net</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="box_btn_tb">
+                        <span class="col"><button type="button" class="btn_basic3 big">취소하기</button></span>
+                        <span class="col"><button type="button" class="btn_basic1 big">수정하기</button></span>
+                    </div>
+                </div>
+                <!-- //bbs -->
+            </div>
+        </section>
+    </div>
+</div>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+</body>
+</html>

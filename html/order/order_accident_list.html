@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="layout_wrap">
+        <!-- S : gnb Menu -->
+        <script src="../include/gnb_menu.js"></script>
+        <!-- E : gnb Menu -->
+        <section class="layout_contents">
+            <!-- S : content header -->
+            <script src="../include/content_hd.js"></script>
+            <!-- E : content header -->
+            <div class="layout_contents-inner">
+                <div class="box_bread_crumb">
+                    <h2 class="tit_type1">사고접수현황</h2>
+                    <ul class="bread_crumb">
+                        <li>주문/배송관리 &gt;</li>
+                        <li>사고접수현황</li>
+                    </ul>
+                </div>
+                <article class="bbs_form-content">
+                    <table class="search_table">
+                        <colgroup>
+                            <col style="width:95px">
+                            <col style="width:38%">
+                            <col style="width:95px">
+                            <col style="width:46%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>접수유형</th>
+                            <td>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                            </td>
+                            <th>기사구분</th>
+                            <td>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>접수기간</th>
+                            <td>
+                                <div class="box_datepicker-area">
+                                    <span class="datepicker_box">
+                                        <input type="text" class="small" id="date01" name="" value="" placeholder="날짜선택" disabled>
+                                        <button type="button" class="btn_calendar"><i class="ico_com"></i>달력</button>
+                                    </span>
+                                    <i class="txt_date-line">~</i>
+                                    <span class="datepicker_box">
+                                        <input type="text" class="small" id="date02" name="" value="" placeholder="날짜선택" disabled>
+                                        <button type="button" class="btn_calendar"><i class="ico_com"></i>달력</button>
+                                    </span>
+                                </div>
+                            </td>
+                            <th>검색</th>
+                            <td>
+                                <div class="box_sch-area type1">
+                                        <span class="sel">
+                                            <select>
+                                                <option selected="selected">전체</option>
+                                                <option>패키징번호</option>
+                                                <option>맥 어드레스</option>
+                                            </select>
+                                        </span>
+                                    <input type="text" class="big" value="">
+                                </div>
+                                <button type="button" class="btn_basic1">조회</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                <!-- bbs -->
+                <div class="bbs_area">
+                    <div class="bbs_header">
+                        <div class="bbs_list">
+                            <p class="total">접수건수 <span class="point-color01">12,145</span>건</p>
+                        </div>
+                    </div>
+
+                    <!-- bbs -->
+                    <table class="bbs">
+                        <colgroup>
+                            <col style="width:60px">
+                            <col style="width:13%">
+                            <col style="width:15%">
+                            <col style="width:10%">
+                            <col style="width:10%">
+                            <col style="width:10%">
+                            <col style="width:13%">
+                            <col style="width:10%">
+                            <col style="width:100px">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>
+                                <span class="checkbox1 no_label">
+                                    <input type="checkbox" name="" id="all">
+                                    <label for="all">전체선택</label>
+                                </span>
+                            </th>
+                            <th>사고접수번호</th>
+                            <th>접수시간</th>
+                            <th>기사구분</th>
+                            <th>기사명</th>
+                            <th>패키징번호</th>
+                            <th>주문번호</th>
+                            <th>접수유형</th>
+                            <th>상세사유</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="checkbox1 no_label">
+                                        <input type="checkbox" name="" id="chk01" checked="">
+                                        <label for="chk01">선택</label>
+                                    </span>
+                                </td>
+                                <td>202028-1452</td>
+                                <td>2020-08-11 23:03</td>
+                                <td>배송기사</td>
+                                <td class="link"><a>홍길동</a></td>
+                                <td class="link"><a href="" title="패키징번호로 이동">010158</a></td>
+                                <td class="link"><a href="" title="주문번호로 이동">MK1000023</a></td>
+                                <td>차량사고</td>
+                                <!-- 2020-10-16 html modify -->
+                                <td>
+                                    <div class="box_reason-area">
+                                        <button type="button" class="btn_reason">상세사유</button>
+                                        <div class="box_reason-data">
+                                            <div class="box_reason-inner">
+                                                글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!글씨는 200자가 최대라고 합니다. 유념띠! 기억띠!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- 2020-10-16 html modify -->
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="checkbox1 no_label">
+                                        <input type="checkbox" name="" id="chk02" checked="">
+                                        <label for="chk02">선택</label>
+                                    </span>
+                                </td>
+                                <td>202028-1452</td>
+                                <td>2020-08-11 23:03</td>
+                                <td>배송기사</td>
+                                <td class="link"><a>홍길동</a></td>
+                                <td class="link"><a href="" title="패키징번호로 이동">010158</a></td>
+                                <td class="link"><a href="" title="주문번호로 이동">MK1000023</a></td>
+                                <td>차량사고</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="checkbox1 no_label">
+                                        <input type="checkbox" name="" id="chk03" checked="">
+                                        <label for="chk03">선택</label>
+                                    </span>
+                                </td>
+                                <td>202028-1452</td>
+                                <td>2020-08-11 23:03</td>
+                                <td>배송기사</td>
+                                <td class="link"><a>홍길동</a></td>
+                                <td class="link"><a href="" title="패키징번호로 이동">010158</a></td>
+                                <td class="link"><a href="" title="주문번호로 이동">MK1000023</a></td>
+                                <td>차량사고</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="checkbox1 no_label">
+                                        <input type="checkbox" name="" id="chk04" checked="">
+                                        <label for="chk04">선택</label>
+                                    </span>
+                                </td>
+                                <td>202028-1452</td>
+                                <td>2020-08-11 23:03</td>
+                                <td>배송기사</td>
+                                <td class="link"><a>홍길동</a></td>
+                                <td class="link"><a href="" title="패키징번호로 이동">010158</a></td>
+                                <td class="link"><a href="" title="주문번호로 이동">MK1000023</a></td>
+                                <td>차량사고</td>
+                                <!-- 2020-10-16 html modify -->
+                                <td>
+                                    <div class="box_reason-area">
+                                        <button type="button" class="btn_reason">상세사유</button>
+                                        <div class="box_reason-data">
+                                            <div class="box_reason-inner">짧은 글일경우 이로케 나오지롱>_<</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- 2020-10-16 html modify -->
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="box_bbs-footer">
+                        <button type="button" class="btn_basic3 type1 align-l">선택정보 일괄 재회수처리</button>
+                    </div>
+                    <!-- 페이징 -->
+                    <div class="bbs_page">
+                        <button type="button" class="btn_page prev">이전</button>
+                        <button type="button" class="btn_page active">1</button>
+                        <button type="button" class="btn_page">2</button>
+                        <button type="button" class="btn_page">3</button>
+                        <button type="button" class="btn_page">4</button>
+                        <button type="button" class="btn_page">5</button>
+                        <button type="button" class="btn_page">6</button>
+                        <button type="button" class="btn_page">7</button>
+                        <button type="button" class="btn_page">8</button>
+                        <button type="button" class="btn_page">9</button>
+                        <button type="button" class="btn_page">10</button>
+                        <button type="button" class="btn_page next">다음</button>
+                    </div>
+                </div>
+                <!-- //bbs -->
+            </div>
+        </section>
+    </div>
+</div>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+    <!-- 가윤과장님 확인용(vue-js-modal css) -->
+    <link rel="stylesheet" href="../../css/modal_style.css">
+</head>
+<body>
+<div class="login_wrap">
+    <div class="login_content login_find">
+        <div class="login_contains">
+            <div class="login_inner">
+                <h1><img src="../../images/logo_login.png" alt="TLK logo"></h1>
+                <p class="txt_find-desc">아이디/비밀번호 찾기<span>관리자에 가입한 정보를 입력해주세요.</span></p>
+
+                <div class="contents_box">
+                    <div class="tab_type">
+                        <ul>
+                            <li><button type="button" class="tab01 active" title="tab01">아이디찾기</button></li>
+                            <li><button type="button" class="tab02" title="tab02">비밀번호찾기</button></li>
+                        </ul>
+                    </div>
+                    <!-- S : 아이디찾기 tab -->
+                    <div class="tab_view-box block" id="tab01">
+                        <div class="box_tbl-cont">
+                            <table class="bbs type1">
+                            <colgroup>
+                                <col style="width:50px">
+                                <col style="width:auto">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>이름</th>
+                                <td>
+                                    <input type="text" class="big">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이메일</th>
+                                <td>
+                                    <div class="form_box">
+                                        <div class="item_form-box">
+                                            <input type="email">
+                                            <span class="txt_date-line">@</span>
+                                        </div>
+                                        <div class="item_form-box">
+                                            <input type="email">
+                                        </div>
+                                        <div class="item_form-box sel">
+                                            <select>
+                                                <option>직접입력</option>
+                                                <option value="">naver.com</option>
+                                                <option value="">daum.net</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        <button type="button" class="btn_basic1 big btn_modal">조회하기</button> <!-- D: 2020-10-08 레이어팝업 공통 클래스 [btn_modal] class add -->
+                    </div>
+                    <!-- E : 아이디찾기 tab -->
+                    <!-- S : 비밀번호찾기 tab -->
+                    <div class="tab_view-box" id="tab02">
+                        <div class="box_tbl-cont">
+                            <table class="bbs type1">
+                            <colgroup>
+                                <col style="width:50px">
+                                <col style="width:auto">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>아이디</th>
+                                <td>
+                                    <input type="text" class="big">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이메일</th>
+                                <td>
+                                    <div class="form_box">
+                                        <div class="item_form-box">
+                                            <input type="email">
+                                            <span class="txt_date-line">@</span>
+                                        </div>
+                                        <div class="item_form-box">
+                                            <input type="email">
+                                        </div>
+                                        <div class="item_form-box sel">
+                                            <select>
+                                                <option>직접입력</option>
+                                                <option value="">naver.com</option>
+                                                <option value="">daum.net</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        <button type="button" class="btn_basic1 big">비밀번호 전송</button>
+                    </div>
+                    <!-- E : 비밀번호찾기 tab -->
+                </div>
+
+            </div>
+            <div class="ft_address">
+                <p>(주) 써모랩코리아</p>
+                <p>주소 : 경기도 화성시 동탄순환대로 823, 9층 901호(영천동, 에이팩시티) TEL : 031-374-7102   FAX : 031-374-7103</p>
+                <p>Copyright&copy;2020 THERMO LAB KOREA. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modals-container" style="display: none;"><!-- modal이 없을때 <div id="modals-container">만. (하위 엘리먼트 없음)  -->
+    <div class="vm--container">
+        <div data-modal="dynamic_modal_1" aria-expanded="true" class="vm--overlay">
+            <div class="vm--top-right-slot"></div>
+
+        </div>
+
+        <!-- option을 통해 width(ex: 50, 50px, 50%), height(ex: 50, 50px, 50%, auto) 설정 가능 -->
+        <div aria-expanded="true" role="dialog" aria-modal="true" class="vm--modal" style="width:400px;top:50%;left:50%;margin:-100px 0 0 -200px"> <!-- 2020-10-12 : width값만 확인해주세요. top, margin값은 위치값 퍼블확인용 -->
+            <div class="box_modal-area">
+                <div class="box_modal_hd">아이디 찾기</div>
+                <div class="box_modal_cont">
+                    <p class="txt_id-desc">가입하신 관리자 아이디는<br><span class="point-color01">neoto***</span>입니다.</p>
+                </div>
+                <!-- D: 2020-10-08 위치 변경 -->
+                <div class="box_btn_tb">
+                    <span class="col"><button type="button" class="btn_basic3 big btn_modal-close">확인</button></span> <!-- D: 2020-10-08 레이어팝업 공통 클래스 [btn_modal-close] add -->
+                </div>
+                <!-- D: 2020-10-08 위치 변경 -->
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

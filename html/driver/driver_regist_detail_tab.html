@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="layout_wrap">
+        <!-- S : gnb Menu -->
+        <script src="../include/gnb_menu.js"></script>
+        <!-- E : gnb Menu -->
+        <section class="layout_contents">
+            <!-- S : content header -->
+            <script src="../include/content_hd.js"></script>
+            <!-- E : content header -->
+            <div class="layout_contents-inner">
+                <div class="box_bread_crumb">
+                    <h2 class="tit_type1">기사등록조회</h2>
+                    <ul class="bread_crumb">
+                        <li>기사관리 &gt;</li>
+                        <li>기사등록조회</li>
+                    </ul>
+                </div>
+                <div class="tit_hd-area">
+                    <h2 class="tit_type2">기사정보</h2>
+                    <div class="align-r">
+                        <span class="txt_date">최초등록일 : 2020-08-18</span>
+                        <a href="#" class="btn_basic1">개인정보수정</a>
+                    </div>
+                </div>
+                <article class="bbs_form-content type1">
+                    <div class="item_info-list">
+                        <p class="tit_info">인적정보</p>
+                        <div class="box_info-area">
+                            <!-- S: 프로필 사진 영역 -->
+                            <div class="img-data-area">
+                                <img src="../../images/contents/no_img.png" alt="프로필 사진" />
+                            </div>
+                            <!-- E: 프로필 사진 영역 -->
+                            <div class="box_data-group">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:12%">
+                                        <col style="width:26%">
+                                        <col style="width:12%">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tr>
+                                        <th>아이디</th>
+                                        <td>abcdefghijkl</td>
+                                        <th>이메일</th>
+                                        <td>neotoday3@nate.com</td>
+                                    </tr>
+                                    <tr>
+                                        <th>이름</th>
+                                        <td>문나연</td>
+                                        <th>주소</th>
+                                        <td>서울시 관악구 신림동 1234</td>
+                                    </tr>
+                                    <tr>
+                                        <th>생년월일</th>
+                                        <td>1992.12.16</td>
+                                        <th>마일리지</th>
+                                        <td class="link"><a href="../client/client_regist_detail_tab.html">328,257</a>원</td>
+                                    </tr>
+                                    <tr>
+                                        <th>연락처</th>
+                                        <td colspan="3">010-1234-5678</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item_info-list">
+                        <!-- S: 2020-10-28 수정 -->
+                        <div class="tit_info">
+                            업무정보
+                            <div class="box_state-area">
+                                <span class="state_working">배송 - 업무중</span>
+                                <span class="state_end">회수 - 업무종료</span><!-- 업무종료일 경우 클래스 변경 -->
+                            </div>
+                        </div>
+                        <!-- E: 2020-10-28 수정 -->
+                        <div class="box_info-area">
+                            <div class="box_data-group">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:17%">
+                                        <col style="width:34%">
+                                        <col style="width:17%">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tr>
+                                        <th>소속</th>
+                                        <td>써모랩코리아</td>
+                                        <th>기사구분</th>
+                                        <td>배송기사, 회수기사</td>
+                                    </tr>
+                                    <tr>
+                                        <th>활동지역</th>
+                                        <td>서울시 관악구</td>
+                                        <th>등급</th>
+                                        <td>USER</td>
+                                    </tr>
+                                    <tr>
+                                        <th>업무시간</th>
+                                        <td>18:00 ~ 24:00</td>
+                                        <th>정산금</th>
+                                        <td class="link"><button class="btn_focus-tab" title="tab03">328,257</button><button type="button" class="btn_basic9 xsmall type1">전환</button></td>
+                                    </tr>
+                                    <tr>
+                                        <th>차종</th>
+                                        <td colspan="3">자가용</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- tab -->
+                <div class="contents_box">
+                    <div class="tab_type">
+                        <ul>
+                            <li><button type="button" class="tab01 active" title="tab01">배송이력</button></li>
+                            <li><button type="button" class="tab02" title="tab02">회수이력</button></li>
+                            <li><button type="button" class="tab03" title="tab03">정산금/패널티(기사)</button></li>
+                        </ul>
+                    </div>
+                    <!-- S : 배송이력 tab -->
+                    <div class="tab_view-box block" id="tab01">
+                        <div class="bbs_area">
+                            <div class="bbs_header">
+                                <div class="bbs_list">
+                                    <p class="total"><strong>배송상태 :</strong> 배송중 <span class="point-color01">32</span>건
+                                        <em class="txt_division-area">배송완료 <span class="point-color01">42</span>건</em>
+                                    </p>
+                                </div>
+                                <div class="bbs_right">
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>배송중</option>
+                                            <option>배송완료</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- bbs -->
+                            <table class="bbs">
+                                <colgroup>
+                                    <col style="width:13%;">
+                                    <col style="width:13%;">
+                                    <col style="width:13%;">
+                                    <col style="width:13%;">
+                                    <col style="width:13%">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>주문처</th>
+                                    <th>주문일자</th>
+                                    <th>주문번호</th>
+                                    <th>패키징번호</th>
+                                    <th>고객명</th>
+                                    <th>주문상품</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>마켓컬리</td>
+                                    <td>2020-08-11 03:25</td>
+                                    <td>20-15464</td>
+                                    <td>010111</td>
+                                    <td>조정석띠</td>
+                                    <td class="link type2"><a>[Kurly] 동물복지 유정란 20구</a></td>
+                                </tr>
+                                <tr>
+                                    <td>쿠팡</td>
+                                    <td>2020-08-11 03:25</td>
+                                    <td>20-15464</td>
+                                    <td>010111</td>
+                                    <td>조정석 하튜</td>
+                                    <td class="link type2"><a>[Kurly] 동물복지 유정란 20구 동물복지 유정란 20구 동물복지 유정란 20구 동물복지 유정란 20구 동물복지 유정란 20구</a></td>
+                                </tr>
+                                <tr>
+                                    <td>마켓컬리</td>
+                                    <td>2020-08-11 03:25</td>
+                                    <td>20-15464</td>
+                                    <td>010111</td>
+                                    <td>가윤띠</td>
+                                    <td class="link type2"><a>[Kurly] 동물복지 유정란 20구</a></td>
+                                </tr>
+                                <tr>
+                                    <td>마켓컬리</td>
+                                    <td>2020-08-11 03:25</td>
+                                    <td>20-15464</td>
+                                    <td>010111</td>
+                                    <td>조정석띠</td>
+                                    <td class="link type2"><a>[Kurly] 동물복지 유정란 20구</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td>쿠팡띠띠</td>
+                                   <td>2020-08-11 03:25</td>
+                                    <td>20-15464</td>
+                                    <td>010111</td>
+                                    <td>가윤띠</td>
+                                    <td class="link type2"><a>[Kurly] 동물복지 유정란 20구</a></td>
+                                </tr>
+                               <tr>
+                                    <td>마켓컬리</td>
+                                    <td>2020-08-11 03:25</td>
+                                    <td>20-15464</td>
+                                    <td>010111</td>
+                                    <td>가윤띠</td>
+                                    <td class="link type2"><a>[Kurly] 동물복지 유정란 20구</a></td>
+                                </tr>
+                                <tr>
+                                    <td>마켓컬리</td>
+                                    <td>2020-08-11 03:25</td>
+                                    <td>20-15464</td>
+                                    <td>010111</td>
+                                    <td>조정석띠</td>
+                                    <td class="link type2"><a>[Kurly] 동물복지 유정란 20구</a></td>
+                                </tr>
+                                <tr>
+                                    <td>쿠팡띠띠</td>
+                                    <td>2020-08-11 03:25</td>
+                                    <td>20-15464</td>
+                                    <td>010111</td>
+                                    <td>가윤띠</td>
+                                    <td class="link type2"><a>[Kurly] 동물복지 유정란 20구</a></td>
+                                </tr>
+                                <tr>
+                                    <td>마켓컬리</td>
+                                    <td>2020-08-11 03:25</td>
+                                    <td>20-15464</td>
+                                    <td>010111</td>
+                                    <td>가윤띠</td>
+                                    <td class="link type2"><a>[Kurly] 동물복지 유정란 20구</a></td>
+                                </tr>
+                                <tr>
+                                    <td>마켓컬리</td>
+                                    <td>2020-08-11 03:25</td>
+                                    <td>20-15464</td>
+                                    <td>010111</td>
+                                    <td>가윤띠</td>
+                                    <td class="link type2"><a>[Kurly] 동물복지 유정란 20구</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- 페이징 -->
+                            <div class="bbs_page">
+                                <button type="button" class="btn_page prev">이전</button>
+                                <button type="button" class="btn_page active">1</button>
+                                <button type="button" class="btn_page">2</button>
+                                <button type="button" class="btn_page">3</button>
+                                <button type="button" class="btn_page">4</button>
+                                <button type="button" class="btn_page">5</button>
+                                <button type="button" class="btn_page">6</button>
+                                <button type="button" class="btn_page">7</button>
+                                <button type="button" class="btn_page">8</button>
+                                <button type="button" class="btn_page">9</button>
+                                <button type="button" class="btn_page">10</button>
+                                <button type="button" class="btn_page next">다음</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- E : 배송이력 tab -->
+                    <!-- S : 회수이력 tab -->
+                    <div class="tab_view-box" id="tab02">
+                        <div class="bbs_area">
+                            <div class="bbs_header">
+                                <div class="bbs_list">
+                                    <p class="total"><strong>회수상태 :</strong> 회수중 <span class="point-color01">2</span>건
+                                        <em class="txt_division-area">회수완료 <span class="point-color01">557</span>건</em>
+                                    </p>
+                                </div>
+                                <div class="bbs_right">
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>회수요청</option>
+                                            <option>회수접수</option>
+                                            <option>사고접수</option>
+                                            <option>회수완료</option>
+                                            <option>입고완료</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- bbs -->
+                            <table class="bbs">
+                                <colgroup>
+                                    <col style="width:80px">
+                                    <col style="width:40px">
+                                    <col style="width:10%">
+                                    <col style="width:9%">
+                                    <col style="width:11%">
+                                    <col style="width:12%">
+                                    <col style="width:70px">
+                                    <col style="width:23%">
+                                    <col style="width:80px">
+                                    <col style="width:80px">
+                                    <col style="width:12%">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>패키징번호</th>
+                                    <th>종류</th>
+                                    <th>주문일자</th>
+                                    <th>상태</th>
+                                    <th>재회수여부</th>
+                                    <th>요청일자</th>
+                                    <th>고객명</th>
+                                    <th>회수주소</th>
+                                    <th>배정방식</th>
+                                    <th>배정기사</th>
+                                    <th>완료시간</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="link"><a>010158</a></td>
+                                    <td>1호</td>
+                                    <td>2020-08-11</td>
+                                    <td>회수요청</td>
+                                    <td>Y</td>
+                                    <td>2020-08-11<span class="m_block">23:03:23</span></td>
+                                    <td>김현정</td>
+                                    <td>[24547] 서울시 관악구 신림동 1457-12 301호</td>
+                                    <td>기사배정</td>
+                                    <td class="link"><a>박지선</a></td>
+                                    <td>2020-08-11<span class="m_block">23:03:23</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="link"><a>010158</a></td>
+                                    <td>1호</td>
+                                    <td>2020-08-11</td>
+                                    <td>회수요청</td>
+                                    <td>Y</td>
+                                    <td>2020-08-11<span class="m_block"> 23:03:23</span></td>
+                                    <td>김현정</td>
+                                    <td>[24547] 서울시 관악구 신림동 1457-12 301호</td>
+                                    <td>기사배정</td>
+                                    <td class="link"><a>박지선</a></td>
+                                    <td>2020-08-11<span class="m_block"> 23:03:23</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="link"><a>010158</a></td>
+                                    <td>1호</td>
+                                    <td>2020-08-11</td>
+                                    <td>회수요청</td>
+                                    <td>Y</td>
+                                    <td>2020-08-11<span class="m_block">23:03:23</span></td>
+                                    <td>김현정</td>
+                                    <td>[24547] 서울시 관악구 신림동 1457-12 301호</td>
+                                    <td>기사배정</td>
+                                    <td class="link"><a>박지선</a></td>
+                                    <td>2020-08-11<span class="m_block">23:03:23</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="link"><a>010158</a></td>
+                                    <td>1호</td>
+                                    <td>2020-08-11</td>
+                                    <td>회수요청</td>
+                                    <td>Y</td>
+                                    <td>2020-08-11<span class="m_block">23:03:23</span></td>
+                                    <td>김현정</td>
+                                    <td>[24547] 서울시 관악구 신림동 1457-12 301호</td>
+                                    <td>기사배정</td>
+                                    <td class="link"><a>박지선</a></td>
+                                    <td>2020-08-11<span class="m_block">23:03:23</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="link"><a>010158</a></td>
+                                    <td>1호</td>
+                                    <td>2020-08-11</td>
+                                    <td>회수요청</td>
+                                    <td>Y</td>
+                                    <td>2020-08-11<span class="m_block"> 23:03:23</span></td>
+                                    <td>김현정</td>
+                                    <td>[24547] 서울시 관악구 신림동 1457-12 301호</td>
+                                    <td>기사배정</td>
+                                    <td class="link"><a>박지선</a></td>
+                                    <td>2020-08-11<span class="m_block"> 23:03:23</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="link"><a>010158</a></td>
+                                    <td>1호</td>
+                                    <td>2020-08-11</td>
+                                    <td>회수요청</td>
+                                    <td>Y</td>
+                                    <td>2020-08-11<span class="m_block"> 23:03:23</span></td>
+                                    <td>김현정</td>
+                                    <td>[24547] 서울시 관악구 신림동 1457-12 301호</td>
+                                    <td>기사배정</td>
+                                    <td class="link"><a>박지선</a></td>
+                                    <td>2020-08-11<span class="m_block"> 23:03:23</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- 페이징 -->
+                            <div class="bbs_page">
+                                <button type="button" class="btn_page prev">이전</button>
+                                <button type="button" class="btn_page active">1</button>
+                                <button type="button" class="btn_page">2</button>
+                                <button type="button" class="btn_page">3</button>
+                                <button type="button" class="btn_page">4</button>
+                                <button type="button" class="btn_page">5</button>
+                                <button type="button" class="btn_page">6</button>
+                                <button type="button" class="btn_page">7</button>
+                                <button type="button" class="btn_page">8</button>
+                                <button type="button" class="btn_page">9</button>
+                                <button type="button" class="btn_page">10</button>
+                                <button type="button" class="btn_page next">다음</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- E : 회수이력 tab -->
+                    <!-- S : 정산금/패널티(기사) tab -->
+                    <div class="tab_view-box" id="tab03">
+                        <div class="bbs_area">
+                            <div class="bbs_header">
+                                <div class="bbs_list">
+                                    <p class="total"><strong>전체이력 :</strong> 정산금 <span class="point-color01">2</span>건
+                                        <em class="txt_division-area">패널티 <span class="point-color01">557</span>건</em>
+                                    </p>
+                                </div>
+                                <div class="bbs_right">
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>정산금</option>
+                                            <option>패널티</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- bbs -->
+                            <table class="bbs">
+                                <colgroup>
+                                    <col style="width:60px">
+                                    <col style="width:10%">
+                                    <col style="width:10%">
+                                    <col style="width:10%">
+                                    <col style="width:15%">
+                                    <col style="width:11%">
+                                    <col style="width:80px">
+                                    <col style="width:80px">
+                                    <col style="width:11%">
+                                    <col style="width:23%">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>NO</th>
+                                    <th>업무</th>
+                                    <th>구분</th>
+                                    <th>배송종류</th>
+                                    <th>관련 주문/회수번호</th>
+                                    <th>패키징번호</th>
+                                    <th>증감(+)</th>
+                                    <th>차감(-)</th>
+                                    <th>잔액</th>
+                                    <th>비고(사유)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>123</td>
+                                    <td>배송기사</td>
+                                    <td>패널티</td>
+                                    <td>배송</td>
+                                    <td class="link"><a>MK1000023</a></td>
+                                    <td class="link"><a>010111</a></td>
+                                    <td class="point-color02">+900</td>
+                                    <td></td>
+                                    <td>14,700</td>
+                                    <td>차량사고 (차량 배터리 방전)</td>
+                                </tr>
+                                <tr>
+                                    <td>1234</td>
+                                    <td>배송기사</td>
+                                    <td>패널티</td>
+                                    <td>배송</td>
+                                    <td class="link"><a>MK1000023</a></td>
+                                    <td class="link"><a>010111</a></td>
+                                    <td></td>
+                                    <td class="point-color05">-500</td>
+                                    <td>14,700</td>
+                                    <td>기본 배송 적용</td>
+                                </tr>
+                                <tr>
+                                    <td>1234</td>
+                                    <td>배송기사</td>
+                                    <td>패널티</td>
+                                    <td>배송</td>
+                                    <td class="link"><a>MK1000023</a></td>
+                                    <td class="link"><a>010111</a></td>
+                                    <td></td>
+                                    <td class="point-color05">-500</td>
+                                    <td>14,700</td>
+                                    <td>회수 7일 지연</td>
+                                </tr>
+                                <tr>
+                                    <td>123</td>
+                                    <td>배송기사</td>
+                                    <td>패널티</td>
+                                    <td>배송</td>
+                                    <td class="link"><a>MK1000023</a></td>
+                                    <td class="link"><a>010111</a></td>
+                                    <td class="point-color02">+900</td>
+                                    <td></td>
+                                    <td>14,700</td>
+                                    <td>차량사고 (차량 배터리 방전)</td>
+                                </tr>
+                                <tr>
+                                    <td>1234</td>
+                                    <td>배송기사</td>
+                                    <td>패널티</td>
+                                    <td>배송</td>
+                                    <td class="link"><a>MK1000023</a></td>
+                                    <td class="link"><a>010111</a></td>
+                                    <td></td>
+                                    <td class="point-color05">-500</td>
+                                    <td>14,700</td>
+                                    <td>회수 7일 지연</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- 페이징 -->
+                            <div class="bbs_page">
+                                <button type="button" class="btn_page prev">이전</button>
+                                <button type="button" class="btn_page active">1</button>
+                                <button type="button" class="btn_page">2</button>
+                                <button type="button" class="btn_page">3</button>
+                                <button type="button" class="btn_page">4</button>
+                                <button type="button" class="btn_page">5</button>
+                                <button type="button" class="btn_page">6</button>
+                                <button type="button" class="btn_page">7</button>
+                                <button type="button" class="btn_page">8</button>
+                                <button type="button" class="btn_page">9</button>
+                                <button type="button" class="btn_page">10</button>
+                                <button type="button" class="btn_page next">다음</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- E : 정산금/패널티(기사) tab -->
+                </div>
+                <!-- //tab -->
+            </div>
+        </section>
+    </div>
+</div>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="layout_wrap">
+            <!-- S : gnb Menu -->
+            <script src="../include/gnb_menu.js"></script>
+            <!-- E : gnb Menu -->
+            <section class="layout_contents">
+                <!-- S : content header -->
+                <script src="../include/content_hd.js"></script>
+                <!-- E : content header -->
+                <div class="layout_contents-inner">
+                    <div class="box_bread_crumb">
+                        <h2 class="tit_type1">상태관리</h2>
+                        <ul class="bread_crumb">
+                            <li>패키징관리 &gt;</li>
+                            <li>상태관리</li>
+                        </ul>
+                    </div>
+                    <article class="bbs_form-content">
+                        <table class="search_table">
+                            <colgroup>
+                                <col style="width:7%">
+                                <col style="width:auto">
+                                <col style="width:7%">
+                                <col style="width:17%">
+                                <col style="width:8%">
+                                <col style="width:auto">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>상태</th>
+                                <td>
+                                    <span class="radio">
+                                        <input type="radio" name="f03" id="f0_1">
+                                        <label for="f0_1">전체</label>
+                                    </span>
+                                    <span class="radio">
+                                        <input type="radio" name="f03" id="f1_1" checked="checked">
+                                        <label for="f1_1">정상</label>
+                                    </span>
+                                    <span class="radio">
+                                        <input type="radio" name="f03" id="f1_2">
+                                        <label for="f1_2">이상</label>
+                                    </span>
+                                    <span class="radio">
+                                        <input type="radio" name="f03" id="f1_3">
+                                        <label for="f1_3">폐기</label>
+                                    </span>
+                                </td>
+                                <th>조도센서</th>
+                                <td>
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>정상</option>
+                                            <option>이상</option>
+                                        </select>
+                                    </span>
+                                </td>
+                                <th>온도센서</th>
+                                <td>
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>정상</option>
+                                            <option>이상</option>
+                                        </select>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>박스파손</th>
+                                <td>
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>정상</option>
+                                            <option>이상</option>
+                                        </select>
+                                    </span>
+                                </td>
+                                <th>EDP상태</th>
+                                <td colspan="3">
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>정상</option>
+                                            <option>이상</option>
+                                        </select>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>배터리</th>
+                                <td>
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>정상</option>
+                                            <option>점검</option>
+                                            <option>이상</option>
+                                        </select>
+                                    </span>
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">정상</option>
+                                            <option>점검</option>
+                                            <option>이상</option>
+                                        </select>
+                                    </span>
+                                </td>
+                                <th>검색</th>
+                                <td colspan="3">
+                                    <div class="box_sch-area type1">
+                                        <span class="sel">
+                                            <select>
+                                                <option selected="selected">전체</option>
+                                                <option>패키징번호</option>
+                                            </select>
+                                        </span>
+                                        <input type="text" class="big" value="">
+                                    </div>
+                                    <button type="button" class="btn_basic1">조회</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </article>
+
+                    <!-- bbs -->
+                    <div class="bbs_area">
+                        <div class="bbs_header"> <!-- D: 2020-10-14 class delete -->
+                            <div class="bbs_list">
+                                <p class="total">패키징 총 <span class="point-color01">345</span>건 (정상 <span class="point-color01">45</span>
+                                    <em class="txt_division-area">배터리 <span class="point-color01">45</span></em>
+                                    <em class="txt_division-area">조도센서 <span class="point-color01">24</span></em>
+                                    <em class="txt_division-area">온도센서 <span class="point-color01">15</span></em>
+                                    <em class="txt_division-area">EPD상태 <span class="point-color01">157</span></em>
+                                    <em class="txt_division-area">박스파손 <span class="point-color01">157</span></em>)
+                                </p>
+                            </div>
+                            <div class="bbs_right">
+                                <!-- S: 2020-10-14 html modify -->
+                                <div class="total">
+                                    <span class="txt_total">배터리 (정상 <span class="point-color01">13524</span>
+                                        <em class="txt_division-area">점검 <span class="point-color01">12345</span></em>
+                                        <em class="txt_division-area">이상 <span class="point-color01">12444</span></em>)
+                                    </span>
+                                    <button type="button" class="btn_help btn_toggle"><i class="ico_com"></i>배터리 도움말</button>
+                                    <div class="box_help-data">
+                                        <strong>범례</strong> : 정상 <span class="point-color02">[100~50%]</span> 점검 <span class="point-color06">[100~50%]</span> 이상 <span class="point-color04">[100~50%]</span>
+                                    </div>
+                                </div>
+                                <!-- E: 2020-10-14 html modify -->
+                            </div>
+                        </div>
+
+                        <!-- bbs -->
+                        <table class="bbs">
+                            <colgroup>
+                                <col style="width:60px">
+                                <col style="width:auto">
+                                <col style="width:auto">
+                                <col style="width:auto">
+                                <col style="width:auto">
+                                <col style="width:auto">
+                                <col style="width:auto">
+                                <col style="width:auto">
+                                <col style="width:auto">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>
+                                    <span class="checkbox1 no_label">
+                                        <input type="checkbox" name="" id="all">
+                                        <label for="all">전체선택</label>
+                                    </span>
+                                </th>
+                                <th>패키징번호</th>
+                                <th>전체상태</th>
+                                <th>배터리</th>
+                                <th>조도센서</th>
+                                <th>온도센서</th>
+                                <th>EPD상태</th>
+                                <th>박스파손</th>
+                                <th>온도이탈여부</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="checkbox1 no_label">
+                                            <input type="checkbox" name="" id="chk01" checked>
+                                            <label for="chk01">선택</label>
+                                        </span>
+                                    </td>
+                                    <td class="link"><a href="" title="패키징번호페이지 이동">010158</a></td>
+                                    <td class="point-color02">정상</td>
+                                    <td>정상 (98%)</td>
+                                    <td>정상</td>
+                                    <td>정상</td>
+                                    <td>정상</td>
+                                    <td>정상</td>
+                                    <td>이상</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="checkbox1 no_label">
+                                            <input type="checkbox" name="" id="chk02">
+                                            <label for="chk02">선택</label>
+                                        </span>
+                                    </td>
+                                    <td class="link"><a href="" title="패키징번호페이지 이동">010158</a></td>
+                                    <td class="point-color03">이상</td>
+                                    <td>정상 (98%)</td>
+                                    <td>정상</td>
+                                    <td>정상</td>
+                                    <td>정상</td>
+                                    <td>정상</td>
+                                    <td>이상</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="checkbox1 no_label">
+                                            <input type="checkbox" name="" id="chk03">
+                                            <label for="chk03">선택</label>
+                                        </span>
+                                    </td>
+                                    <td class="link"><a href="" title="패키징번호페이지 이동">010158</a></td>
+                                    <td class="point-color04">폐기</td>
+                                    <td>정상 (98%)</td>
+                                    <td>정상</td>
+                                    <td>정상</td>
+                                    <td>정상</td>
+                                    <td>정상</td>
+                                    <td>이상</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="checkbox1 no_label">
+                                            <input type="checkbox" name="" id="chk04">
+                                            <label for="chk04">선택</label>
+                                        </span>
+                                    </td>
+                                    <td class="link"><a href="" title="패키징번호페이지 이동">010158</a></td>
+                                    <td class="point-color02">정상</td>
+                                    <td>정상 (98%)</td>
+                                    <td>정상</td>
+                                    <td>정상</td>
+                                    <td>정상</td>
+                                    <td>정상</td>
+                                    <td>이상</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="box_bbs-footer">
+                            <!-- 버튼 영역 -->
+                            <div class="align-l type1">
+                                <span class="txt_select-tit">일괄 상태변경</span>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체상태</option>
+                                        <option>온도센서이상</option>
+                                        <option>조도센서이상</option>
+                                        <option>배터리 이상</option>
+                                        <option>박스파손</option>
+                                    </select>
+                                </span>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">일괄 정상변경</option>
+                                        <option>일괄이상 변경</option>
+                                        <option>일괄폐기 변경</option>
+                                    </select>
+                                </span>
+                                <button type="button" class="btn_basic1 type1">적용</button>
+                            </div>
+                            <button type="button" class="btn_basic btn_excel align-r"><i class="ico_com"></i>엑셀 다운로드</button>
+                        </div>
+
+                        <!-- 페이징 -->
+                        <div class="bbs_page">
+                            <button type="button" class="btn_page prev">이전</button>
+                            <button type="button" class="btn_page active">1</button>
+                            <button type="button" class="btn_page">2</button>
+                            <button type="button" class="btn_page">3</button>
+                            <button type="button" class="btn_page">4</button>
+                            <button type="button" class="btn_page">5</button>
+                            <button type="button" class="btn_page">6</button>
+                            <button type="button" class="btn_page">7</button>
+                            <button type="button" class="btn_page">8</button>
+                            <button type="button" class="btn_page">9</button>
+                            <button type="button" class="btn_page">10</button>
+                            <button type="button" class="btn_page next">다음</button>
+                        </div>
+                    </div>
+                    <!-- //bbs -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+    <script src="../../js/tmap/jsv2.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="layout_wrap">
+        <!-- S :gnb Menu -->
+        <script src="../include/gnb_menu.js"></script>
+        <!-- E :gnb Menu -->
+        <section class="layout_contents type_b">
+            <!-- S :content header -->
+            <script src="../include/content_hd.js"></script>
+            <!-- E :content header -->
+            <div class="layout_contents-inner">
+                <div class="box_bread_crumb">
+                    <h2 class="tit_type1">배송현황</h2>
+                    <ul class="bread_crumb">
+                        <li>주문/배송관리 &gt;</li>
+                        <li>배송현황</li>
+                    </ul>
+                </div>
+                <article class="bbs_form-content">
+                    <table class="search_table">
+                        <colgroup>
+                            <col style="width:95px">
+                            <col style="width:38%">
+                            <col style="width:95px">
+                            <col style="width:46%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>주문처</th>
+                            <td>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>회사목록</option>
+                                    </select>
+                                </span>
+                            </td>
+                            <th>지역</th>
+                            <td>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>시</option>
+                                    </select>
+                                </span>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>구</option>
+                                    </select>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>업무상태</th>
+                            <td>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>업무중</option>
+                                        <option>업무종료</option>
+                                    </select>
+                                </span>
+                            </td>
+                            <th>검색</th>
+                            <td>
+                                <div class="box_sch-area type1">
+                                        <span class="sel">
+                                            <select>
+                                                <option selected="selected">전체</option>
+                                                <option>주문번호</option>
+                                                <option>기사이름</option>
+                                                <option>차번호</option>
+                                                <option>지역명</option>
+                                            </select>
+                                        </span>
+                                    <input type="text" class="big" value="">
+                                </div>
+                                <button type="button" class="btn_basic1">조회</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                <div class="delivery_wrap">
+                    <div class="delivery_result">
+                        <p class="tit_sch-result">배송 검색결과 10건</p>
+                        <div class="box_delivery-inner">
+                            <ul class="box_delivery-group">
+                                <li>
+                                    <span class="item_delivery-num"><span class="ico_num"><em>1</em></span></span>
+                                    <span class="item_delivery-info">홍길동 (53라 3536)<span class="delivery_address">현재위치 서울 관악구 신림동 가나다라마바사</span></span>
+                                    <span class="item_delivery-state"><em class="btn_type01">업무중</em></span>
+                                </li>
+                                <li>
+                                    <span class="item_delivery-num"><span class="ico_num"><em>2</em></span></span>
+                                    <span class="item_delivery-info">홍길동 (53라 3536)<span class="delivery_address">현재위치 서울 관악구 신림동</span></span>
+                                    <span class="item_delivery-state end"><em class="btn_type01 type_a">업무종료</em></span>
+                                </li>
+                                <li class="is-active"> <!-- 선택된 셀 class [is-active] add-->
+                                    <span class="item_delivery-num"><span class="ico_num"><em>3</em></span></span>
+                                    <span class="item_delivery-info">홍길동 (53라 3536)<span class="delivery_address">현재위치 서울 관악구 신림동</span></span>
+                                    <span class="item_delivery-state"><em class="btn_type01">업무중</em></span>
+                                </li>
+                                <li>
+                                    <span class="item_delivery-num"><span class="ico_num"><em>4</em></span></span>
+                                    <span class="item_delivery-info">홍길동 (53라 3536)<span class="delivery_address">현재위치 서울 관악구 신림동</span></span>
+                                    <span class="item_delivery-state"><em class="btn_type01">업무중</em></span>
+                                </li>
+                                <li>
+                                    <span class="item_delivery-num"><span class="ico_num"><em>5</em></span></span>
+                                    <span class="item_delivery-info">홍길동 (53라 3536)<span class="delivery_address">현재위치 서울 관악구 신림동</span></span>
+                                    <span class="item_delivery-state"><em class="btn_type01">업무중</em></span>
+                                </li>
+                                <li>
+                                    <span class="item_delivery-num"><span class="ico_num"><em>6</em></span></span>
+                                    <span class="item_delivery-info">홍길동 (53라 3536)<span class="delivery_address">현재위치 서울 관악구 신림동</span></span>
+                                    <span class="item_delivery-state end"><em class="btn_type01 type_a">업무종료</em></span>
+                                </li>
+                                <li>
+                                    <span class="item_delivery-num"><span class="ico_num"><em>7</em></span></span>
+                                    <span class="item_delivery-info">홍길동 (53라 3536)<span class="delivery_address">현재위치 서울 관악구 신림동</span></span>
+                                    <span class="item_delivery-state"><em class="btn_type01">업무중</em></span>
+                                </li>
+                                <li>
+                                    <span class="item_delivery-num"><span class="ico_num"><em>8</em></span></span>
+                                    <span class="item_delivery-info">홍길동 (53라 3536)<span class="delivery_address">현재위치 서울 관악구 신림동</span></span>
+                                    <span class="item_delivery-state"><em class="btn_type01">업무중</em></span>
+                                </li>
+                                <li>
+                                    <span class="item_delivery-num"><span class="ico_num"><em>9</em></span></span>
+                                    <span class="item_delivery-info">홍길동 (53라 3536)<span class="delivery_address">현재위치 서울 관악구 신림동</span></span>
+                                    <span class="item_delivery-state"><em class="btn_type01">업무중</em></span>
+                                </li>
+                                <li>
+                                    <span class="item_delivery-num"><span class="ico_num"><em>10</em></span></span>
+                                    <span class="item_delivery-info">홍길동 (53라 3536)<span class="delivery_address">현재위치 서울 관악구 신림동</span></span>
+                                    <span class="item_delivery-state end"><em class="btn_type01 type_a">업무종료</em></span>
+                                </li>
+                            </ul>
+                            <!-- S: 데이터 없을 경우 -->
+                            <!--<p class="no-data">조회된 데이터가 없습니다.</p>-->
+                            <!-- E: 데이터 없을 경우 -->
+
+                            <!-- 페이징 -->
+                            <div class="bbs_page">
+                                <button type="button" class="btn_page prev">이전</button>
+                                <button type="button" class="btn_page active">1</button>
+                                <button type="button" class="btn_page">2</button>
+                                <button type="button" class="btn_page">3</button>
+                                <button type="button" class="btn_page">4</button>
+                                <button type="button" class="btn_page">5</button>
+                                <button type="button" class="btn_page next">다음</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delivery_detail-info">
+                        <div class="box_detail-hd">
+                            <p class="tit_detail-info">상세정보</p>
+                            <button type="button" class="btn_detail-close" onclick="btn_close()">닫기</button>
+                        </div>
+                        <div class="box_detail-cont">
+                            <div class="tab_type">
+                                <ul>
+                                    <li><button type="button" class="tab01 active" title="tab01">배송정보</button></li>
+                                    <li><button type="button" class="tab02" title="tab02">패키징정보</button></li>
+                                </ul>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>배송중</option>
+                                        <option>배송완료</option>
+                                    </select>
+                                </span>
+                            </div>
+                            <div class="tab_view-box block" id="tab01">
+                                <ul class="box_detail-list">
+                                    <li>
+                                        <div class="item_detail-info">
+                                            <p class="txt_address">전남 광양시 다압면 고사리 291-60 현대빌라A B102호</p>
+                                            <p class="txt_use-info">조진용<span>주문번호 20-25857</span></p>
+                                        </div>
+                                        <div class="item_detail-state">
+                                            <p class="txt_delivery-state type_a">배송중</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_detail-info">
+                                            <p class="txt_address">서울시 관악구 신림동 10-60 304호</p>
+                                            <p class="txt_use-info">조진용<span>주문번호 20-25857</span></p>
+                                        </div>
+                                        <div class="item_detail-state">
+                                            <p class="txt_delivery-state">배송완료</p>
+                                            <span class="btn_type01">-2˚</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_detail-info">
+                                            <p class="txt_address">서울시 관악구 신림동 10-60 304호</p>
+                                            <p class="txt_use-info">조진용<span>주문번호 20-25857</span></p>
+                                        </div>
+                                        <div class="item_detail-state">
+                                            <p class="txt_delivery-state">배송완료</p>
+                                            <span class="btn_type01">-3˚</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_detail-info">
+                                            <p class="txt_address">서울시 관악구 신림동 10-60 304호</p>
+                                            <p class="txt_use-info">조진용<span>주문번호 20-25857</span></p>
+                                        </div>
+                                        <div class="item_detail-state">
+                                            <p class="txt_delivery-state">배송완료</p>
+                                            <span class="btn_type01">-3˚</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_detail-info">
+                                            <p class="txt_address">서울시 관악구 신림동 10-60 304호</p>
+                                            <p class="txt_use-info">조진용<span>주문번호 20-25857</span></p>
+                                        </div>
+                                        <div class="item_detail-state">
+                                            <p class="txt_delivery-state type_a">배송중</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="box_btn-area">
+                                    <button type="button" class="btn_list-more"><i class="ico_com"></i>더보기</button>
+                                </div>
+                                <!-- S: 데이터 없을 경우 -->
+                                <!--<p class="no-data">조회된 데이터가 없습니다.</p>-->
+                                <!-- E: 데이터 없을 경우 -->
+                            </div>
+                            <div class="tab_view-box" id="tab02">
+                                <ul class="box_detail-list">
+                                    <li>
+                                        <div class="item_detail-info">
+                                            <p class="txt_address">[동물복지 유정란]</p>
+                                            <p class="txt_use-info">패키징번호<a class="link">010158</a></p>
+                                        </div>
+                                        <div class="item_detail-state">
+                                            <p class="txt_delivery-state type_a">배송중</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_detail-info">
+                                            <p class="txt_address">[동물복지 유정란]</p>
+                                            <p class="txt_use-info">패키징번호<a class="link">010158</a></p>
+                                        </div>
+                                        <div class="item_detail-state">
+                                            <p class="txt_delivery-state">배송완료</p>
+                                            <span class="btn_type01">-3˚</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_detail-info">
+                                            <p class="txt_address">[동물복지 유정란]</p>
+                                            <p class="txt_use-info">패키징번호<a class="link">010158</a></p>
+                                        </div>
+                                        <div class="item_detail-state">
+                                            <p class="txt_delivery-state type_a">배송중</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_detail-info">
+                                            <p class="txt_address">[동물복지 유정란]</p>
+                                            <p class="txt_use-info">패키징번호<a class="link">010158</a></p>
+                                        </div>
+                                        <div class="item_detail-state">
+                                            <p class="txt_delivery-state">배송완료</p>
+                                            <span class="btn_type01">-1˚</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_detail-info">
+                                            <p class="txt_address">[동물복지 유정란]</p>
+                                            <p class="txt_use-info">패키징번호<a class="link">010158</a></p>
+                                        </div>
+                                        <div class="item_detail-state">
+                                            <p class="txt_delivery-state type_a">배송중</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item_detail-info">
+                                            <p class="txt_address">[동물복지 유정란]</p>
+                                            <p class="txt_use-info">패키징번호<a class="link">010158</a></p>
+                                        </div>
+                                        <div class="item_detail-state">
+                                            <p class="txt_delivery-state">배송완료</p>
+                                            <span class="btn_type01">-2˚</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="box_btn-area">
+                                    <button type="button" class="btn_list-more"><i class="ico_com"></i>더보기</button>
+                                </div>
+                                <!-- S: 데이터 없을 경우 -->
+                                <!--<p class="no-data">조회된 데이터가 없습니다.</p>-->
+                                <!-- E: 데이터 없을 경우 -->
+                            </div>
+                        </div>
+                        <!-- S: 배송 상세정보 -->
+                        <div class="box_detail-info">
+                            <div class="box_detail-hd">
+                                <p class="tit_detail-info">배송 상세정보</p>
+                                <button type="button" class="btn_prev" onclick="btn_closePop();">이전으로 가기</button>
+                            </div>
+                            <ul class="list_delivery-area">
+                                <li><strong>고객명</strong><span>문나연</span></li>
+                                <li><strong>주소</strong><span>서울시 관악구 신림동 10-60 가나다라마바사</span></li>
+                                <li><strong>주문번호</strong><span>20-25857</span></li>
+                                <li><strong>배송상태</strong><span class="point-color01">배송완료</span></li>
+                                <li><strong>패키징NO</strong><span>010158</span></li>
+                                <li><strong>상품정보</strong><span>무농약 간편 샐러드 6종</span></li>
+                                <li><strong>최종온도</strong><span class="point-color01">-3˚</span></li>
+                            </ul>
+                            <div class="box_delivery-step">
+                                <ul class="list_delivery-state">
+                                    <li class="item_delivery-step">
+                                        <span class="box_detail-step">배송출발</span>
+                                        <div class="box_detail-state">
+                                            <span class="date_delivery">2020-08-12 10:20</span>
+                                            <span class="txt_celsius">온도<em>-11˚</em></span>
+                                        </div>
+                                    </li>
+                                    <li class="item_delivery-step">
+                                        <span class="box_detail-step">배송중</span>
+                                        <div class="box_detail-state">
+                                            <span class="date_delivery">2020-08-12 10:20</span>
+                                            <span class="txt_celsius">온도<em>-11˚</em></span>
+                                        </div>
+                                    </li>
+                                    <li class="item_delivery-step">
+                                        <span class="box_detail-step">배송중</span>
+                                        <div class="box_detail-state">
+                                            <span class="date_delivery">2020-08-12 10:20</span>
+                                            <span class="txt_celsius">온도<em>-11˚</em></span>
+                                        </div>
+                                    </li>
+                                    <li class="item_delivery-step">
+                                        <span class="box_detail-step">배송중</span>
+                                        <div class="box_detail-state">
+                                            <span class="date_delivery">2020-08-12 10:20</span>
+                                            <span class="txt_celsius">온도<em>-11˚</em></span>
+                                        </div>
+                                    </li>
+                                    <li class="item_delivery-step">
+                                        <span class="box_detail-step">배송중</span>
+                                        <div class="box_detail-state">
+                                            <span class="date_delivery">2020-08-12 10:20</span>
+                                            <span class="txt_celsius">온도<em>-11˚</em></span>
+                                        </div>
+                                    </li>
+                                    <li class="item_delivery-step">
+                                        <span class="box_detail-step">배송중</span>
+                                        <div class="box_detail-state">
+                                            <span class="date_delivery">2020-08-12 10:20</span>
+                                            <span class="txt_celsius">온도<em>-11˚</em></span>
+                                        </div>
+                                    </li>
+                                    <li class="item_delivery-step">
+                                        <span class="box_detail-step">배송중</span>
+                                        <div class="box_detail-state">
+                                            <span class="date_delivery">2020-08-12 10:20</span>
+                                            <span class="txt_celsius">온도<em>-11˚</em></span>
+                                        </div>
+                                    </li>
+                                    <li class="item_delivery-step">
+                                        <span class="box_detail-step">배송중</span>
+                                        <div class="box_detail-state">
+                                            <span class="date_delivery">2020-08-12 10:20</span>
+                                            <span class="txt_celsius">온도<em>-11˚</em></span>
+                                        </div>
+                                    </li>
+                                    <li class="item_delivery-step">
+                                        <span class="box_detail-step">배송중</span>
+                                        <div class="box_detail-state">
+                                            <span class="date_delivery">2020-08-12 10:20</span>
+                                            <span class="txt_celsius">온도<em>-11˚</em></span>
+                                        </div>
+                                    </li>
+                                    <li class="item_delivery-step">
+                                        <span class="box_detail-step">배송중</span>
+                                        <div class="box_detail-state">
+                                            <span class="date_delivery">2020-08-12 10:20</span>
+                                            <span class="txt_celsius">온도<em>-11˚</em></span>
+                                        </div>
+                                    </li>
+                                    <li class="item_delivery-step">
+                                        <span class="box_detail-step">배송중</span>
+                                        <div class="box_detail-state">
+                                            <span class="date_delivery">2020-08-12 10:20</span>
+                                            <span class="txt_celsius">온도<em>-11˚</em></span>
+                                        </div>
+                                    </li>
+                                    <li class="item_delivery-step">
+                                        <span class="box_detail-step">배송완료</span>
+                                        <div class="box_detail-state">
+                                            <span class="date_delivery">2020-08-12 10:20</span>
+                                            <span class="txt_celsius">온도<em>-11˚</em></span>
+                                        </div>
+                                    </li>
+                                    <li class="item_delivery-step">
+                                        <span class="box_detail-step">회수요청</span>
+                                        <div class="box_detail-state">
+                                            <span class="date_delivery">2020-08-12 10:20</span>
+                                            <span class="txt_celsius">온도<em>-11˚</em></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- E: 배송 상세정보 -->
+                    </div>
+                    <div class="delivery_map">
+                        <div id="delivery_map">
+                            <span class="ico_num current" style="top:30%;left:50%"></span>
+                            <span class="ico_num" style="top:30%;left:20%"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    $('.box_delivery-group').click(function () {
+        $('.delivery_detail-info').addClass('is-show');
+    })
+    $('.box_detail-list li').click(function(){
+        $('.box_detail-info').css('right','0');
+    })
+    function btn_close(){
+        $('.delivery_detail-info').removeClass('is-show');
+    }
+    function btn_closePop(){
+        $('.box_detail-info').css('right','-326px');
+    }
+
+    $(document).ready(function() {
+        console.log("ready");
+        var map = new Tmapv2.Map("delivery_map", {
+
+            width: "100%",
+            height: "100%",
+            zoomControl : false
+        });
+    });
+</script>
+</body>
+</html>

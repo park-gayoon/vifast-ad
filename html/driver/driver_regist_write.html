@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>TLK</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="layout_wrap">
+        <!-- S : gnb Menu -->
+        <script src="../include/gnb_menu.js"></script>
+        <!-- E : gnb Menu -->
+        <section class="layout_contents">
+            <!-- S : content header -->
+            <script src="../include/content_hd.js"></script>
+            <!-- E : content header -->
+            <div class="layout_contents-inner">
+                <div class="box_bread_crumb">
+                    <h2 class="tit_type1">기사등록조회</h2>
+                    <ul class="bread_crumb">
+                        <li>기사관리 &gt;</li>
+                        <li>기사등록조회</li>
+                    </ul>
+                </div>
+                <div class="tit_hd-area">
+                    <h2 class="tit_type2">회원정보</h2>
+                </div>
+                <!-- bbs -->
+                <div class="bbs_area">
+                    <!-- bbs -->
+                    <table class="bbs type1">
+                        <colgroup>
+                            <col style="width:11%">
+                            <col style="width:auto">
+                            <col style="width:12%">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>아이디</th>
+                            <td colspan="3">
+                                <input type="text" value="moonzzang92" class="big">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>이름</th>
+                            <td>
+                                <input type="text" value="홍길동" class="small">
+                            </td>
+                            <th>생년월일</th>
+                            <td>
+                                <input type="text" value="000101" class="small">
+                            </td>
+                        </tr>
+                       <tr>
+                            <th>성별</th>
+                            <td>
+                                <span class="radio">
+                                    <input type="radio" name="genderType" id="genderType1" checked>
+                                    <label for="genderType1">남자</label>
+                                </span>
+                                <span class="radio">
+                                    <input type="radio" name="genderType" id="genderType2">
+                                    <label for="genderType2">여자</label>
+                                </span>
+                            </td>
+                            <th>연락처</th>
+                            <td>
+                                <input type="tel" class="small" title="연락처 입력" maxlength="11">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>이메일</th>
+                            <td>
+                                <div class="form_box">
+                                    <input type="email" class="small">
+                                    <span class="txt_date-line">@</span>
+                                    <!-- S: 회원가입 직접 입력 선택시 활성화 -->
+                                    <div class="form_active">
+                                        <input type="text" class="small" disabled>
+                                    </div>
+                                    <!-- E: 회원가입 직접 입력 선택시 활성화 -->
+                                    <div class="sel">
+                                        <select name="">
+                                            <option value="">직접입력</option>
+                                            <option value="">naver.com</option>
+                                            <option value="">daum.net</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <th>수신동의</th>
+                            <td>
+                                <span class="txt_tbl-desc">PUSH허용</span>
+                                <span class="checkbox1">
+                                    <input type="checkbox" name="" id="agreeType1" checked>
+                                    <label for="agreeType1">동의</label>
+                                </span>
+                                <span class="txt_tbl-desc">야간수신동의</span>
+                                <span class="checkbox1">
+                                    <input type="checkbox" name="" id="agreeType2">
+                                    <label for="agreeType2">동의</label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>주소</th>
+                            <td colspan="3">
+                                <div class="form_box zip_code">
+                                    <input type="text" class="small" name="">
+                                    <button type="button" class="btn_basic2">우편번호</button>
+                                    <div class="zip_code-data">
+                                        <input type="text" name="" title="주소입력" class="big">
+                                        <input type="text" name="" placeholder="상세주소 입력" title="상세주소 입력" class="big">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //bbs -->
+                <div class="tit_hd-area">
+                    <h2 class="tit_type2">기사등록 정보</h2>
+                </div>
+                <!-- bbs -->
+                <div class="bbs_area">
+                    <!-- bbs -->
+                    <table class="bbs type1">
+                        <colgroup>
+                            <col style="width:11%">
+                            <col style="width:auto">
+                            <col style="width:12%">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>승인여부</th>
+                            <td>
+                                <span class="radio">
+                                    <input type="radio" name="admissionType" id="admissionType1" checked>
+                                    <label for="admissionType1">승인</label>
+                                </span>
+                                <span class="radio">
+                                    <input type="radio" name="admissionType" id="admissionType2">
+                                    <label for="admissionType2">미승인</label>
+                                </span>
+                                <span class="radio">
+                                    <input type="radio" name="admissionType" id="admissionType3">
+                                    <label for="admissionType3">보류</label>
+                                </span>
+                            </td>
+                            <th>프로필 사진</th>
+                            <td>
+                                <div class="form_box">
+                                    <div class="cols">
+                                        <!--input box-->
+                                        <input type="text" class="upload_text" readonly="readonly" placeholder="(80*90) 이미지를 등록해주세요.">
+                                        <!--button-->
+                                        <div class="upload-btn_wrap">
+                                            <button type="button" class="btn_basic2 fake_file">찾아보기</button>
+                                            <input type="file" class="input_file" title="파일찾기">
+                                        </div>
+                                    </div>
+                                    <div class="cols small">
+                                        <button type="button" class="btn_basic5 type1 small">업로드</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>소속</th>
+                            <td>
+                                <span class="sel big02">
+                                    <select>
+                                        <option selected="selected">써모랩코리아</option>
+                                        <option>써모랩코리아</option>
+                                        <option>써모랩코리아</option>
+                                    </select>
+                                </span>
+                            </td>
+                            <th>차종(번호)</th>
+                            <td>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">자가용</option>
+                                        <option></option>
+                                        <option></option>
+                                    </select>
+                                </span>
+                                <input type="text" class="small" value="56라 3565">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>기사구분</th>
+                            <td>
+                                 <span class="sel">
+                                    <select>
+                                        <option selected="selected">배송+회수</option>
+                                        <option>배송</option>
+                                        <option>회수</option>
+                                    </select>
+                                </span>
+                            </td>
+                            <th>선호시간</th>
+                            <td>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">09:00</option>
+                                        <option></option>
+                                        <option></option>
+                                    </select>
+                                </span>
+                                <i class="txt_date-line">~</i>
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">18:00</option>
+                                        <option></option>
+                                        <option></option>
+                                    </select>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>배송지역</th>
+                            <td>
+                                <div class="form_box">
+                                    <span class="sel cols">
+                                        <select>
+                                            <option selected="selected">서울시</option>
+                                            <option></option>
+                                            <option></option>
+                                        </select>
+                                    </span>
+                                    <span class="sel cols">
+                                        <select>
+                                            <option selected="selected">관악구</option>
+                                            <option></option>
+                                            <option></option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </td>
+                            <th>개인정보활용</th>
+                            <td>
+                                <span class="radio">
+                                    <input type="radio" name="personalType" id="personal01" checked>
+                                    <label for="personal01">동의</label>
+                                </span>
+                                <span class="radio">
+                                    <input type="radio" name="personalType" id="personal02">
+                                    <label for="personal02">미동의</label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>위치정보동의</th>
+                            <td>
+                                <span class="radio">
+                                    <input type="radio" name="locationType" id="location01" checked>
+                                    <label for="location01">동의</label>
+                                </span>
+                                <span class="radio">
+                                    <input type="radio" name="locationType" id="location02">
+                                    <label for="location02">미수료</label>
+                                </span>
+                            </td>
+                            <th>배송교육수료</th>
+                            <td>
+                                <span class="radio">
+                                    <input type="radio" name="educationType" id="education" checked>
+                                    <label for="education">수료</label>
+                                </span>
+                                <span class="radio">
+                                    <input type="radio" name="educationType" id="education02">
+                                    <label for="education02">미수료</label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>차량등록증</th>
+                            <td>
+                                <div class="form_box">
+                                    <div class="cols">
+                                        <!--input box-->
+                                        <input type="text" class="upload_text" readonly="readonly" placeholder="이미지를 등록해주세요.">
+                                        <!--button-->
+                                        <div class="upload-btn_wrap">
+                                            <button type="button" class="btn_basic2 fake_file">찾아보기</button>
+                                            <input type="file" class="input_file" title="파일찾기">
+                                        </div>
+                                    </div>
+                                    <div class="cols small">
+                                        <button type="button" class="btn_basic5 type1 small">업로드</button>
+                                    </div>
+                                </div>
+                            </td>
+                            <th>운전면허증</th>
+                            <td>
+                                <div class="form_box">
+                                    <div class="cols">
+                                        <!--input box-->
+                                        <input type="text" class="upload_text" readonly="readonly" placeholder="이미지를 등록해주세요.">
+                                        <!--button-->
+                                        <div class="upload-btn_wrap">
+                                            <button type="button" class="btn_basic2 fake_file">찾아보기</button>
+                                            <input type="file" class="input_file" title="파일찾기">
+                                        </div>
+                                    </div>
+                                    <div class="cols small">
+                                        <button type="button" class="btn_basic5 type1 small">업로드</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>통장사본</th>
+                            <td colspan="3">
+                                <div class="form_box">
+                                    <div class="cols">
+                                        <!--input box-->
+                                        <input type="text" class="upload_text" readonly="readonly" placeholder="이미지를 등록해주세요.">
+                                        <!--button-->
+                                        <div class="upload-btn_wrap">
+                                            <button type="button" class="btn_basic2 fake_file">찾아보기</button>
+                                            <input type="file" class="input_file" title="파일찾기">
+                                        </div>
+                                    </div>
+                                    <div class="cols small">
+                                        <button type="button" class="btn_basic5 type1 small">업로드</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>입금계좌</th>
+                            <td colspan="3">
+                                <div class="form_box type1">
+                                    <span class="sel big02 cols">
+                                        <select disabled>
+                                            <option selected="selected">기업은행</option>
+                                            <option>하나은행</option>
+                                            <option>우리은행</option>
+                                        </select>
+                                    </span>
+                                    <span class="cols">
+                                        <span class="txt_tbl-desc">예금주</span>
+                                        <input type="text" value="홍길동" class="small" disabled>
+                                    </span>
+                                    <span class="cols">
+                                        <span class="txt_tbl-desc">계좌번호</span>
+                                        <input type="text" value="000101" class="big" disabled>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //bbs -->
+                <div class="box_btn_tb">
+                    <span class="col"><button type="button" class="btn_basic3 big">취소하기</button></span>
+                    <span class="col"><button type="button" class="btn_basic1 big">저장하기</button></span>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+</body>
+</html>
