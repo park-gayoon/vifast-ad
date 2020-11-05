@@ -1,32 +1,17 @@
-﻿$(document).ready(function(){
+﻿/**
+ * Created by CREWMATE on 2020.11.05
+ * @author : Publishing Team.
+ * @dependency : jquery ver 1.12.4+
+ * @env : PC
+ */
+
+$(document).ready(function(){
     /* modal */
     $(".btn_modal").on("click", function(e) {
         $("#modals-container").toggle();
     });
     $(".btn_modal-close").on("click", function(e) {
         $("#modals-container").css('display','none');
-    });
-
-    //datepicker
-    $(".datepicker").datepicker({
-        showOn: "button",
-        dateFormat: "yy-mm-dd",
-        buttonText: "Select date",
-        changeYear: true,
-        changeMonth: true,
-        showOtherMonths: true,
-        monthNamesShort: [ "1","2","3","4","5","6","7","8","9","10","11","12" ],
-        dayNamesMin: [ "일","월","화","수","목","금","토" ],
-        beforeShow: function() {
-            var $datepickerDiv = $("#ui-datepicker-div");
-            $datepickerDiv.after('<div class="ui-widget-overlay ui-front" />');
-        },
-        onSelect: function() {
-            $('.ui-widget-overlay.ui-front').remove();
-        },
-        onClose: function() {
-            $('.ui-widget-overlay.ui-front').remove();
-        }
     });
 
     /* 햄버거버튼 클릭 시 */
@@ -115,5 +100,27 @@
         var contentid = $(this).attr('title');
         $('#' + contentid).addClass('block');
         $('.' + contentid).addClass('active');
+    });
+
+    //datepicker
+    $(".datepicker").datepicker({
+        showOn: "button",
+        dateFormat: "yy-mm-dd",
+        buttonText: "Select date",
+        changeYear: true,
+        changeMonth: true,
+        showOtherMonths: true,
+        monthNamesShort: [ "1","2","3","4","5","6","7","8","9","10","11","12" ],
+        dayNamesMin: [ "일","월","화","수","목","금","토" ],
+        beforeShow: function() {
+            const $datepickerDiv = $("#ui-datepicker-div");
+            $datepickerDiv.after('<div class="ui-widget-overlay ui-front" />');
+        },
+        onSelect: function() {
+            $('.ui-widget-overlay.ui-front').remove();
+        },
+        onClose: function() {
+            $('.ui-widget-overlay.ui-front').remove();
+        }
     });
 });

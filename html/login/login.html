@@ -6,6 +6,7 @@
     <title>Vinfast admin</title>
     <link rel="stylesheet" href="../../css/common.css">
     <link rel="stylesheet" href="../../css/contents.css">
+    <script src="../../js/jquery-1.12.4.min.js"></script>
 </head>
 <body>
 <div class="login_wrap">
@@ -19,14 +20,16 @@
                     <div class="input_box">
                         <label for="id">ID</label>
                         <input type="text" id="id" name="id" placeholder="ID" maxlength="8">
+                        <p class="txt_form-error">아이디를 다시 입력해주세요</p>
                     </div>
                     <div class="input_box">
                         <label for="pw">Password</label>
                         <input type="password" id="pw" name="pw" placeholder="Password" maxlength="8">
+                        <p class="txt_form-error">비밀번호를 다시 입력해주세요</p>
                     </div>
                     <button type="button" class="btn_login">LOG IN</button>
                 </div>
-                <div class="chk-id-area">
+                <div class="chk_id-area">
                     <span class="checkbox2">
                         <input type="checkbox" name="" id="chk-id">
                         <label for="chk-id">아이디저장</label>
@@ -41,8 +44,5 @@
         </div>
     </div>
 </div>
-
-<script src="../../js/jquery-1.12.4.min.js"></script>
-
 </body>
 </html>

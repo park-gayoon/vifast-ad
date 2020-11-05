@@ -4,14 +4,11 @@
 <meta charset="utf-8">
 <title>Vinfast admin CSS-Guide</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<script src="../../js/jquery-1.12.4.min.js"></script>
 <link rel="stylesheet" href="../../css/common.css">
+<script src="../../js/jquery-1.12.4.min.js"></script>
 <style>
 body{background:linear-gradient(to bottom, #ffdfe0, rgba(255, 255, 255, 0));
 	background:#ffeff0; /* Old browsers */}
-.btnTop {position:fixed;z-index:50;overflow:hidden;width:30px;height:30px;right:10px;bottom:10px}
-.btnTop a {display:block;width:30px;height:30px;background:url("../../btn_top.png") no-repeat 0 0;text-indent:-9999em;opacity:.7}
-.btnTop a:hover {opacity:1}
 .list_box_wrap {padding:0 20px 20px 20px;min-width:1000px}
 .tabs {min-width:1600px;background-color:#959aa1;position:fixed;top:0;right:0;left:0;z-index:49}
 .tabs .title {position:absolute;width:270px;top:0;left:0;height:50px;line-height:50px;color:#fff;text-align:center;background-color:#1a1f28;font-size:16px}
@@ -33,6 +30,33 @@ body{background:linear-gradient(to bottom, #ffdfe0, rgba(255, 255, 255, 0));
 .s_wrap ul li + li, .s_wrap ol li + li {margin-top:5px}
 .s_wrap p + ol {margin-top:10px}
 
+.btnTop {position:fixed;z-index:50;overflow:hidden;width:30px;height:30px;right:10px;bottom:20px;
+	animation-name:btnTop;
+	animation-duration:.6s;
+	animation-iteration-count:4;
+	animation-direction:alternate;
+	animation-fill-mode: forwards
+}
+.btnTop a {display:block;width:30px;height:30px;background:url("../../btn_top.png") no-repeat 0 0;text-indent:-9999em;opacity:.7}
+.btnTop a:hover {opacity:1}
+
+@-webkit-keyframes btnTop {
+	0% {
+		bottom:20px;
+	}
+	40% {
+		bottom:18px;
+	}
+	60% {
+		bottom:15px;
+	}
+	80% {
+		bottom:18px;
+	}
+	100% {
+		bottom:20px;
+	}
+}
 </style>
 <script type="text/javascript">
 $(document).ready(function() {

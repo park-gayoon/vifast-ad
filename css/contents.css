@@ -1,10 +1,6 @@
 @charset "utf-8";
 
 /* main dashBoard */
-.main_layout .box_bread_crumb {position:relative;padding-bottom:11px;overflow:hidden}
-.main_layout .box_bread_crumb .tit_type1 {margin-bottom:5px}
-.main_layout .box_bread_crumb .btn_update {margin-left:16px}
-.main_layout .box_bread_crumb .align-r {top:0;font-size:0}
 .main_layout [class*="box_item-"] ~ [class*="box_item-"] {margin-top:10px}
 [class*="box_item-"] {display:flex;width:100%;flex-wrap:wrap;justify-content:space-between}
 [class*="box_item-"] > [class*="item_"], .box_item-graph {box-shadow:18px 0px 80px 0 rgba(0,0,0,.05);border:solid 1px #f3f3f3;background-color:#fff}
@@ -37,25 +33,6 @@
 .box_item-graph .align-r button[class*="btn_basic"].xsmall {padding:0 8px;height:22px;line-height:22px;font-size:12px;border-radius:4px}
 .box_item-graph .align-r button ~ button {margin-left:10px}
 .box_graph {position:relative;height:calc(100% - 36px)}
-
-.box_status-cont {display:table;table-layout:fixed;padding:12px 4px;width:100%;height:66px}
-.box_status-cont .item_status-cont {display: table-cell;vertical-align:middle;text-align:center;font-size:0}
-.item_status-cont .bg_status {display:inline-block;width:46px;height:46px;border-radius:50%;text-align:center;vertical-align:top}
-.item_status-task .bg_status {color:#fff;font-size:14px;letter-spacing:-.35px;line-height:46px}
-.item_status-cont .bg_status.on {background-color:#7fb0ff}
-.item_status-cont .bg_status.off {background-color:#b8b8b8}
-.item_status-cont .txt_desc {display:inline-block;margin-left:8px;font-size:14px;letter-spacing:-.35px;line-height:20px;text-align:center}
-.item_status-cont .link {display:block;margin-top:2px}
-.item_status-enrollment .item_status-cont .txt_desc {text-align:left}
-.item_status-enrollment .bg_status {background-color:#64638b;font-size:0;color:transparent}
-.item_status-enrollment .bg_status .ico_com {position:relative;top:10px;width:30px;height:26px;background:url('../images/main/ico_main.png') no-repeat 0 0}
-.item_status-enrollment .bg_status.type2 .ico_com {top:11px;left:2px;background-position:-30px 0}
-.rank_num {display:inline-block;margin-left:4px;font-size:10px;line-height:16px;vertical-align:bottom;color:#777;letter-spacing:-.25px}
-.rank_num .ico_com {position:relative;top:1px;width:6px;height:8px}
-.ico_com.up {width:6px;height:8px;background-position:-38px -122px}
-.ico_com.down{background-position:-44px -122px}
-.item_status-collection .item_status-cont {font-size:14px;line-height:20px}
-.item_status-collection .box_status-cont .link {display:block;margin:4px auto 0;width:74px;height:22px;line-height:22px;border-radius:15px;background-color:#7fb0ff;color:#fff;text-align:center;font-size:14px;text-decoration:none}
 
 .list_status-receipt {text-align:center}
 .item_receipt {display:flex;justify-content:space-around;align-items:center;padding:9px 12px 10px;box-shadow:18px 0 80px 0 rgba(0,0,0,.04)}
@@ -147,8 +124,9 @@
 .input_box {display:block;overflow:hidden}
 .input_box label {display:block;margin-bottom:4px;text-align:left;font-size:18px;font-family:'notoSansM';line-height:24px}
 .login_wrap input[type='text'], .login_wrap input[type='password'] {position:relative;width:100%;height:36px;padding:6px 10px;font-size:14px;background:#fff;-webkit-appearance:none;border:none;border-radius:0}
+.txt_form-error {margin:4px 0 0;font-size:12px;text-align:left;color:#c4161c}
 
-.chk-id-area {margin-top:40px}
+.chk_id-area {margin-top:40px}
 .btn_login {padding:0 50px;width:350px;height:40px;border-radius:4px;background:#c4161c;box-shadow:0 3px 6px 0 rgba(196, 22, 28, 0.3);color:#fff;font-size:14px}
 .find_info {margin-top:36px;font-size:0}
 .find_info a {display:inline-block;position:relative;color:#999;line-height:20px;font-size:14px}
