@@ -248,15 +248,16 @@ input.big {width:270px}
 .ui-datepicker-calendar .ui-widget-header .ui-state-highlight {height:30px;color:#333;border:2px solid #c4161c;background-color:transparent}
 .ui-datepicker .ui-state-default.ui-state-hover,
 .ui-datepicker-calendar .ui-datepicker-week-end .ui-state-default.ui-state-active {color:#fff !important;background-color:#c4161c}
-.ui-datepicker .ui-state-highlight.ui-state-hover {color:#333 !important;border:2px solid #c4161c;background-color:transparent}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight,
+.ui-datepicker .ui-state-highlight.ui-state-hover {color:#333 !important;border:2px solid #c4161c !important;background-color:transparent !important}
 .ui-datepicker-calendar .ui-datepicker-week-end .ui-state-default {color:#ff5959}
 .ui-datepicker .ui-datepicker-header .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-header .ui-datepicker-next {display:none}
 .ui-datepicker .ui-datepicker-title {position:relative}
 .ui-datepicker .ui-datepicker-title:after,
 .ui-datepicker .ui-datepicker-title:before {content:'';position:absolute;top:50%;z-index:2;display:block;margin-top:-6px;width:12px;height:12px;background-color:transparent;background-position:-30px -60px}
-.ui-datepicker .ui-datepicker-title:before {left:106px}
-.ui-datepicker .ui-datepicker-title:after {right:56px}
+.ui-datepicker .ui-datepicker-title:before {left:94px}
+.ui-datepicker .ui-datepicker-title:after {right:16px}
 .ui-datepicker .ui-datepicker-title select {width:80px;height:32px;color:#666;background:transparent;border:1px solid #cbccce;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;-webkit-appearance:none;-moz-appearance:none;padding:0 24px 0 10px}
 .ui-datepicker .ui-datepicker-title select:disabled{background:#f5f5f5;border-color:#ddd;color:#666}
 
@@ -316,6 +317,18 @@ button.btn_basic2:disabled {color:#c5c5c5;background:#888}
 button.btn_basic3:disabled {color:#8b2626;background-color:#b35c5c}
 button.btn_basic4:disabled {color:#4f6d9a;background-color:#13376c}
 
+/* modal */
+.box_popup-panel {display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:10}
+.bg_popup {position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.8)}
+.box_popup {position:absolute;top:50%;left:50%;transform:translateX(-50%) translateY(-50%);min-width:600px;z-index:10;background-color:#fff}
+.box_popup-hd {position:relative;padding:18px 30px;height:70px;color:#111;font-size:24px}
+.box_popup-cont {height:100%}
+.btn_popup_close {position:absolute;right:22px;top:18px;width:32px;height:32px;font-size:0;color:transparent}
+.btn_popup_close:before, .btn_popup_close:after {content:'';display:block;position:absolute;background-color:#888}
+.btn_popup_close:before {left:8px;top:16px;width:17px;height:1px;transform:rotate(45deg)}
+.btn_popup_close:after {left:16px;top:8px;width:1px;height:17px;transform:rotate(45deg)}
+
+
 /* layout */
 .wrapper {height:100%;min-height: 100%;}
 .layout_wrap {display:-webkit-flex;display:-moz-flex;display:-ms-flexbox;display:-o-flex;display:flex;position:relative;min-height:100%}
@@ -350,7 +363,8 @@ button.btn_basic4:disabled {color:#4f6d9a;background-color:#13376c}
     -webkit-transform:rotate(180deg);
     -o-transform:rotate(180deg);
     -ms-transform:rotate(180deg);
-    transform:rotate(180deg);transition:all 0.2s ease-in-out 0s}
+    transform:rotate(180deg);transition:all 0.2s ease-in-out 0s
+}
 
 /* 햄버거버튼 */
 .btn_gnb-open {position:absolute;right:50%;bottom:20px;z-index:10;width:30px}
