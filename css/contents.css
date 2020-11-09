@@ -93,7 +93,7 @@
 .box_join-area .bbs.type1 .form_active input.big {min-width:auto;width:100%}
 
 /* contents */
-.layout_contents {position:relative;width:100%;overflow:hidden;background-color:#f8f9fa}
+.layout_contents {position:relative;width:100%;overflow:hidden;/*background-color:#f8f9fa*/}
 /*.layout_contents.type_a {min-width:1500px}
 .layout_contents.type_b {min-width:1600px}*/
 .layout_contents-hd {position:relative;margin-bottom:30px}

@@ -102,8 +102,32 @@
                         </div>
                     </article>
                 </div>
+
+                <style>
+                    .btn_bg-change {margin:0 20px 20px}
+                    .btn_bg-change button {padding:10px 20px;border:1px solid #111}
+                </style>
+                <div class="btn_bg-change">
+                    <button value="#f2f5ff" data-id="bgColor-a" onclick="colorChan(this.value)">색상 변경1</button>
+                    <button value="#1a1f28" data-id="bgColor-b" onclick="colorChan(this.value)">색상 변경2</button>
+                    <button value="#f8f9fa" data-id="bgColor-c" onclick="colorChan(this.value)">색상 변경3</button>
+                    <button value="#ecae01" data-id="bgColor-d" onclick="colorChan(this.value)">색상 변경4</button>
+                </div>
             </section>
         </div>
     </div>
+    <script type="text/javascript">
+        //$('.layout_contents').css('background-color','#f8f9fa');
+        $('.btn_bg-change button').click(function(){
+            $('.btn_bg-change button').removeClass('selected');
+            $(this).addClass('selected');
+            //console.log( $(this).data() );
+            $('html').attr( $(this).data() );
+            //$('html').css('background-color', color);
+        })
+        function colorChan(color){
+            document.body.style.backgroundColor=color;
+        }
+    </script>
 </body>
 </html>
