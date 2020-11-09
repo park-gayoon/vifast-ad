@@ -353,7 +353,7 @@ button.btn_basic4:disabled {color:#4f6d9a;background-color:#13376c}
 .sub_menu-list li {margin-top:10px}
 .sub_menu-list a {position:relative;display:block;padding-left:8px;color:#fff;line-height:20px}
 .sub_menu-list a:before {content:'';display:block;position:absolute;left:0;top:10px;width:2px;height:2px;background:#fff;border-radius:50%}
-.sub_menu-list a:hover, .sub_menu-list a.active {color:#a3a0fb}
+.sub_menu-list a:hover, .sub_menu-list a.active {color:#c4161c}
 .sub_menu-list a:hover:before, .sub_menu-list a.active:before {background:#a3a0fb}
 .txt_menu-name {position:relative;width:100%;font-size:14px;color:#fff;vertical-align:top}
 .txt_menu-name.no_sub-item:after {display:none}
@@ -366,8 +366,28 @@ button.btn_basic4:disabled {color:#4f6d9a;background-color:#13376c}
 }
 
 /* 햄버거버튼 */
-.btn_gnb-open {position:absolute;right:50%;bottom:20px;z-index:10;width:30px}
-.btn_gnb-open .line {display:block;margin:4px auto;width:30px;height:4px;background-color:#fff}
+.btn_gnb-open {position:relative;margin-top:40px;border-top:1px solid #3d4146;padding:30px;width:100%;text-align:left;font-size:18px;font-family:'notoSansT';line-height:24px;color:#fff}
+.ico_notice {display:block;position:absolute;top:30px;right:18px;width:30px;height:24px}
+.ico_notice:before, .ico_notice:after {content:'';display:block;height:10px;width:2px;position:absolute;left:14px;top:3px;background-color:#999;transform:rotate(-135deg)}
+.ico_notice:after {top:9px;transform:rotate(135deg)}
+.size-s .btn_gnb-open {position:absolute;top:50%;margin-top:-40px;font-size:0}
+.size-s .ico_notice {animation-name:btnClose;animation-duration:.4s;animation-iteration-count:9;animation-direction:alternate;animation-fill-mode:forwards}
+@-webkit-keyframes btnClose {
+    0% {
+        right:-3px;
+    }
+    40% {
+        right:-2px;
+    }
+    70% {
+        right:-1px;
+    }
+    100% {
+        right:0;
+    }
+}
+.size-s .ico_notice:before, .size-s .ico_notice:after {left:-10px;transform:rotate(-45deg);background-color:#c4161c}
+.size-s .ico_notice:after {transform:rotate(45deg)}
 
 .size-s .gnb_contents .logo {padding:24px 10px}
 .size-s .gnb_contents .logo .ico-logo {width:50px;height:50px;background:url("../images/common/logo_s.png") no-repeat 0 0}

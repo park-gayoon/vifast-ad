@@ -55,77 +55,55 @@
                             </li>
                         </ul>
                     </div>
-                    <button type="button" class="btn_gnb-open">
-                        <span class="line"></span>
-                        <span class="line"></span>
-                        <span class="line"></span>
-                    </button>
+                    <button type="button" class="btn_gnb-open">Collapse Panel<i class="ico_notice"></i></button>
                 </div>
             </section>
             <!-- E :gnb Menu -->
             <section class="layout_contents">
                 <div class="layout_contents-inner">
+                    <div class="layout_contents-hd">
+                        <h2>Data Distribution</h2>
+                        <div class="box_user-info">
+                            <i class="img_profile" style="background:#ddd"></i>
+                            <span class="txt_user">administrator</span>
+                            <button type="button" class="btn_user-login">Log out</button>
+                        </div>
+                    </div>
                     <article class="box_item-progress">
-                        <div class="item_progress">
-
+                        <div class="item_progress type1">
+                            <p class="txt_item-info">Duration</p>
+                            <p class="txt_data">4h 36m</p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:38%"></div>
+                            </div>
                         </div>
-                        <div class="item_progress">
-
+                        <div class="item_progress type2">
+                            <p class="txt_item-info">Mileage</p>
+                            <p class="txt_data">954,056<span class="sub_up">(+10.2%)</span></p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:77%"></div>
+                            </div>
                         </div>
-                        <div class="item_progress">
-
+                        <div class="item_progress type3">
+                            <p class="txt_item-info">Mileage</p>
+                            <p class="txt_data">15,650,032<span class="sub_down">(-3.2%)</span></p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:67%"></div>
+                            </div>
                         </div>
                     </article>
 
                     <article class="box_item-graph">
                         <div class="box_section-hd">
-                            <p class="tit_item-hd">주문/출고 시간대별 관제현황</p>
+                            <p class="tit_item-hd">section</p>
                         </div>
                         <div class="box_graph" style="padding:26px 28px"> <!-- style 디자인시안용 / 그래프 대입 후 삭제 -->
                             Graph Area
                         </div>
                     </article>
-
-                    <article class="box_item-bottom">
-                        <div class="item_status-receipt">
-                            <div class="box_section-hd">
-                                <p class="tit_item-hd">사고접수현황</p>
-                            </div>
-                            <div></div>
-                        </div>
-                        <div class="item_status-pack">
-                            <div class="box_section-hd">
-                                <p class="tit_item-hd">패키징 이상 사유</p>
-                            </div>
-                            <div class="box_line-graph" style="padding:2px 20px"> <!-- style 디자인시안용 / 그래프 대입 후 삭제 -->
-                                막대그래프 영역
-                            </div>
-                        </div>
-                        <div class="item_status-complete">
-                            <div class="box_section-hd">
-                                <p class="tit_item-hd">배송완료 온도</p>
-                            </div>
-                            <div class="box_circle-graph" style="padding:26px 18px"> <!-- style 디자인시안용 / 그래프 대입 후 삭제 -->
-                                다이어그램 그래프 영역
-                            </div>
-                        </div>
-                    </article>
                 </div>
-
-                <!-- S: notice -->
-                <div class="box_notice">
-                    <div class="box_notice-container"></div>
-                    <button type="button" class="btn_notice"><i class="ico_notice"></i>알림함 버튼</button>
-                </div>
-               <!-- E: notice -->
             </section>
         </div>
     </div>
-
-    <script>
-        $('.btn_notice').click(function(){
-            $(this).closest('.box_notice').toggleClass('is-show');
-        })
-    </script>
 </body>
 </html>
