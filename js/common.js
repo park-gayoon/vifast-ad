@@ -1,5 +1,5 @@
 ﻿/**
- * Created by CREWMATE on 2020.11.05
+ * Created by Gayoon on 2020.11.11
  * @author : Publishing Team.
  * @dependency : jquery ver 1.12.4+
  * @env : PC
@@ -7,12 +7,18 @@
 
 $(document).ready(function(){
     /* modal */
-    $(".btn_modal").on("click", function(e) {
-        $("#modals-container").toggle();
+    var $panel = $(".box_popup-panel");
+    $(".btn_popup_open").on("click", function(e) {
+        $panel.fadeIn(350);
+        alert('tgus');
     });
-    $(".btn_modal-close").on("click", function(e) {
-        $("#modals-container").css('display','none');
-    });
+    $(".btn_popup_close").on("click", popupClose);
+
+    $panel.find(".bg_popup").on("click", popupClose);
+    function popupClose(e) {
+        $panel.fadeOut(250);
+        e.preventDefault();
+    }
 
     /* 햄버거버튼 클릭 시 */
     $('.btn_gnb-open').click(function(){
