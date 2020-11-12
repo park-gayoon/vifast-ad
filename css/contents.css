@@ -52,9 +52,9 @@
 .box_graph {position:relative;height:calc(100% - 36px)}
 
 /* login */
-.login_wrap {display:table;table-layout:fixed;width:100%;height:100%;background:url('../images/contents/bg_login.png') no-repeat center center}
+.login_wrap {display:table;table-layout:fixed;width:100%;height:100%;background:url('/images/contents/bg_login.png') no-repeat center center}
 .login_content {display:table-cell;padding:70px 0;min-height:100%;height:100%;vertical-align:middle}
-.login_contains {position:relative;margin:0 auto;width:1200px;height:800px;background:url('../images/contents/login_visual.png') no-repeat left top}
+.login_contains {position:relative;margin:0 auto;width:1200px;height:800px;background:url('/images/contents/login_visual.png') no-repeat left top}
 .login_contains h1 {display:inline-block;margin:40px 0 0 32px}
 .login_inner {float:right;height:100%;padding:0 122px;width:600px;background-color:#fff;text-align:center}
 .login_inner h2 {margin:230px 0 50px;font-size:28px;font-family:'notoSansM';line-height:38px}
@@ -113,7 +113,7 @@
 .bbs_page .btn_page ~ .btn_page {margin-left:8px}
 .bbs_page .btn_page:hover, .bbs_page .btn_page.active {background-color:#3b3b53;color:#fff}
 .bbs_page .btn_page.prev:hover, .bbs_page .btn_page.next:hover {background-color:#fff}
-.bbs_page .btn_page.prev:after, .bbs_page .btn_page.next:after {content:"";display:block;position:absolute;left:50%;top:50%;margin:-8px 0 0 -5px;width:10px;height:16px;background-image:url('../images/common/ico_com.png');background-repeat:no-repeat}
+.bbs_page .btn_page.prev:after, .bbs_page .btn_page.next:after {content:"";display:block;position:absolute;left:50%;top:50%;margin:-8px 0 0 -5px;width:10px;height:16px;background-image:url('/images/common/ico_com.png');background-repeat:no-repeat}
 .bbs_page .btn_page.prev:after {background-position:-78px -60px}
 .bbs_page .btn_page.next:after {background-position:-88px -60px}
 .bbs_page .btn_page.prev, .bbs_page .btn_page.next {font-size:0;color:transparent}
@@ -135,7 +135,7 @@
 
 /* toggle btn */
 .box_reason-area {position:relative;width:18px;height:18px;margin:auto}
-.btn_reason {width:18px;height:18px;font-size:0;color:transparent;background:url('../images/common/ico_com.png') no-repeat -106px -60px;vertical-align:top}
+.btn_reason {width:18px;height:18px;font-size:0;color:transparent;background:url('/images/common/ico_com.png') no-repeat -106px -60px;vertical-align:top}
 .box_reason-area:hover .box_reason-data {visibility:visible;opacity:1;transform:translateY(0)}
 .box_reason-data {z-index:3;position:absolute;top:0;right:50%;width:100%;min-width:500px;visibility:hidden;opacity:0;transition:all .25s ease-in;transform:translateY(-14px);transition:all .25s ease-in}
 .box_reason-inner {position:absolute;right:-22px;top:22px;padding:6px 18px;min-width:100px;max-width:500px;max-height:214px;overflow-y:auto;background-color:#ffe69f;border:1px solid #ffdd7d;border-radius:4px;font-size:12px;text-align:left;word-break:break-all;text-align:justify}

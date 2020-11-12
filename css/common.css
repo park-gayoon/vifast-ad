@@ -35,7 +35,7 @@ header, footer, section, article, aside, nav, address { display:block; margin:0;
 /* ico sprite */
 .ico_com {font-size:0;color:transparent;line-height:0}
 .ico_com, [type='checkbox']:checked + label:after,
-.sel:after, .checkbox2 label:after, .ui-datepicker .ui-datepicker-title:after, .ui-datepicker .ui-datepicker-title:before, .datepicker_box .ui-datepicker-trigger:after {content:"";display:inline-block;background:url('../images/common/ico_com.png') no-repeat}
+.sel:after, .checkbox2 label:after, .ui-datepicker .ui-datepicker-title:after, .ui-datepicker .ui-datepicker-title:before, .datepicker_box .ui-datepicker-trigger:after {content:"";display:inline-block;background:url('/images/common/ico_com.png') no-repeat}
 
 /* font size */
 .tit_type1 {font-size:24px;font-family:'notoSansM';line-height:34px}
@@ -243,7 +243,7 @@ button.btn_basic4:disabled {color:#4f6d9a;background-color:#13376c}
 .gnb_menu {position:relative;padding-bottom:90px;width:280px;height:100%;background-color:#1a1f28;-webkit-transition:width .25s, -webkit-transform .25s;transition:width .25s, transform .25s}
 .size-s .gnb_contents .gnb_menu {width:80px}
 .logo {padding:60px 0 52px;color:transparent;font-size:0;}
-.logo .ico-logo {display:block;margin:auto;width:152px;height:44px;background:url("../images/common/logo.png") no-repeat 0 0}
+.logo .ico-logo {display:block;margin:auto;width:152px;height:44px;background:url("/images/common/logo.png") no-repeat 0 0}
 .list_item {position:relative}
 .list_item ~ .list_item {margin-top:10px}
 .btn_gnb-menu {display:block;padding:18px 30px;width:100%;text-align:left;font-size:0}
@@ -284,7 +284,7 @@ button.btn_basic4:disabled {color:#4f6d9a;background-color:#13376c}
 .size-s .ico_arrow:after {transform:rotate(45deg)}
 
 .size-s .gnb_contents .logo {padding:24px 10px}
-.size-s .gnb_contents .logo .ico-logo {width:50px;height:50px;background:url("../images/common/logo_s.png") no-repeat 0 0}
+.size-s .gnb_contents .logo .ico-logo {width:50px;height:50px;background:url("/images/common/logo_s.png") no-repeat 0 0}
 .size-s .gnb_inner {display:none}
 
 .size-b .gnb_contents .sub_menu-list {padding:30px;background:#272b31}
