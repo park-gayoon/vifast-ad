@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vinfast admin</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery.heapbox-0.9.3.min.js"></script>
+    <script src="../../js/jquery.scrollbar.js"></script>
+    <script src="../../js/common.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="layout_wrap size-b">
+            <!-- S :gnb Menu -->
+            <section class="gnb_contents">
+                <div class="gnb_menu">
+                    <h1 class="logo"><i class="ico-logo"></i>VINFAST</h1>
+                    <div class="gnb_inner">
+                        <ul class="gnb_menu-list">
+                            <li class="list_item">
+                                <button type="button" class="btn_gnb-menu">
+                                    <span class="txt_menu-name no_sub-item">Videos</span>
+                                </button>
+                            </li>
+                            <li class="list_item">
+                                <button type="button" class="btn_gnb-menu">
+                                    <span class="txt_menu-name">Statistics</span>
+                                </button>
+                                <ul class="sub_menu-list">
+                                    <li><a href="">User</a></li>
+                                    <li><a href="">Code</a></li>
+                                </ul>
+                            </li>
+                            <li class="list_item active"> <!-- D: 활성화된 현재페이지 li 태그에 class [active] add -->
+                                <button type="button" class="btn_gnb-menu on">  <!-- D: 활성화된 현재페이지 class [on] add -->
+                                    <span class="txt_menu-name">Data Distribution</span>
+                                </button>
+                                <ul class="sub_menu-list" style="display:block"> <!-- D: 화면 UI상 임의로 style 넣었습니다. 개발 시 삭제 -->
+                                    <li><a href="" class="active">sub01</a></li> <!-- D: 활성화 시 a 태그에 class [active] add -->
+                                    <li><a href="">sub02</a></li>
+                                </ul>
+                            </li>
+                            <li class="list_item">
+                                <button type="button" class="btn_gnb-menu">
+                                    <span class="txt_menu-name">Management</span>
+                                </button>
+                                <ul class="sub_menu-list">
+                                    <li><a href="">sub01</a></li>
+                                    <li><a href="">sub02</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn_gnb-open">Collapse Panel<i class="ico_arrow"></i></button>
+                </div>
+            </section>
+            <!-- E :gnb Menu -->
+            <section class="layout_contents">
+                <div class="layout_contents-inner">
+                    <div class="layout_contents-hd">
+                        <h2 class="tit_type1">Data Distribution</h2>
+                        <div class="box_user-info">
+                            <i class="img_profile" style="background:#ddd"></i>
+                            <span class="txt_user">administrator</span>
+                            <button type="button" class="btn_user-login">Log out</button>
+                        </div>
+                    </div>
+                    <article class="box_item-progress">
+                        <div class="item_progress type1">
+                            <p class="txt_item-info">Duration</p>
+                            <p class="txt_data">4h 36m</p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:38%"></div>
+                            </div>
+                            <div class="box_toggle-group">
+                                <button type="button" class="btn_toggle">메뉴보기</button>
+                                <ul class="box_toggle-cont">
+                                    <li class="is-active"><a>Vietnam Hanoi</a></li> <!-- 선택 시 class [is-active] add -->
+                                    <li><a>Vietnam Hanoi</a></li>
+                                    <li><a>Vietnam Hanoi</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item_progress type2">
+                            <p class="txt_item-info">Mileage</p>
+                            <p class="txt_data">954,056<span class="sub_up">(+10.2%)</span></p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:77%"></div>
+                            </div>
+                        </div>
+                        <div class="item_progress type3">
+                            <p class="txt_item-info">Mileage</p>
+                            <p class="txt_data">15,650,032<span class="sub_down">(-3.2%)</span></p>
+                            <div class="progress">
+                                <div class="progress-bar" style="width:67%"></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="box_item-graph">
+                        <div class="box_section-hd">
+                            <p class="tit_item-hd">section</p>
+                        </div>
+                        <div class="box_graph" style="padding:26px 28px"> <!-- style 디자인시안용 / 그래프 대입 후 삭제 -->
+                            Graph Area
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

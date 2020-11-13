@@ -4,15 +4,18 @@
 <meta charset="utf-8">
 <title>Vinfast admin UI-Guide</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="stylesheet" href="/css/common.css">
-<link rel="stylesheet" href="/css/contents.css">
-<link rel="stylesheet" href="/css/jquery-ui.css">
-<script src="/js/jquery-1.12.4.min.js"></script>
-<script src="/js/jquery-ui.js"></script>
-<script src="/js/common.js"></script>
+<link rel="stylesheet" href="../../css/common.css">
+<link rel="stylesheet" href="../../css/contents.css">
+<link rel="stylesheet" href="../../css/jquery-ui.css">
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/jquery-ui.js"></script>
+<script src="../../js/jquery.heapbox-0.9.3.min.js"></script>
+<script src="../../js/jquery.scrollbar.js"></script>
+<script src="../../js/common.js"></script>
 <style>
+html,body {min-width:100%}
 .list_box_wrap {padding:0}
-.tabs {position:fixed;top:0;right:0;left:0;z-index:10;height:50px;background:#3d4146}
+.tabs {position:fixed;top:0;right:0;left:0;z-index:11;height:50px;background:#3d4146}
 .tabs .logo {display:none;height:50px;line-height:50px;color:#fff;font-weight:bold;text-align:center;background-color:#4a525f;font-size:16px}
 .tabs ul li {float:left}
 .tabs ul li a {position:relative;z-index:2;display:block;text-align:center;height:35px;width:35px;text-align:center;line-height:35px;font-weight:bold;color:#333;font-size:13px;position:relative;font-family:'verdana';border-radius:50%;background-color:#ffdfe0}
@@ -26,12 +29,18 @@
 .sbt {font-size:1.2rem;margin:10px 0 5px}
 .box_wrap {border-top:1px solid #ddd;border-bottom:1px solid #ddd;padding:0 10px 0 10px;background-color:#fff}
 .type_view {padding-bottom:10px}
-.type_view .sbt {padding:7px 10px;margin:0 -10px 10px -10px;color:#333;background-color:#fff;font-size:12px}
+.type_view .sbt {position:relative;padding:7px 10px 7px 20px;margin:0 -10px 10px -10px;color:#333;background-color:#fff;font-size:13px}
+.type_view .sbt:before {content:'';display:block;position:absolute;left:13px;top:16px;width:2px;height:2px;background:#111;border-radius:50%}
 .type_view .sbt ~ .sbt {margin-top:10px}
 .type_view.btn_view button {margin-right:20px}
 .type_view > .checkbox, .type_view > .radio {margin-right:15px}
 .tab_nav {position:fixed;top:5px;right:20px}
-.form_box ~ .form_box {margin-top:10px}
+
+[class*="point-color"] {position:relative;display:inline-block;padding-top:50px}
+[class*="point-color"]:before {content:'';display:block;position:absolute;left:6px;top:0;width:40px;height:40px}
+[class*="point-color"] ~ [class*="point-color"] {margin-left:20px}
+.point-color01:before {background-color:#c4161c}
+.point-color02:before {background-color:#1a1f28}
 
 .btnTop {position:fixed;z-index:9;overflow:hidden;width:30px;height:30px;right:10px;bottom:20px;
 	animation-name:btnTop;
@@ -40,7 +49,7 @@
 	animation-direction:alternate;
 	animation-fill-mode: forwards
 }
-.btnTop a {display:block;width:30px;height:30px;background:url("../../btn_top.png") no-repeat 0 0;text-indent:-9999em;opacity:.7}
+.btnTop a {display:block;width:30px;height:30px;line-height:30px;text-align:center;background:#c4161c;color:#fff;border-radius:50%;opacity:.7}
 .btnTop a:hover {opacity:1}
 
 @-webkit-keyframes btnTop {
@@ -62,7 +71,7 @@
 }
 
 /*demo*/
-.demo_contents {margin-bottom:10px}
+.demo_contents {margin-bottom:10px;padding:0 10px}
 .type_view pre {display:none;margin:0;padding:0;overflow:auto;font-size:13px;font-family:'tahoma', 'sans-serif';background-color:#333;color:#f2f2f2}
 .type_view code .code-indent {display:inline-block;width:30px;font-size:0}
 .btn-expand {display:block;width:100%;border-top:1px solid #eaeefb;height:34px;box-sizing:border-box;background-color:#e9e9e9;text-align:center;font-size:12px;color:#c4161c;cursor:pointer;position:relative}
@@ -73,7 +82,7 @@
 .btn-expand.on:before {content:'▲'}
 .btn-expand.on span {font-size:12px;opacity:1;margin-right:0}
 </style>
-<link rel="stylesheet" href="/_lib/vs2015.min.css">
+<link rel="stylesheet" href="../../_lib/vs2015.min.css">
 <script src="../../_lib/highlight.min.js"></script>
 
 <script type="text/javascript">
@@ -168,8 +177,8 @@ function redrawDotNav(){
 	var section1Top = 0;
 	// The top of each section is offset by half the distance to the previous section.
 	var section2Top = $('#group02').offset().top - (($('#group03').offset().top - $('#group02').offset().top) / 20);
-	var section3Top = $('#group03').offset().top - (($('#group04').offset().top - $('#group03').offset().top) / 2);
-	var section4Top = $('#group04').offset().top - (($('#group05').offset().top - $('#group04').offset().top) / 2);
+	var section3Top = $('#group03').offset().top - (($('#group04').offset().top - $('#group03').offset().top) / 8);
+	var section4Top = $('#group04').offset().top - (($('#group05').offset().top - $('#group04').offset().top) / 8);
 	var section5Top = $('#group05').offset().top - (($('#group06').offset().top -$('#group05').offset().top)/8);
 	var section6Top = $('#group06').offset().top - (($(document).height() + $('#group06').offset().top) / 8);
 	$('.tab_nav a').removeClass('active');
@@ -186,7 +195,6 @@ function redrawDotNav(){
 	} else if ($(document).scrollTop() < section6Top){
 		$('.tab_nav a.p06').addClass('active');
 	}
-	console.log($(document).scrollTop() +'//////'+ section4Top +'/'+ section5Top +'/'+ section6Top)
 }
 </script>
 </head>
@@ -222,11 +230,6 @@ function redrawDotNav(){
 		<div class="box_wrap">
 			<p class="h2">Input</p>
 			<div class="type_view">
-				<p class="sbt">small type</p>
-				<xmp class="code">
-					<input type="text" class="small">
-				</xmp>
-
 				<p class="sbt">basic type</p>
 				<xmp class="code">
 					<input type="text">
@@ -242,9 +245,48 @@ function redrawDotNav(){
 					<input type="text" value="입력값" disabled>
 				</xmp>
 
-				<p class="sbt">big type</p>
+
+				<p class="sbt">cending type</p>
 				<xmp class="code">
-					<input type="text" value="" class="big" placeholder="입력값">
+					<div class="box_cendign-area">
+						<input type="text">
+						<div class="btn_cending-group">
+							<button type="button" class="btn_up">up</button>
+							<button type="button" class="btn_down">down</button>
+						</div>
+					</div>
+				</xmp>
+
+				<p class="sbt">Dark type</p>
+				<xmp class="code">
+					<input type="text" class="type2">
+				</xmp>
+			</div>
+			<p class="h2">datepicker</p>
+			<div class="type_view">
+				<p class="sbt">basic</p>
+				<span class="datepicker_box">
+					<input type="text" value="" placeholder="날짜선택" class="datepicker" disabled>
+				</span>
+
+				<p class="sbt">Dark type</p>
+				<span class="datepicker_box type2">
+					<input type="text" value="" placeholder="날짜선택" class="datepicker" disabled>
+				</span>
+			</div>
+			<p class="h2">File</p>
+			<div class="type_view">
+				<p class="sbt">basic</p>
+				<xmp class="code">
+					<div class="form_box">
+						<!--input box-->
+						<input type="text" class="upload_text big" readonly="readonly" placeholder="이미지를 등록해주세요.">
+						<!--button-->
+						<div class="upload-btn_wrap">
+							<button type="button" class="fake_file">찾아보기</button>
+							<input type="file" class="input_file" title="파일찾기">
+						</div>
+					</div>
 				</xmp>
 			</div>
 
@@ -275,12 +317,32 @@ function redrawDotNav(){
 					</select>
 				</span>
 				</xmp>
-			</div>
-			<p class="h2">datepicker</p>
-			<div class="type_view">
-				<span class="datepicker_box">
-					<input type="text" id="" name="" value="" placeholder="날짜선택" class="datepicker" disabled>
+
+				<p class="sbt">dark type</p>
+				<xmp class="code">
+				<span class="sel type2">
+					<select>
+						<option selected="selected">Slower</option>
+						<option>Slow</option>
+						<option >Medium</option>
+						<option disabled>Fast</option>
+						<option disabled>Faster</option>
+					</select>
 				</span>
+				</xmp>
+
+				<p class="sbt">dark disabled type</p>
+				<xmp class="code">
+				<span class="sel type2">
+					<select disabled>
+						<option selected="selected">Slower</option>
+						<option>Slow</option>
+						<option >Medium</option>
+						<option disabled>Fast</option>
+						<option disabled>Faster</option>
+					</select>
+				</span>
+				</xmp>
 			</div>
 			<p class="h2">Radio</p>
 			<div class="type_view">
@@ -341,53 +403,6 @@ function redrawDotNav(){
 					<label for="termType40">선택</label>
 				</span>
 				</xmp>
-
-				<p class="sbt">type1</p>
-				<xmp class="code">
-				<span class="checkbox2">
-					<input type="checkbox" name="" id="id" checked>
-					<label for="id">선택</label>
-				</span>
-				<span class="checkbox2">
-					<input type="checkbox" name="" id="id2">
-					<label for="id2">미선택</label>
-				</span>
-				</xmp>
-			</div>
-			<p class="h2">File</p>
-			<div class="type_view">
-				<p class="sbt">basic</p>
-				<xmp class="code">
-					<div class="form_box">
-						<!--input box-->
-						<input type="text" class="upload_text big" readonly="readonly" placeholder="이미지를 등록해주세요.">
-						<!--button-->
-						<div class="upload-btn_wrap">
-							<button type="button" class="btn_basic2 fake_file">찾아보기</button>
-							<input type="file" class="input_file" title="파일찾기">
-						</div>
-					</div>
-				</xmp>
-				<!--<div class="form_box">
-						<div class="file_sh placeholder_wrap">
-							<span class="file_name"></span>
-							<input type="file" name="" class="real_file" id="file01">
-							<label for="file01">이미지를 등록해 주세요.</label>
-						</div>
-						<div class="form_btn">
-							<button type="button" class="btn_basic2 fake_file">찾아보기</button>
-							<button type="button" class="btn_basic5 type1 small">업로드</button>
-						</div>
-					</div>-->
-
-				<script>
-					$(function(){
-						$('.input_file').change(function(){
-							var i = $(this).val();
-							$('.upload_text').val(i);
-						});
-					});
-				</script>
 			</div>
 		</div>
 	</div>
@@ -400,35 +415,29 @@ function redrawDotNav(){
 				<p class="sbt">basic</p>
 				<xmp class="code">
 					<div class="bbs_page">
+						<button type="button" class="btn_page first">맨처음으로</button>
 						<button type="button" class="btn_page prev">이전</button>
 						<button type="button" class="btn_page active">1</button>
 						<button type="button" class="btn_page">2</button>
 						<button type="button" class="btn_page">3</button>
 						<button type="button" class="btn_page">4</button>
 						<button type="button" class="btn_page">5</button>
-						<button type="button" class="btn_page">6</button>
-						<button type="button" class="btn_page">7</button>
-						<button type="button" class="btn_page">8</button>
-						<button type="button" class="btn_page">9</button>
-						<button type="button" class="btn_page">10</button>
 						<button type="button" class="btn_page next">다음</button>
+						<button type="button" class="btn_page last">맨뒤로</button>
 					</div>
 				</xmp>
 				<p class="sbt">disabled</p>
 				<xmp class="code">
 					<div class="bbs_page">
+						<button type="button" class="btn_page first" disabled>맨처음으로</button>
 						<button type="button" class="btn_page prev" disabled>이전</button>
 						<button type="button" class="btn_page active">1</button>
 						<button type="button" class="btn_page">2</button>
 						<button type="button" class="btn_page">3</button>
 						<button type="button" class="btn_page">4</button>
 						<button type="button" class="btn_page">5</button>
-						<button type="button" class="btn_page">6</button>
-						<button type="button" class="btn_page">7</button>
-						<button type="button" class="btn_page">8</button>
-						<button type="button" class="btn_page">9</button>
-						<button type="button" class="btn_page">10</button>
 						<button type="button" class="btn_page next" disabled>다음</button>
+						<button type="button" class="btn_page last" disabled>맨뒤로</button>
 					</div>
 				</xmp>
 			</div>
@@ -442,47 +451,31 @@ function redrawDotNav(){
 			<div class="type_view">
 				<p class="sbt">small size</p>
 				<xmp class="code">
-					<button type="button" class="btn_basic1 small">btn_basic1</button>
-					<button type="button" class="btn_basic2 small">btn_basic2</button>
-					<button type="button" class="btn_basic3 small">btn_basic3</button>
-					<button type="button" class="btn_basic4 small">btn_basic4</button>
+					<button type="button" class="btn_basic small">Del</button>
 				</xmp>
 			</div>
 			<div class="type_view">
 				<p class="sbt">default size</p>
 				<xmp class="code">
-					<button type="button" class="btn_basic1">btn_basic1</button>
-					<button type="button" class="btn_basic2">btn_basic2</button>
-					<button type="button" class="btn_basic3">btn_basic3</button>
-					<button type="button" class="btn_basic4">btn_basic4</button>
+					<button type="button" class="btn_basic">Insert</button>
+					<button type="button" class="btn_basic">Update</button>
 				</xmp>
 			</div>
 			<div class="type_view">
-				<p class="sbt">L size</p>
-				<xmp class="code">
-					<button type="button" class="btn_basic1 big">btn_basic1</button>
-					<button type="button" class="btn_basic2 big">btn_basic2</button>
-					<button type="button" class="btn_basic3 big">btn_basic3</button>
-					<button type="button" class="btn_basic4 big">btn_basic4</button>
-				</xmp>
-			</div>
-			<!--<div class="type_view">
 				<p class="sbt">disabled</p>
 				<xmp class="code">
-					<button type="button" class="btn_basic1" disabled>btn_basic1</button>
-					<button type="button" class="btn_basic2" disabled>btn_basic2</button>
-					<button type="button" class="btn_basic3" disabled>btn_basic3</button>
-					<button type="button" class="btn_basic4" disabled>btn_basic4</button>
+					<button type="button" class="btn_basic" disabled>Insert</button>
 				</xmp>
-			</div>-->
+			</div>
 
 			<p class="h2">Array Button</p>
 			<div class="type_view">
 				<p class="sbt">table-cell</p>
 				<xmp class="code">
-					<div class="btn_tb">
-						<span class="col"><button type="button" class="btn_basic3 big">취소하기</button></span>
-						<span class="col"><button type="button" class="btn_basic1 big">등록하기</button></span>
+					<div class="btn_tb-group">
+						<span class="col"><button type="button" class="btn_basic">Insert</button></span>
+						<span class="col"><button type="button" class="btn_basic">Update</button></span>
+						<span class="col"><button type="button" class="btn_basic small">Del</button></span>
 					</div>
 				</xmp>
 			</div>
@@ -495,83 +488,77 @@ function redrawDotNav(){
 			<p class="h2">List</p>
 			<div class="type_view">
 				<xmp class="code">
-					<table class="bbs">
-						<colgroup>
-							<col style="width:60px">
-							<col style="width:9%">
-							<col style="width:9%">
-							<col style="width:8%">
-							<col style="width:auto">
-							<col style="width:8%">
-							<col style="width:auto">
-							<col style="width:9%">
-							<col style="width:7%">
-							<col style="width:8%">
-							<col style="width:9%">
-						</colgroup>
-						<thead>
-						<tr>
-							<th>
-								<span class="checkbox1 no_label">
-									<input type="checkbox" name="" id="all">
-									<label for="all">전체선택</label>
-								</span>
-							</th>
-							<th>구분</th>
-							<th>패키징번호</th>
-							<th>종류</th>
-							<th>Mac Add</th>
-							<th>상태</th>
-							<th>등록일자</th>
-							<th>담당자</th>
-							<th>등록기기</th>
-							<th>사용여부</th>
-							<th>총 사용회수</th>
-						</tr>
-						</thead>
-						<tbody>
-						<tr>
-							<td>
-								<span class="checkbox1 no_label">
-									<input type="checkbox" name="" id="chk01" checked="">
-									<label for="chk01">전체선택</label>
-								</span>
-							</td>
-							<td>패키징</td>
-							<td class="link"><a href="" title="패키징번호페이지 이동">010158</a></td>
-							<td>1호</td>
-							<td>DKDHWEIYYRN1</td>
-							<td>정상</td>
-							<td>2020-08-13 19:00:24</td>
-							<td>홍길동</td>
-							<td>APP</td>
-							<td>입고</td>
-							<td>82</td>
-						</tr>
-						<tr>
-							<td>
-								<span class="checkbox1 no_label">
-									<input type="checkbox" name="" id="chk02">
-									<label for="chk02">전체선택</label>
-								</span>
-							</td>
-							<td>패키징</td>
-							<td class="link"><a href="" title="패키징번호페이지 이동">010158</a></td>
-							<td>1호</td>
-							<td>DKDHWEIYYRN1</td>
-							<td>정상</td>
-							<td>2020-08-13 19:00:24</td>
-							<td>홍길동</td>
-							<td>APP</td>
-							<td>입고</td>
-							<td>82</td>
-						</tr>
-						</tbody>
-					</table>
+					<div class="box_scroll-tbl">
+						<table class="bbs">
+							<colgroup>
+								<col>
+								<col>
+								<col>
+							</colgroup>
+							<thead>
+							<tr>
+								<th>구분</th>
+								<th>시간</th>
+								<th>온도</th>
+							</tr>
+							</thead>
+						</table>
+						<div class="scrollbar-inner">
+							<table class="bbs">
+									<colgroup>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<tbody>
+									<tr>
+										<td>배송대기</td>
+										<td>08-20 13:14</td>
+										<td>-5˚C</td>
+									</tr>
+									<tr>
+										<td>배송중</td>
+										<td>08-20 13:14</td>
+										<td>-5˚C</td>
+									</tr>
+									<tr>
+										<td>배송회수</td>
+										<td>08-20 13:14</td>
+										<td>-5˚C</td>
+									</tr>
+									<tr>
+										<td>배송중</td>
+										<td>08-20 13:14</td>
+										<td>-5˚C</td>
+									</tr>
+									<tr>
+										<td>배송완료</td>
+										<td>08-20 13:14</td>
+										<td>-5˚C</td>
+									</tr>
+									<tr>
+										<td>배송회수</td>
+										<td>08-20 13:14</td>
+										<td>-5˚C</td>
+									</tr>
+									<tr>
+										<td>배송대기</td>
+										<td>08-20 13:14</td>
+										<td>-5˚C</td>
+									</tr>
+									</tbody>
+								</table>
+						</div>
+					</div>
 				</xmp>
 			</div>
 		</div>
 	</div>
+	<script>
+		jQuery(document).ready(function(){
+			jQuery('.scrollbar-inner').scrollbar();
+		});
+	</script>
 
 	<div id="group06" class="group_wrap">
 		<p class="h1">UI</p>
@@ -579,10 +566,25 @@ function redrawDotNav(){
 			<p class="h2">Color</p>
 			<div class="type_view">
 				<xmp class="code">
-					<p class="point-color01">point color1</p>
-					<p class="point-color02">point color2</p>
+					<p class="point-color01">#c4161c</p>
+					<p class="point-color02">#1a1f28</p>
 				</xmp>
 			</div>
+
+			<p class="h2">ScrollBar</p>
+			<div class="type_view">
+				<xmp class="code">
+					<div class="box_scrollbar-area">
+						<div class="scrollbar-inner"> <!-- 부모의 클래스 지정으로 [scrollbar-inner]에 max-height 값 지정 css -->
+							<div style="height:200px">내용<br>내용<br>내용<br></div>
+						</div>
+					</div>
+				</xmp>
+				<style>
+					.box_scrollbar-area .scrollbar-inner {max-height:150px}
+				</style>
+			</div>
+
 			<p class="h2">Popup</p>
 			<div class="type_view">
 				<xmp class="code">
@@ -591,12 +593,24 @@ function redrawDotNav(){
 						<div class="box_popup">
 							<div class="box_popup-hd">Drive Info</div>
 							<div class="box_popup-cont">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.515329577726!2d127.03021897756904!3d37.50003156713196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3fd88031a5f%3A0x490ba09a6b0d8626!2zKOyjvCnshozrpqzsnpDrsJQ!5e0!3m2!1sko!2skr!4v1604653559144!5m2!1sko!2skr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.515329577726!2d127.03021897756904!3d37.50003156713196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3fd88031a5f%3A0x490ba09a6b0d8626!2zKOyjvCnshozrpqzsnpDrsJQ!5e0!3m2!1sko!2skr!4v1604653559144!5m2!1sko!2skr" width="1100px" height="630px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 							</div>
 							<button type="button" class="btn_popup_close">닫기</button>
 						</div>
 						<div class="bg_popup"></div>
 					</div>
+				</xmp>
+			</div>
+
+			<p class="h2">Toggle</p>
+			<div class="type_view">
+				<xmp class="code">
+					<button type="button" class="btn_toggle">토글 버튼</button>
+					<ul class="box_toggle-cont">
+						<li class="is-active"><a>Vietnam Hanoi</a></li> <!-- 선택 시 class [is-active] add -->
+						<li><a>Vietnam Hanoi</a></li>
+						<li><a>Vietnam Hanoi</a></li>
+					</ul>
 				</xmp>
 			</div>
 		</div>
@@ -606,6 +620,25 @@ function redrawDotNav(){
 
 <script type="text/javascript">
 	$(document).ready(function() {
+		// toggle 공통
+		$('.btn_toggle').click(function() {
+			$('.box_toggle-cont').toggleClass('is-active');
+		});
+
+		/* file Upload*/
+		$('.input_file').change(function(){
+			var i = $(this).val();
+			$('.upload_text').val(i);
+		});
+
+		/* select box */
+		$(".sel select").each(function () {
+			if($(this).is(':disabled')){
+				$(this).wrapAll(" <div class='select--disabled'></div>");
+			}
+		});
+		$('.sel select').heapbox();
+
 		/* modal */
 		var $panel = $(".box_popup-panel");
 		$(".btn_popup_open").on("click", function(e) {

@@ -6,13 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <script src="js/jquery-1.12.4.min.js"></script>
 <style>
-body {margin:0;color:#333;font-size:12px;font-family:"맑은 고딕", "돋움", Dotum, AppleSDGothicNeo ,Droid Sans, arial, sans-serif}
+body {margin:0;color:#333;min-width:1200px;font-size:12px;font-family:"맑은 고딕", "돋움", Dotum, AppleSDGothicNeo ,Droid Sans, arial, sans-serif}
 a:hover {color:#e60012;text-decoration:underline}
 a, img {border:none}
 
-.list_box_wrap {padding:0 20px}
+.list_box_wrap {position:relative;padding:0 20px}
 .list_box_wrap h1 img {height:40px}
-.information {position:absolute;right:20px;top:50px;color:#666;font-size:14px;font-weight:bold}
+.information {position:absolute;right:20px;top:34px;color:#666;font-size:14px;font-weight:bold}
 .information p {padding:0;margin:0;text-align:right}
 .information p + p {margin-top:5px}
 .information p span {position:relative;display:inline-block;padding:0 11px 0 10px}
@@ -46,10 +46,6 @@ table tbody td p.psd {text-align:center;font-weight:bold;padding:0;margin:0;colo
 .hold td, .hold {background-color:#fef3fd}
 .ing td, .ing {background-color:#FC6}
 .red {color:#c4161c !important}
-
-.btnTop {position:fixed;z-index:50;overflow:hidden;width:30px;height:30px;right:10px;bottom:20px}
-.btnTop a {display:block;width:30px;height:30px;background:url("./btn_top.png") no-repeat 0 0;text-indent:-9999em;opacity:.7}
-.btnTop a:hover {opacity:1}
 
 .sian dl {overflow:hidden}
 .sian * {box-sizing:border-box}
@@ -179,14 +175,14 @@ $(function(){
 				<td>UI Guide</td>
 				<td></td>
 				<td><a href="./html/guide/css_rule.html" target="_blank">css_rule.html</a></td>
-				<td colspan="2" style="font-weight:600">CSS, HTML, Image 규칙산출물 퍼블 가이드입니다.</td>
+				<td colspan="2" style="font-size:14px;font-weight:600">CSS, HTML, Image 규칙산출물 퍼블 가이드입니다.</td>
 			</tr>
 			<tr>
 				<td>Guide</td>
 				<td>UI Guide</td>
 				<td></td>
 				<td><a href="./html/guide/ui_guide.html" target="_blank">ui_guide.html</a></td>
-				<td colspan="2" style="font-weight:600">Component Element 산출물 퍼블 가이드입니다.</td>
+				<td colspan="2" style="font-size:14px;font-weight:600">Component Element 산출물 퍼블 가이드입니다.</td>
 			</tr>
 		</tbody>
 		<tbody class="sum">
@@ -194,94 +190,69 @@ $(function(){
 				<td>로그인</td>
 				<td></td>
 				<td></td>
-				<td><a href="./html/login/login.html" target="_blank">login.html</a></td>
+				<td><a href="./html/login/VAECD_SC_001.html" target="_blank">VAECD_SC_001.html</a></td>
 				<td class="txt_complete">완료</td>
 				<td></td>
 			</tr>
 			<tr class="sec">
-				<td>메인</td>
+				<td>Videos</td>
+				<td>List</td>
 				<td></td>
-				<td>main</td>
-				<td><a href="html/main/main.html" target="_blank">main.html</a></td>
+				<td><a href="./html/videos/VAECD_SC_002.html" target="_blank">VAECD_SC_002.html</a></td>
+				<td class="txt_complete">진행중</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>Data Popup</td>
+				<td><a href="./html/videos/VAECD_SC_002_popup.html" target="_blank">VAECD_SC_002_popup.html</a></td>
+				<td class="txt_complete">진행중</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>Map Popup</td>
+				<td><a href="./html/videos/VAECD_SC_002_popup2.html" target="_blank">VAECD_SC_002_popup2.html</a></td>
 				<td class="txt_complete">진행중</td>
 				<td></td>
 			</tr>
 			<tr class="sec">
-				<td>리스트</td>
-				<td>조회/등록관리</td>
-				<td>List</td>
-				<td><a href="./html/package/package_inquiry_list.html" target="_blank">package_inquiry_list.html</a></td>
-				<td class="txt_complete"></td>
+				<td>Statistics</td>
+				<td>Graph</td>
 				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td>등록하기</td>
-				<td><a href="./html/package/package_inquiry_write.html" target="_blank">package_inquiry_write.html</a></td>
-				<td class="txt_complete"></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>상태관리</td>
-				<td>List</td>
-				<td><a href="./html/package/package_state_list.html" target="_blank">package_state_list.html</a></td>
+				<td><a href="./html/statistics/VAECD_SC_006.html" target="_blank">VAECD_SC_006.html</a></td>
 				<td class="txt_complete"></td>
 				<td></td>
 			</tr>
 			<tr class="sec">
-				<td>주문/배송관리</td>
-				<td>발주정보현황</td>
-				<td>Write</td>
-				<td><a href="./html/order/order_infor_write.html" target="_blank">order_infor_write.html</a></td>
-				<td class="txt_complete"></td>
+				<td>dataDistribution</td>
+				<td>Dash board</td>
 				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>배송현황</td>
-				<td></td>
-				<td><a href="html/order/order_delivery_list.html" target="_blank">order_delivery_list.html</a></td>
-				<td class="txt_complete"></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>사고접수현황</td>
-				<td></td>
-				<td><a href="./html/order/order_accident_list.html" target="_blank">order_accident_list.html</a></td>
+				<td><a href="./html/dataDistribution/VAECD_SC_007.html" target="_blank">VAECD_SC_007.html</a></td>
 				<td class="txt_complete"></td>
 				<td></td>
 			</tr>
 			<tr class="sec">
-				<td>기사관리</td>
-				<td></td>
-				<td>회원정보</td>
-				<td><a href="./html/driver/driver_regist_write.html" target="_blank">driver_regist_write.html</a></td>
+				<td>management</td>
+				<td>List</td>
+				<td>User</td>
+				<td><a href="./html/management/VAECD_SC_008.html" target="_blank">VAECD_SC_008.html</a></td>
 				<td class="txt_complete"></td>
 				<td></td>
 			</tr>
 			<tr>
 				<td></td>
 				<td></td>
-				<td>개인정보페이지</td>
-				<td><a href="./html/driver/driver_regist_detail_tab.html" target="_blank">driver_regist_detail_tab.html</a></td>
-				<td class="txt_complete"></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>기사승인관리</td>
-				<td></td>
-				<td><a href="./html/driver/driver_regist_detail.html" target="_blank">driver_regist_detail.html</a></td>
+				<td>Code</td>
+				<td><a href="./html/management/VAECD_SC_009.html" target="_blank">VAECD_SC_009.html</a></td>
 				<td class="txt_complete"></td>
 				<td></td>
 			</tr>
 		</tbody>
 	</table>
 </div>
-<div class="btnTop"><a href="#;">top</a></div>
 <script type="text/javascript">
 	$('table tr').bind('mouseover',function(){$(this).addClass('on')});
 	$('table tr').bind('mouseout',function(){$(this).removeClass('on')});
