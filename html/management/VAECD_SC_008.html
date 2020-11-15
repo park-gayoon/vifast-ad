@@ -159,45 +159,137 @@
             <section class="layout_contents">
                 <div class="layout_contents-inner">
                     <div class="layout_contents-hd">
-                        <h2 class="tit_type1">Data Distribution</h2>
+                        <h2 class="tit_type1">User Management</h2>
                         <div class="box_user-info">
                             <i class="img_profile" style="background:#ddd"></i>
                             <span class="txt_user">administrator</span>
                             <button type="button" class="btn_user-login">Log out</button>
                         </div>
                     </div>
-                    <article class="box_item-progress">
-                        <div class="item_progress type1">
-                            <p class="txt_item-info">Duration</p>
-                            <p class="txt_data">4h 36m</p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:38%"></div>
+                    <div class="layout_contents-con">
+                        <div class="box_scroll-tbl">
+                            <table class="bbs">
+                                <colgroup>
+                                    <col style="width:auto">
+                                    <col style="width:20%">
+                                    <col style="width:16%">
+                                    <col style="width:16%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="box_cending-area">
+                                                <span class="txt_cending-data">ID</span>
+                                                <div class="btn_cending-group">
+                                                    <button type="button" class="btn_up">up</button>
+                                                    <button type="button" class="btn_down">down</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="box_cending-area">
+                                                <span class="txt_cending-data">Name</span>
+                                                <div class="btn_cending-group">
+                                                    <button type="button" class="btn_up">up</button>
+                                                    <button type="button" class="btn_down">down</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="box_cending-area">
+                                                <span class="txt_cending-data">Author</span>
+                                                <div class="btn_cending-group">
+                                                    <button type="button" class="btn_up">up</button>
+                                                    <button type="button" class="btn_down">down</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>Is usable</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <div class="scrollbar-inner">
+                                <table class="bbs">
+                                    <colgroup>
+                                        <col style="width:auto">
+                                        <col style="width:20%">
+                                        <col style="width:16%">
+                                        <col style="width:16%">
+                                    </colgroup>
+                                    <tbody>
+                                        <!--
+                                        // 데이터 없을 경우
+                                        <tr>
+                                            <td colspan="4">데이터가 없습니다.</td>
+                                        </tr>
+                                        -->
+                                        <tr>
+                                            <td>admin</td>
+                                            <td>administrator</td>
+                                            <td>A</td>
+                                            <td>
+                                                <span class="checkbox1 no_label">
+                                                    <input type="checkbox" name="" id="chk01" checked>
+                                                    <label for="chk01">선택</label>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vinfast admin</td>
+                                            <td>administrator</td>
+                                            <td>B</td>
+                                            <td>
+                                                <span class="checkbox1 no_label">
+                                                    <input type="checkbox" name="" id="chk02">
+                                                    <label for="chk02">선택</label>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>admin</td>
+                                            <td>administrator</td>
+                                            <td>A</td>
+                                            <td>
+                                                <span class="checkbox1 no_label">
+                                                    <input type="checkbox" name="" id="chk03">
+                                                    <label for="chk03">선택</label>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vinfast admin</td>
+                                            <td>administrator</td>
+                                            <td>B</td>
+                                            <td>
+                                                <span class="checkbox1 no_label">
+                                                    <input type="checkbox" name="" id="chk04">
+                                                    <label for="chk04">선택</label>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                        <div class="item_progress type2">
-                            <p class="txt_item-info">Mileage</p>
-                            <p class="txt_data">954,056<span class="sub_up">(+10.2%)</span></p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:77%"></div>
+                        <div class="box_tbl-bottom">
+                            <div class="bbs_page">
+                                <button type="button" class="btn_page first">맨처음으로</button>
+                                <button type="button" class="btn_page prev">이전</button>
+                                <button type="button" class="btn_page active">1</button>
+                                <button type="button" class="btn_page">2</button>
+                                <button type="button" class="btn_page">3</button>
+                                <button type="button" class="btn_page">4</button>
+                                <button type="button" class="btn_page">5</button>
+                                <button type="button" class="btn_page next">다음</button>
+                                <button type="button" class="btn_page last">맨뒤로</button>
+                            </div>
+                            <div class="btn_tb-group">
+                                <span class="col"><button type="button" class="btn_basic">Insert</button></span>
+                                <span class="col"><button type="button" class="btn_basic">Update</button></span>
+                                <span class="col"><button type="button" class="btn_basic small">Del</button></span>
                             </div>
                         </div>
-                        <div class="item_progress type3">
-                            <p class="txt_item-info">Mileage</p>
-                            <p class="txt_data">15,650,032<span class="sub_down">(-3.2%)</span></p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:67%"></div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="box_item-graph">
-                        <div class="box_section-hd">
-                            <p class="tit_item-hd">section</p>
-                        </div>
-                        <div class="box_graph" style="padding:26px 28px"> <!-- style 디자인시안용 / 그래프 대입 후 삭제 -->
-                            Graph Area
-                        </div>
-                    </article>
+                    </div>
                 </div>
             </section>
         </div>

@@ -160,20 +160,20 @@ input.datepicker[disabled]::-webkit-input-placeholder {background-color:transpar
 
 /* checkbox */
 .checkbox input[type='checkbox']:focus {outline:none}
-[class*="checkbox"] {position:relative;display:inline-block;margin-left:14px}
+[class*="checkbox"] {position:relative;display:inline-block;margin-left:14px;line-height:15px}
 [class*="checkbox"]:first-child {margin-left:0}
 [class*="checkbox"] input[type='checkbox'] {position:absolute;top:0;left:0;z-index:1;width:15px;height:15px;vertical-align:middle;opacity:0 !important}
 [class*="checkbox"] label {position:relative;z-index:3;display:inline-block;vertical-align:top;cursor:pointer}
 [class*="checkbox"] label:before {content:'';position:absolute;left:0;display:inline-block;-webkit-transition:border 0.15s ease-in-out, color 0.15s ease-in-out;-o-transition:border 0.15s ease-in-out, color 0.15s ease-in-out;transition:border 0.15s ease-in-out, color 0.15s ease-in-out}
-.checkbox1 label {padding-left:25px;font-size:14px;line-height:14px}
+.checkbox1 label {padding-left:20px;font-size:14px;line-height:15px}
 .checkbox1 label:before {top:0;width:15px;height:15px;background-color:#fff;border:1px solid #ccc;border-radius:2px}
 .checkbox1 input[type='checkbox']:checked + label:before {border-color:#c4161c;background-color:#c4161c}
 .checkbox1 input[type='checkbox']:checked + label:after {position:absolute;top:3px;left:3px;width:10px;height:8px;background-position:0 0}
 .checkbox1 input[type='checkbox']:disabled + label {color:#999;cursor:default}
 .checkbox1 input[type='checkbox']:disabled + label:before {background-color:#f8f8f8;border-color:#ddd;cursor:not-allowed}
 .checkbox1 input[type='checkbox']:disabled:checked + label:before {background-color:#ddd}
-[class*="checkbox"].no_label label {min-height:20px;padding:0;font-size:0;line-height:0}
-.checkbox1.no_label label {width:20px}
+[class*="checkbox"].no_label label {min-height:15px;padding:0;font-size:0;line-height:0}
+.checkbox1.no_label label {width:15px}
 
 /* paging */
 .bbs_page {text-align:center;font-size:0}

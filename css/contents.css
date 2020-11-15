@@ -95,9 +95,9 @@
 .bbs {table-layout:fixed}
 .bbs th, .bbs td {word-break:keep-all;padding:6px 8px;height:50px;text-align:center;font-size:16px}
 .bbs thead th {font-family:'notoSansM','notokrM','sans-serif';border-top:1px solid #111;border-bottom:1px solid #999}
+.bbs tbody tr:nth-child(even) td {background-color:#f8f9fa}
 .bbs tbody td {border-bottom:1px solid #ddd}
 .bbs tbody td, .bbs tbody td a {color:#666;font-family:'notoSansR','notokrR','sans-serif'}
-.bbs tbody tr:hover td {background-color:#e9e9e9}
 
 .bbs .box_cending-area {display:inline-block;padding-right:18px}
 .bbs .btn_cending-group {top:2px;right:0}
