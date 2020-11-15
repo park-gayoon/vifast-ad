@@ -30,14 +30,14 @@ body{background:linear-gradient(to bottom, #ffdfe0, rgba(255, 255, 255, 0));
 .s_wrap ul li + li, .s_wrap ol li + li {margin-top:5px}
 .s_wrap p + ol {margin-top:10px}
 
-.btnTop {position:fixed;z-index:50;overflow:hidden;width:30px;height:30px;right:10px;bottom:20px;
+.btnTop {position:fixed;z-index:9;overflow:hidden;width:30px;height:30px;right:10px;bottom:20px;
 	animation-name:btnTop;
 	animation-duration:.6s;
 	animation-iteration-count:4;
 	animation-direction:alternate;
 	animation-fill-mode: forwards
 }
-.btnTop a {display:block;width:30px;height:30px;background:url("../../btn_top.png") no-repeat 0 0;text-indent:-9999em;opacity:.7}
+.btnTop a {display:block;width:30px;height:30px;line-height:30px;text-align:center;background:#c4161c;color:#fff;border-radius:50%;opacity:.7}
 .btnTop a:hover {opacity:1}
 
 @-webkit-keyframes btnTop {
@@ -95,9 +95,8 @@ $(document).ready(function() {
 function redrawDotNav(){
 	var section1Top =  0;
 	var section2Top =  $('#group02').offset().top - (($('#group03').offset().top - $('#group02').offset().top) / 4);
-	var section3Top =  $('#group03').offset().top - (($(document).height() - $('#group03').offset().top));;
+	var section3Top =  $('#group03').offset().top - (($(document).height() - $('#group03').offset().top) / 4);
 	$('.tab_nav a').removeClass('active');
-	$('.product_section').removeClass('onbg');
 	if($(document).scrollTop() >= section1Top && $(document).scrollTop() < section2Top){
 		$('.tab_nav a.p01').addClass('active');
 	} else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
@@ -189,8 +188,6 @@ function redrawDotNav(){
 				<ul>
 					<li><strong>common.css</strong>: html 기본 속성값 초기화/공통 설정값(H tag, Button, Form, table, ul list)</li>
 					<li><strong>contents.css</strong>: 서브 컨텐츠</li>
-					<li><strong>main.css</strong>: 메인 전용</li>
-					<li><strong>modal_style.css</strong>: 모달 전용(개발 플러그인 css)</li>
 				</ul>
 			</div>
 			<p class="h2">id/class 명명 규칙</p>
@@ -212,7 +209,6 @@ function redrawDotNav(){
 			<div class="s_wrap">
 				<ul>
 					<li><strong>common</strong>: header, footer 영역과 같이 공통으로 사용되는 이미지</li>
-					<li><strong>main</strong>: 메인에 사용되는 이미지</li>
 					<li><strong>contents</strong>: 서브 페이지에 사용되는 이미지</li>
 					<li><strong>temp</strong>: 실제 반영되지 않을 샘플 이미지</li>
 				</ul>
@@ -226,7 +222,7 @@ function redrawDotNav(){
 			<p class="h2">Sprite image</p>
 			<div class="s_wrap">
 				<ul>
-					<li><strong>PSD 경로</strong> : tlk-publish/sprite_PSD 폴더</li>
+					<li><strong>PSD 경로</strong> : vifast-ad/sprite_PSD 폴더</li>
 					<li><strong>ico_com.psd</strong> : common 아이콘 및 이미지</li>
 					<li><strong>ico_main.psd</strong> : main 아이콘 및 이미지</li>
 				</ul>

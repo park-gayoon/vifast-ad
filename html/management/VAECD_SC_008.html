@@ -21,32 +21,128 @@
                                 <button type="button" class="btn_gnb-menu">
                                     <span class="txt_menu-name no_sub-item">Videos</span>
                                 </button>
+                                <ul class="sub_menu-list">
+                                    <li>
+                                        <p class="tit-sub-txt">Date</p>
+                                        <div class="datepicker_box type2">
+                                            <input type="text" value="" placeholder="날짜선택" class="datepicker" disabled>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="tit-sub-txt">Vechicle</p>
+                                        <div class="sel type2">
+                                            <select>
+                                                <option selected="selected">LUX A</option>
+                                                <option>Slow</option>
+                                                <option disabled>Medium</option>
+                                                <option>Fast</option>
+                                                <option>Faster</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="tit-sub-txt">Location</p>
+                                        <div class="sel type2">
+                                            <select>
+                                                <option selected="selected">Vietnam Hanoi</option>
+                                                <option>Slow</option>
+                                                <option >Medium</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="tit-sub-txt">Weather</p>
+                                        <div class="sel type2">
+                                            <select>
+                                                <option selected="selected">Clear</option>
+                                                <option>Slow</option>
+                                                <option >Medium</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="tit-sub-txt">Day Type</p>
+                                        <div class="sel type2">
+                                            <select>
+                                                <option selected="selected">Day</option>
+                                                <option>Slow</option>
+                                                <option >Medium</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="list_item">
                                 <button type="button" class="btn_gnb-menu">
                                     <span class="txt_menu-name">Statistics</span>
                                 </button>
                                 <ul class="sub_menu-list">
-                                    <li><a href="">User</a></li>
-                                    <li><a href="">Code</a></li>
-                                </ul>
-                            </li>
-                            <li class="list_item active"> <!-- D: 활성화된 현재페이지 li 태그에 class [active] add -->
-                                <button type="button" class="btn_gnb-menu on">  <!-- D: 활성화된 현재페이지 class [on] add -->
-                                    <span class="txt_menu-name">Data Distribution</span>
-                                </button>
-                                <ul class="sub_menu-list" style="display:block"> <!-- D: 화면 UI상 임의로 style 넣었습니다. 개발 시 삭제 -->
-                                    <li><a href="" class="active">sub01</a></li> <!-- D: 활성화 시 a 태그에 class [active] add -->
-                                    <li><a href="">sub02</a></li>
+                                    <li>
+                                        <p class="tit-sub-txt">Date</p>
+                                        <div class="datepicker_box type2">
+                                            <input type="text" value="" placeholder="날짜선택" class="datepicker" disabled>
+                                        </div>
+                                        <div class="datepicker_box type2">
+                                            <input type="text" value="" placeholder="날짜선택" class="datepicker" disabled>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="tit-sub-txt">X Axis</p>
+                                        <div class="sel type2">
+                                            <select>
+                                                <option selected="selected">Distance</option>
+                                                <option>Slow</option>
+                                                <option disabled>Medium</option>
+                                                <option>Fast</option>
+                                                <option>Faster</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="tit-sub-txt">Y Axis</p>
+                                        <div class="sel type2">
+                                            <select>
+                                                <option selected="selected">Distance</option>
+                                                <option>Slow</option>
+                                                <option >Medium</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="tit-sub-txt">Chart Type</p>
+                                        <div class="sel type2">
+                                            <select>
+                                                <option selected="selected">Single Bar</option>
+                                                <option>Slow</option>
+                                                <option >Medium</option>
+                                            </select>
+                                        </div>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="list_item">
                                 <button type="button" class="btn_gnb-menu">
-                                    <span class="txt_menu-name">Management</span>
+                                    <span class="txt_menu-name">Data Distribution</span>
                                 </button>
                                 <ul class="sub_menu-list">
-                                    <li><a href="">sub01</a></li>
-                                    <li><a href="">sub02</a></li>
+                                    <li>
+                                        <p class="tit-sub-txt">Date</p>
+                                        <div class="datepicker_box type2">
+                                            <input type="text" value="" placeholder="날짜선택" class="datepicker" disabled>
+                                        </div>
+                                        <div class="datepicker_box type2">
+                                            <input type="text" value="" placeholder="날짜선택" class="datepicker" disabled>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list_item active"> <!-- D: 활성화된 현재페이지 li 태그에 class [active] add -->
+                                <button type="button" class="btn_gnb-menu on">  <!-- D: 활성화된 현재페이지 class [on] add -->
+                                    <span class="txt_menu-name">Management</span>
+                                </button>
+                                <ul class="sub_menu-list" style="display:block"> <!-- D: 화면 UI상 임의로 style 넣었습니다. 개발 시 삭제 -->
+                                    <li><a href="" class="sub_menu-item active">User</a></li> <!-- D: 활성화 시 a 태그에 class [active] add -->
+                                    <li><a href="" class="sub_menu-item">Code</a></li>
                                 </ul>
                             </li>
                         </ul>

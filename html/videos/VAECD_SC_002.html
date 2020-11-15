@@ -2,11 +2,16 @@
 <html lang="ko">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Vinfast admin</title>
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/contents.css">
-    <script src="/js/jquery-1.12.4.min.js"></script>
-    <script src="/js/common.js"></script>
+    <meta charset="utf-8">
+    <title>Vinfast</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/contents.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/jquery.heapbox-0.9.3.min.js"></script>
+    <script src="../../js/jquery.scrollbar.js"></script>
+    <script src="../../js/common.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -17,27 +22,123 @@
                     <h1 class="logo"><i class="ico-logo"></i>VINFAST</h1>
                     <div class="gnb_inner">
                         <ul class="gnb_menu-list">
-                            <li class="list_item">
-                                <button type="button" class="btn_gnb-menu">
+                            <li class="list_item active"> <!-- D: 활성화된 현재페이지 li 태그에 class [active] add -->
+                                <button type="button" class="btn_gnb-menu on">  <!-- D: 활성화된 현재페이지 class [on] add -->
                                     <span class="txt_menu-name no_sub-item">Videos</span>
                                 </button>
+                                <ul class="sub_menu-list" style="display:block"> <!-- D: 화면 UI상 임의로 style 넣었습니다. 개발 시 삭제 -->
+                                    <li>
+                                        <p class="tit-sub-txt">Date</p>
+                                        <div class="datepicker_box type2">
+                                            <input type="text" value="" placeholder="날짜선택" class="datepicker" disabled>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="tit-sub-txt">Vechicle</p>
+                                        <div class="sel type2">
+                                            <select>
+                                                <option selected="selected">LUX A</option>
+                                                <option>Slow</option>
+                                                <option disabled>Medium</option>
+                                                <option>Fast</option>
+                                                <option>Faster</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="tit-sub-txt">Location</p>
+                                        <div class="sel type2">
+                                            <select>
+                                                <option selected="selected">Vietnam Hanoi</option>
+                                                <option>Slow</option>
+                                                <option >Medium</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="tit-sub-txt">Weather</p>
+                                        <div class="sel type2">
+                                            <select>
+                                                <option selected="selected">Clear</option>
+                                                <option>Slow</option>
+                                                <option >Medium</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="tit-sub-txt">Day Type</p>
+                                        <div class="sel type2">
+                                            <select>
+                                                <option selected="selected">Day</option>
+                                                <option>Slow</option>
+                                                <option >Medium</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="list_item">
                                 <button type="button" class="btn_gnb-menu">
                                     <span class="txt_menu-name">Statistics</span>
                                 </button>
                                 <ul class="sub_menu-list">
-                                    <li><a href="">User</a></li>
-                                    <li><a href="">Code</a></li>
+                                    <li>
+                                        <p class="tit-sub-txt">Date</p>
+                                        <div class="datepicker_box type2">
+                                            <input type="text" value="" placeholder="날짜선택" class="datepicker" disabled>
+                                        </div>
+                                        <div class="datepicker_box type2">
+                                            <input type="text" value="" placeholder="날짜선택" class="datepicker" disabled>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="tit-sub-txt">X Axis</p>
+                                        <div class="sel type2">
+                                            <select>
+                                                <option selected="selected">Distance</option>
+                                                <option>Slow</option>
+                                                <option disabled>Medium</option>
+                                                <option>Fast</option>
+                                                <option>Faster</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="tit-sub-txt">Y Axis</p>
+                                        <div class="sel type2">
+                                            <select>
+                                                <option selected="selected">Distance</option>
+                                                <option>Slow</option>
+                                                <option >Medium</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="tit-sub-txt">Chart Type</p>
+                                        <div class="sel type2">
+                                            <select>
+                                                <option selected="selected">Single Bar</option>
+                                                <option>Slow</option>
+                                                <option >Medium</option>
+                                            </select>
+                                        </div>
+                                    </li>
                                 </ul>
                             </li>
-                            <li class="list_item active"> <!-- D: 활성화된 현재페이지 li 태그에 class [active] add -->
-                                <button type="button" class="btn_gnb-menu on">  <!-- D: 활성화된 현재페이지 class [on] add -->
+                            <li class="list_item">
+                                <button type="button" class="btn_gnb-menu">
                                     <span class="txt_menu-name">Data Distribution</span>
                                 </button>
-                                <ul class="sub_menu-list" style="display:block"> <!-- D: 화면 UI상 임의로 style 넣었습니다. 개발 시 삭제 -->
-                                    <li><a href="" class="active">sub01</a></li> <!-- D: 활성화 시 a 태그에 class [active] add -->
-                                    <li><a href="">sub02</a></li>
+                                <ul class="sub_menu-list">
+                                    <li>
+                                        <p class="tit-sub-txt">Date</p>
+                                        <div class="datepicker_box type2">
+                                            <input type="text" value="" placeholder="날짜선택" class="datepicker" disabled>
+                                        </div>
+                                        <div class="datepicker_box type2">
+                                            <input type="text" value="" placeholder="날짜선택" class="datepicker" disabled>
+                                        </div>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="list_item">
@@ -45,8 +146,8 @@
                                     <span class="txt_menu-name">Management</span>
                                 </button>
                                 <ul class="sub_menu-list">
-                                    <li><a href="">sub01</a></li>
-                                    <li><a href="">sub02</a></li>
+                                    <li><a href="" class="sub_menu-item">User</a></li>
+                                    <li><a href="" class="sub_menu-item">Code</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -58,45 +159,415 @@
             <section class="layout_contents">
                 <div class="layout_contents-inner">
                     <div class="layout_contents-hd">
-                        <h2 class="tit_type1">Data Distribution</h2>
+                        <h2 class="tit_type1">Videos</h2>
                         <div class="box_user-info">
                             <i class="img_profile" style="background:#ddd"></i>
                             <span class="txt_user">administrator</span>
                             <button type="button" class="btn_user-login">Log out</button>
                         </div>
                     </div>
-                    <article class="box_item-progress">
-                        <div class="item_progress type1">
-                            <p class="txt_item-info">Duration</p>
-                            <p class="txt_data">4h 36m</p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:38%"></div>
+                    <div class="layout_contents-con">
+                        <div class="box_scroll-tbl">
+                            <table class="bbs">
+                                <colgroup>
+                                    <col style="width:18%">
+                                    <col style="width:18%">
+                                    <col style="width:8%">
+                                    <col style="width:14%">
+                                    <col style="width:10%">
+                                    <col style="width:12%">
+                                    <col style="width:10%">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>
+                                        <div class="box_cending-area">
+                                            <span class="txt_cending-data">Date</span>
+                                            <div class="btn_cending-group">
+                                                <button type="button" class="btn_up">up</button>
+                                                <button type="button" class="btn_down">down</button>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="box_cending-area">
+                                            <span class="txt_cending-data">Video Name</span>
+                                            <div class="btn_cending-group">
+                                                <button type="button" class="btn_up">up</button>
+                                                <button type="button" class="btn_down">down</button>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="box_cending-area">
+                                            <span class="txt_cending-data">Vehicle</span>
+                                            <div class="btn_cending-group">
+                                                <button type="button" class="btn_up">up</button>
+                                                <button type="button" class="btn_down">down</button>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="box_cending-area">
+                                            <span class="txt_cending-data">Location</span>
+                                            <div class="btn_cending-group">
+                                                <button type="button" class="btn_up">up</button>
+                                                <button type="button" class="btn_down">down</button>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="box_cending-area">
+                                            <span class="txt_cending-data">Duration</span>
+                                            <div class="btn_cending-group">
+                                                <button type="button" class="btn_up">up</button>
+                                                <button type="button" class="btn_down">down</button>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="box_cending-area">
+                                            <span class="txt_cending-data">Mileage</span>
+                                            <div class="btn_cending-group">
+                                                <button type="button" class="btn_up">up</button>
+                                                <button type="button" class="btn_down">down</button>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="box_cending-area">
+                                            <span class="txt_cending-data">Weather</span>
+                                            <div class="btn_cending-group">
+                                                <button type="button" class="btn_up">up</button>
+                                                <button type="button" class="btn_down">down</button>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>Day Type</th>
+                                </tr>
+                                </thead>
+                            </table>
+                            <div class="scrollbar-inner">
+                                <table class="bbs">
+                                <colgroup>
+                                    <col style="width:18%">
+                                    <col style="width:18%">
+                                    <col style="width:8%">
+                                    <col style="width:14%">
+                                    <col style="width:10%">
+                                    <col style="width:12%">
+                                    <col style="width:10%">
+                                </colgroup>
+                                <tbody>
+                                    <!-- S: 데이터 없을 경우 -->
+                                    <tr>
+                                        <td colspan="8">데이터가 없습니다.</td>
+                                    </tr>
+                                    <!-- E: 데이터 없을 경우 -->
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.11 09:35:24</td>
+                                        <td>VIDEO_20200911.avi</td>
+                                        <td>LUX A</td>
+                                        <td>Vietnam Hanoi</td>
+                                        <td>4h 31m</td>
+                                        <td>442km</td>
+                                        <td>Clear</td>
+                                        <td>Day</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                             </div>
                         </div>
-                        <div class="item_progress type2">
-                            <p class="txt_item-info">Mileage</p>
-                            <p class="txt_data">954,056<span class="sub_up">(+10.2%)</span></p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:77%"></div>
+                        <div class="box_tbl-bottom">
+                            <div class="bbs_page">
+                                <button type="button" class="btn_page first">맨처음으로</button>
+                                <button type="button" class="btn_page prev">이전</button>
+                                <button type="button" class="btn_page active">1</button>
+                                <button type="button" class="btn_page">2</button>
+                                <button type="button" class="btn_page">3</button>
+                                <button type="button" class="btn_page">4</button>
+                                <button type="button" class="btn_page">5</button>
+                                <button type="button" class="btn_page next">다음</button>
+                                <button type="button" class="btn_page last">맨뒤로</button>
+                            </div>
+                            <div class="btn_tb-group">
+                                <span class="col"><button type="button" class="btn_basic">Insert</button></span>
+                                <span class="col"><button type="button" class="btn_basic">Update</button></span>
+                                <span class="col"><button type="button" class="btn_basic small">Del</button></span>
                             </div>
                         </div>
-                        <div class="item_progress type3">
-                            <p class="txt_item-info">Mileage</p>
-                            <p class="txt_data">15,650,032<span class="sub_down">(-3.2%)</span></p>
-                            <div class="progress">
-                                <div class="progress-bar" style="width:67%"></div>
-                            </div>
-                        </div>
-                    </article>
 
-                    <article class="box_item-graph">
-                        <div class="box_section-hd">
-                            <p class="tit_item-hd">section</p>
-                        </div>
-                        <div class="box_graph" style="padding:26px 28px"> <!-- style 디자인시안용 / 그래프 대입 후 삭제 -->
-                            Graph Area
-                        </div>
-                    </article>
+                    </div>
                 </div>
             </section>
         </div>

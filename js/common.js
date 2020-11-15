@@ -6,6 +6,12 @@
  */
 
 $(document).ready(function(){
+    // file Upload
+    $('.input_file').change(function(){
+        var i = $(this).val();
+        $('.upload_text').val(i);
+    });
+
     // select box
     $(".sel select").each(function () {
         if($(this).is(':disabled')){
@@ -13,6 +19,9 @@ $(document).ready(function(){
         }
     });
     $('.sel select').heapbox();
+
+    //스크롤바
+    $('.scrollbar-inner').scrollbar();
 
     // modal
     var $panel = $(".box_popup-panel");
