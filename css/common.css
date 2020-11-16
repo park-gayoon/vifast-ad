@@ -62,10 +62,10 @@ header, footer, section, article, aside, nav, address { display:block; margin:0;
 .sel .heapBox .handler {position:relative;width:34px;height:34px;background:#f8f9fa;border-top-right-radius:4px;border-bottom-right-radius:4px;-webkit-border-top-right-radius:4px;-webkit-border-bottom-right-radius:4px}
 .sel .heapBox .handler:after {position:absolute;top:50%;right:12px;z-index:2;margin-top:-4px;width:12px;height:8px;background-position:-100px 0}
 .sel .heapBox .holder, .sel .heapBox .handler {float:left;position:relative;z-index:10}
-.sel .heapBox div.heap {display:none;position:absolute;list-style-type:none;left:0;width:100%;top:38px;overflow:hidden}
+.sel .heapBox div.heap {display:none;position:absolute;list-style-type:none;left:0;width:100%;top:37px;overflow:hidden}
 .sel .heapBox .heap .heapOptions {display:block;position:relative;overflow:hidden;z-index:11}
 .sel .heapBox .heap .heapOptions .heapOption {position:relative;display:block;height:34px;z-index:11}
-.sel .heapBox .heap .heapOptions .heapOption a {width:100%;height:100%;display:block;background:#f8f9fa;text-indent:10px}
+.sel .heapBox .heap .heapOptions, .sel .heapBox .heap .heapOptions .heapOption a {width:100%;height:100%;display:block;background:#f8f9fa;text-indent:10px}
 .sel .heapBox .heap .heapOptions .heapOption a:hover {background:#eee}
 .sel .heapBox .heap .heapOptions .heapOption a.selected {background:#eee;font-family:'notoSansM','notokrM','sans-serif'}
 .sel .heapBox .heap .heapOptions .heapOption a.disabled {background:#f8f8f8;color:#d8d8d8;font-family:'notoSansR','notokrR','sans-serif';cursor:default}
@@ -74,9 +74,9 @@ header, footer, section, article, aside, nav, address { display:block; margin:0;
 .sel.type2 .heapBox a {color:#fff;font-family:'notoSansT','notokrL','sans-serif'}
 .sel.type2 .heapBox .holder {min-width:186px;background-color:#3d4146;color:#fff;border-radius:0}
 .sel.type2 .heapBox .handler {background-color:#3d4146;border-radius:0}
-.sel.type2 .select--disabled .heapBox .holder, .sel.type2 .select--disabled .heapBox .handler {background-color:#51555a}
+.sel.type2 .select--disabled .heapBox .holder, .sel.type2 .select--disabled .heapBox .handler {background-color:#51555a;color:#999}
 .sel.type2 .heapBox .handler:after {background-position-y:-8px}
-.sel.type2 .heapBox .heap .heapOptions .heapOption a {background:#3d4146}
+.sel.type2 .heapBox .heap .heapOptions, .sel.type2 .heapBox .heap .heapOptions .heapOption a {background:#3d4146}
 .sel.type2 .heapBox .heap .heapOptions .heapOption a:hover, .sel.type2 .heapBox .heap .heapOptions .heapOption a.selected {background:#666}
 .sel.type2 .heapBox .heap .heapOptions .heapOption a.selected {font-family:'notoSansR','notokrR','sans-serif'}
 .sel.type2 .heapBox .heap .heapOptions .heapOption a.disabled {background:#444547;color:#818181;font-family:'notoSansT','notokrL','sans-serif'}
@@ -203,7 +203,7 @@ input.datepicker[disabled]::-webkit-input-placeholder {background-color:transpar
 .datepicker_box.type2 .ui-datepicker-trigger:after {background-position-x:-18px}
 .ui-widget-overlay {cursor:pointer}
 
-.ui-datepicker {background-color:#fff;z-index:12 !important}
+.ui-datepicker {background-color:#fff;z-index:23 !important}
 .ui-datepicker {width:264px;background-color:#fff}
 .ui-datepicker .ui-widget-header {background-color:transparent;border-color:transparent}
 .ui-datepicker .ui-state-default,
@@ -237,9 +237,10 @@ button[class*="btn_basic"]:hover, a[class*="btn_basic"]:hover,
 button[class*="btn_basic"]:focus, a[class*="btn_basic"]:focus {color:#111;font-family:'notoSansM','notokrM','sans-serif'}
 button.btn_basic1:disabled {color:#ccc;background:#f8f9fa}
 
-.btn_tb-group {font-size:0}
+.btn_tb-group {font-size:0;text-align:right}
 .btn_tb-group .col {display:inline-block;vertical-align:top}
 .btn_tb-group .col ~ .col {padding-left:4px}
+.btn_tb-group.type2 {margin-top:30px;padding-top:10px;border-top:1px solid #ddd}
 
 .box_cending-area {position:relative}
 .box_cending-area input {padding-right:40px;text-align:right}
@@ -249,20 +250,18 @@ button.btn_basic1:disabled {color:#ccc;background:#f8f9fa}
 .btn_cending-group .btn_up:after {background-position:-82px 0}
 .btn_cending-group .btn_down:after {background-position:-82px -10px}
 .btn_cending-group .btn_up:hover:after, .btn_cending-group .btn_up:focus:after {background-position-y:-22px}
-.btn_cending-group .btn_down:hover:after, .btn_cending-group .btn_down:focus:after {background-position-y:-33px}
+.btn_cending-group .btn_down:hover:after, .btn_cending-group .btn_down:focus:after {background-position-y:-32px}
 
 /* modal */
 .box_popup-panel {display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:22}
 .bg_popup {position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.8)}
 .box_popup {position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);min-width:800px;z-index:20;background-color:#fff}
-.box_popup-hd {position:relative;padding:18px 30px;height:70px;color:#111;font-size:24px}
-.box_popup-cont {width:100%}
+.box_popup-hd {position:relative;padding:18px 30px;height:70px;color:#111;font-size:24px;border-bottom:1px solid #eee}
+.box_popup-cont {position:relative;width:100%}
 .btn_popup_close {position:absolute;right:22px;top:18px;width:32px;height:32px;font-size:0;color:transparent}
 .btn_popup_close:before, .btn_popup_close:after {content:'';display:block;position:absolute;background-color:#888}
 .btn_popup_close:before {left:8px;top:16px;width:17px;height:1px;transform:rotate(45deg)}
 .btn_popup_close:after {left:16px;top:8px;width:1px;height:17px;transform:rotate(45deg)}
-.box_popup-panel .box_popup-info {width:150px}
-.box_popup-panel .box_popup-info.type2 {width:220px}
 
 /* popup info box */
 .tit-popup-info {height:40px;padding:8px 20px;background-color:#272b31;color:#fff;font-size:18px;font-family:'notoSansT','notokrL','sans-serif';border-top-left-radius:4px;-webkit-border-top-left-radius:4px;border-top-right-radius:4px;-webkit-border-top-right-radius:4px}
@@ -270,8 +269,9 @@ button.btn_basic1:disabled {color:#ccc;background:#f8f9fa}
 .box_popup-desc li {color:#333}
 .box_popup-desc li ~ li {margin-top:15px}
 
-.box_popup-info.type2 {position:relative;padding:20px 20px 26px;background-color:#fff;border-radius:4px}
-.box_popup-info.type2:after {content:'';display:block;position:absolute;left:50%;bottom:-7px;width:16px;height:16px;background:url('../images/common/ico_com.png') no-repeat -66px 0}
+.box_popup-info {z-index:6}
+.box_popup-info.type2 {position:relative;padding:20px 20px 26px;background-color:#fff;border-radius:4px;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.06)}
+.box_popup-info.type2:after {content:'';display:block;position:absolute;left:50%;bottom:-8px;margin-left:-8px;width:16px;height:16px;background:url('../images/common/ico_com.png') no-repeat -66px 0}
 .box_popup-info.type2 .tit-popup-info {height:auto;padding:0;border-radius:0;background-color:#fff;color:#c4161c;line-height:24px;font-family:'notoSansM','notokrM','sans-serif'}
 .box_popup-info.type2 .box_popup-desc {margin-top:10px;padding:0;border-radius:0;color:#666;font-family:'notoSansR','notokrR','sans-serif';line-height:20px}
 

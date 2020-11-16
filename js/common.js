@@ -24,17 +24,43 @@ $(document).ready(function(){
     $('.scrollbar-inner').scrollbar();
 
     // modal
-    var $panel = $(".box_popup-panel");
-    $(".btn_popup_open").on("click", function(e) {
-        $panel.fadeIn(350);
-    });
-    $(".btn_popup_close").on("click", popupClose);
+    var modals = document.getElementsByClassName("box_popup-panel"); // Modal을 가져옵니다.
+    var openBtns = document.getElementsByClassName("btn_popup_open"); // Modal을 띄우는 클래스 이름을 가져옵니다.
+    var closeBtn = document.getElementsByClassName("btn_popup_close"); // Modal을 닫는 close 클래스를 가져옵니다.
+    var modalBg = document.getElementsByClassName("bg_popup"); // Modal Bg 클래스를 가져옵니다.
+    var funcs = [];
 
-    $panel.find(".bg_popup").on("click", popupClose);
-    function popupClose(e) {
-        $panel.fadeOut(250);
-        e.preventDefault();
+    function Modal(num) {
+        return function() {
+            // Modal open
+            openBtns[num].onclick =  function() {
+                modals[num].style.display = "block";
+                console.log(num);
+            };
+
+            // Modal close
+            closeBtn[num].onclick = function() {
+                modals[num].style.display = "none";
+            };
+
+            // dim close
+            modalBg[num].onclick =  function(event) {
+                modals[num].style.display = "none";
+            };
+        };
     }
+
+
+    // Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의.
+    for(var i = 0; i < openBtns.length; i++) {
+        funcs[i] = Modal(i);
+    }
+
+    // Modal 수만큼 funcs 함수를 호출.
+    for(var j = 0; j < openBtns.length; j++) {
+        funcs[j]();
+    }
+
 
     // 햄버거버튼 클릭 시
     $('.btn_gnb-open').click(function(){

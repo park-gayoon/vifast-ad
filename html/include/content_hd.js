@@ -1,0 +1,1 @@
+document.write("<div class=\"layout_contents-hd\"><h2 class=\"tit_type1\">Videos</h2><div class=\"box_user-info\"><i class=\"img_profile\" style=\"background:#ddd\"></i><span class=\"txt_user\">administrator</span><button type=\"button\" class=\"btn_user-login\">Log out</button></div></div>");

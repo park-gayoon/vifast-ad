@@ -503,7 +503,7 @@ function redrawDotNav(){
 								<tr>
 									<th>구분</th>
 									<th>시간</th>
-									<th>온도</th>
+									<th>타입</th>
 								</tr>
 							</thead>
 						</table>
@@ -516,39 +516,39 @@ function redrawDotNav(){
 								</colgroup>
 								<tbody>
 									<tr>
-										<td>배송대기</td>
+										<td>데이터</td>
 										<td>08-20 13:14</td>
-										<td>-5˚C</td>
+										<td>데이터</td>
 									</tr>
 									<tr>
-										<td>배송중</td>
+										<td>데이터</td>
 										<td>08-20 13:14</td>
-										<td>-5˚C</td>
+										<td>데이터</td>
 									</tr>
 									<tr>
-										<td>배송회수</td>
+										<td>데이터</td>
 										<td>08-20 13:14</td>
-										<td>-5˚C</td>
+										<td>데이터</td>
 									</tr>
 									<tr>
-										<td>배송중</td>
+										<td>데이터</td>
 										<td>08-20 13:14</td>
-										<td>-5˚C</td>
+										<td>데이터</td>
 									</tr>
 									<tr>
-										<td>배송완료</td>
+										<td>데이터</td>
 										<td>08-20 13:14</td>
-										<td>-5˚C</td>
+										<td>데이터</td>
 									</tr>
 									<tr>
-										<td>배송회수</td>
+										<td>데이터</td>
 										<td>08-20 13:14</td>
-										<td>-5˚C</td>
+										<td>데이터</td>
 									</tr>
 									<tr>
-										<td>배송대기</td>
+										<td>데이터</td>
 										<td>08-20 13:14</td>
-										<td>-5˚C</td>
+										<td>데이터</td>
 									</tr>
 								</tbody>
 							</table>
@@ -724,70 +724,111 @@ function redrawDotNav(){
 
 			<p class="h2">Table type : form table</p>
 			<div class="type_view">
-				<xmp class="code">
-					<div class="box_scroll-tbl">
-						<table class="bbs">
-							<colgroup>
-								<col>
-								<col>
-								<col>
-							</colgroup>
-							<thead>
-							<tr>
-								<th>구분</th>
-								<th>시간</th>
-								<th>온도</th>
-							</tr>
-							</thead>
-						</table>
-						<div class="scrollbar-inner">
-							<table class="bbs">
+				<div class="box_popup" style="position:static;margin:0 auto;max-width:800px;transform:none;background:#ddd">
+					<div class="box_popup-hd">Video Insert</div>
+					<div class="box_popup-cont">
+						<div class="box_form-tbl">
+							<table>
 								<colgroup>
-									<col>
-									<col>
-									<col>
+									<col style="width:12%">
+									<col style="width:auto">
+									<col style="width:12%">
+									<col style="width:auto">
 								</colgroup>
 								<tbody>
 								<tr>
-									<td>배송대기</td>
-									<td>08-20 13:14</td>
-									<td>-5˚C</td>
+									<th>File Path</th>
+									<td colspan="3">
+										<div class="form_box">
+											<!--input box-->
+											<input type="text" class="upload_text big" readonly="readonly" placeholder="이미지를 등록해주세요.">
+											<!--button-->
+											<div class="upload-btn_wrap">
+												<button type="button" class="fake_file">찾아보기</button>
+												<input type="file" class="input_file" title="파일찾기">
+											</div>
+										</div>
+									</td>
 								</tr>
 								<tr>
-									<td>배송중</td>
-									<td>08-20 13:14</td>
-									<td>-5˚C</td>
+									<th>Date</th>
+									<td>
+										<span class="datepicker_box">
+											<input type="text" value="" placeholder="날짜선택" class="datepicker" disabled>
+										</span>
+									</td>
+									<th>Location</th>
+									<td>
+										<span class="sel">
+											<select>
+												<option selected="selected">Slower</option>
+												<option>Slow</option>
+												<option >Medium</option>
+												<option disabled>Fast</option>
+												<option disabled>Faster</option>
+											</select>
+										</span>
+									</td>
 								</tr>
 								<tr>
-									<td>배송회수</td>
-									<td>08-20 13:14</td>
-									<td>-5˚C</td>
+									<th>Mileage</th>
+									<td>
+										<div class="box_cending-area">
+											<input type="text">
+											<div class="btn_cending-group">
+												<button type="button" class="btn_up">up</button>
+												<button type="button" class="btn_down">down</button>
+											</div>
+										</div>
+									</td>
+									<th>Vechicle</th>
+									<td>
+										<span class="sel">
+											<select>
+												<option selected="selected">LUK A</option>
+												<option>Slow</option>
+												<option >Medium</option>
+												<option disabled>Fast</option>
+												<option disabled>Faster</option>
+											</select>
+										</span>
+									</td>
 								</tr>
 								<tr>
-									<td>배송중</td>
-									<td>08-20 13:14</td>
-									<td>-5˚C</td>
-								</tr>
-								<tr>
-									<td>배송완료</td>
-									<td>08-20 13:14</td>
-									<td>-5˚C</td>
-								</tr>
-								<tr>
-									<td>배송회수</td>
-									<td>08-20 13:14</td>
-									<td>-5˚C</td>
-								</tr>
-								<tr>
-									<td>배송대기</td>
-									<td>08-20 13:14</td>
-									<td>-5˚C</td>
+									<th>Weather</th>
+									<td>
+										<span class="sel">
+											<select>
+												<option selected="selected">Clean</option>
+												<option>Slow</option>
+												<option >Medium</option>
+												<option disabled>Fast</option>
+												<option disabled>Faster</option>
+											</select>
+										</span>
+									</td>
+									<th>Day Type</th>
+									<td>
+										<span class="sel">
+											<select>
+												<option selected="selected">Day</option>
+												<option>Slow</option>
+												<option >Medium</option>
+												<option disabled>Fast</option>
+												<option disabled>Faster</option>
+											</select>
+										</span>
+									</td>
 								</tr>
 								</tbody>
 							</table>
+							<div class="btn_tb-group">
+								<button type="button" class="btn_basic">Confirm</button>
+							</div>
 						</div>
 					</div>
-				</xmp>
+					<button type="button" class="btn_popup_close">닫기</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -817,27 +858,10 @@ function redrawDotNav(){
 				</style>
 			</div>
 
-			<p class="h2">Popup</p>
-			<div class="type_view">
-				<xmp class="code">
-					<button type="button" class="btn_popup_open">팝업 열기</button>
-					<div class="box_popup-panel">
-						<div class="box_popup">
-							<div class="box_popup-hd">Drive Info</div>
-							<div class="box_popup-cont">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.515329577726!2d127.03021897756904!3d37.50003156713196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3fd88031a5f%3A0x490ba09a6b0d8626!2zKOyjvCnshozrpqzsnpDrsJQ!5e0!3m2!1sko!2skr!4v1604653559144!5m2!1sko!2skr" width="1100px" height="630px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-							</div>
-							<button type="button" class="btn_popup_close">닫기</button>
-						</div>
-						<div class="bg_popup"></div>
-					</div>
-				</xmp>
-			</div>
-
 			<p class="h2">Toggle</p>
 			<div class="type_view">
 				<xmp class="code">
-					<button type="button" class="btn_toggle">토글 버튼</button>
+					<button type="button" class="btn_basic btn_toggle">토글 버튼</button>
 					<ul class="box_toggle-cont">
 						<li class="is-active"><a>Vietnam Hanoi</a></li> <!-- 선택 시 class [is-active] add -->
 						<li><a>Vietnam Hanoi</a></li>
@@ -894,6 +918,48 @@ function redrawDotNav(){
 				</div>
 			</xmp>
 		</div>
+
+		<p class="h2">modal popup multi</p>
+		<div class="type_view">
+			<!-- 첫 번째 Modal -->
+			<button type="button" class="btn_basic btn_popup_open">팝업 열기</button>
+			<div class="box_popup-panel">
+				<div class="box_popup">
+					<div class="box_popup-hd">Drive Info</div>
+					<div class="box_popup-cont">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.515329577726!2d127.03021897756904!3d37.50003156713196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3fd88031a5f%3A0x490ba09a6b0d8626!2zKOyjvCnshozrpqzsnpDrsJQ!5e0!3m2!1sko!2skr!4v1604653559144!5m2!1sko!2skr" width="1100px" height="630px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					</div>
+					<button type="button" class="btn_popup_close">닫기</button>
+				</div>
+				<div class="bg_popup"></div>
+			</div>
+
+			<!-- 두 번째 Modal -->
+			<button type="button" class="btn_basic btn_popup_open">팝업 열기02</button>
+			<div class="box_popup-panel">
+				<div class="box_popup">
+					<div class="box_popup-hd">Drive Info22</div>
+					<div class="box_popup-cont">
+						Contents02
+					</div>
+					<button type="button" class="btn_popup_close">닫기</button>
+				</div>
+				<div class="bg_popup"></div>
+			</div>
+
+			<!-- 세 번째 Modal -->
+			<button type="button" class="btn_basic btn_popup_open">팝업 열기03</button>
+			<div class="box_popup-panel">
+				<div class="box_popup">
+					<div class="box_popup-hd">Drive Info33</div>
+					<div class="box_popup-cont">
+						Contents03
+					</div>
+					<button type="button" class="btn_popup_close">닫기</button>
+				</div>
+				<div class="bg_popup"></div>
+			</div>
+		</div>
 	</div>
 	</div>
 </div>
@@ -924,16 +990,40 @@ function redrawDotNav(){
 		$('.sel select').heapbox();
 
 		/* modal */
-		var $panel = $(".box_popup-panel");
-		$(".btn_popup_open").on("click", function(e) {
-			$panel.fadeIn(350);
-		});
-		$(".btn_popup_close").on("click", popupClose);
+		var modals = document.getElementsByClassName("box_popup-panel"); // Modal을 가져옵니다.
+		var openBtns = document.getElementsByClassName("btn_popup_open"); // Modal을 띄우는 클래스 이름을 가져옵니다.
+		var closeBtn = document.getElementsByClassName("btn_popup_close"); // Modal을 닫는 close 클래스를 가져옵니다.
+		var modalBg = document.getElementsByClassName("bg_popup"); // Modal Bg 클래스를 가져옵니다.
+		var funcs = [];
 
-		$panel.find(".bg_popup").on("click", popupClose);
-		function popupClose(e) {
-			$panel.fadeOut(250);
-			e.preventDefault();
+		function Modal(num) {
+			return function() {
+				// Modal open
+				openBtns[num].onclick =  function() {
+					modals[num].style.display = "block";
+					console.log(num);
+				};
+
+				// Modal close
+				closeBtn[num].onclick = function() {
+					modals[num].style.display = "none";
+				};
+
+				// dim close
+				modalBg[num].onclick =  function(event) {
+					modals[num].style.display = "none";
+				};
+			};
+		}
+
+		// 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의.
+		for(var i = 0; i < openBtns.length; i++) {
+			funcs[i] = Modal(i);
+		}
+
+		// 원하는 Modal 수만큼 funcs 함수를 호출.
+		for(var j = 0; j < openBtns.length; j++) {
+			funcs[j]();
 		}
 	});
 </script>

@@ -18,154 +18,14 @@
         <div class="layout_wrap size-b">
             <!-- S :gnb Menu -->
             <section class="gnb_contents">
-                <div class="gnb_menu">
-                    <h1 class="logo"><i class="ico-logo"></i>VINFAST</h1>
-                    <div class="gnb_inner">
-                        <ul class="gnb_menu-list">
-                            <li class="list_item">
-                                <button type="button" class="btn_gnb-menu">
-                                    <span class="txt_menu-name no_sub-item">Videos</span>
-                                </button>
-                                <ul class="sub_menu-list">
-                                    <li>
-                                        <p class="tit-sub-txt">Date</p>
-                                        <div class="datepicker_box type2">
-                                            <input type="text" value="" placeholder="날짜선택" class="datepicker" disabled>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p class="tit-sub-txt">Vechicle</p>
-                                        <div class="sel type2">
-                                            <select>
-                                                <option selected="selected">LUX A</option>
-                                                <option>Slow</option>
-                                                <option disabled>Medium</option>
-                                                <option>Fast</option>
-                                                <option>Faster</option>
-                                            </select>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p class="tit-sub-txt">Location</p>
-                                        <div class="sel type2">
-                                            <select>
-                                                <option selected="selected">Vietnam Hanoi</option>
-                                                <option>Slow</option>
-                                                <option >Medium</option>
-                                            </select>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p class="tit-sub-txt">Weather</p>
-                                        <div class="sel type2">
-                                            <select>
-                                                <option selected="selected">Clear</option>
-                                                <option>Slow</option>
-                                                <option >Medium</option>
-                                            </select>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p class="tit-sub-txt">Day Type</p>
-                                        <div class="sel type2">
-                                            <select>
-                                                <option selected="selected">Day</option>
-                                                <option>Slow</option>
-                                                <option >Medium</option>
-                                            </select>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list_item">
-                                <button type="button" class="btn_gnb-menu">
-                                    <span class="txt_menu-name">Statistics</span>
-                                </button>
-                                <ul class="sub_menu-list">
-                                    <li>
-                                        <p class="tit-sub-txt">Date</p>
-                                        <div class="datepicker_box type2">
-                                            <input type="text" value="" placeholder="날짜선택" class="datepicker" disabled>
-                                        </div>
-                                        <div class="datepicker_box type2">
-                                            <input type="text" value="" placeholder="날짜선택" class="datepicker" disabled>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p class="tit-sub-txt">X Axis</p>
-                                        <div class="sel type2">
-                                            <select>
-                                                <option selected="selected">Distance</option>
-                                                <option>Slow</option>
-                                                <option disabled>Medium</option>
-                                                <option>Fast</option>
-                                                <option>Faster</option>
-                                            </select>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p class="tit-sub-txt">Y Axis</p>
-                                        <div class="sel type2">
-                                            <select>
-                                                <option selected="selected">Distance</option>
-                                                <option>Slow</option>
-                                                <option >Medium</option>
-                                            </select>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p class="tit-sub-txt">Chart Type</p>
-                                        <div class="sel type2">
-                                            <select>
-                                                <option selected="selected">Single Bar</option>
-                                                <option>Slow</option>
-                                                <option >Medium</option>
-                                            </select>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list_item active"> <!-- D: 활성화된 현재페이지 li 태그에 class [active] add -->
-                                <button type="button" class="btn_gnb-menu on">  <!-- D: 활성화된 현재페이지 class [on] add -->
-                                    <span class="txt_menu-name">Data Distribution</span>
-                                </button>
-                                <ul class="sub_menu-list" style="display:block"> <!-- D: 화면 UI상 임의로 style 넣었습니다. 개발 시 삭제 -->
-                                    <li>
-                                        <p class="tit-sub-txt">Date</p>
-                                        <div class="datepicker_box type2">
-                                            <input type="text" value="" placeholder="날짜선택" class="datepicker" disabled>
-                                        </div>
-                                        <div class="datepicker_box type2">
-                                            <input type="text" value="" placeholder="날짜선택" class="datepicker" disabled>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list_item">
-                                <button type="button" class="btn_gnb-menu">
-                                    <span class="txt_menu-name">Management</span>
-                                </button>
-                                <ul class="sub_menu-list">
-                                    <li><a href="" class="sub_menu-item">User</a></li>
-                                    <li><a href="" class="sub_menu-item">Code</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <button type="button" class="btn_gnb-open">Collapse Panel<i class="ico_arrow"></i></button>
-                </div>
+                <script src="../include/gnb_menu.js"></script>
             </section>
             <!-- E :gnb Menu -->
             <section class="layout_contents">
                 <div class="layout_contents-inner">
-                    <div class="layout_contents-hd">
-                        <h2 class="tit_type1">Data Distribution</h2>
-                        <div class="box_user-info">
-                            <i class="img_profile" style="background:#ddd"></i>
-                            <span class="txt_user">administrator</span>
-                            <button type="button" class="btn_user-login">Log out</button>
-                        </div>
-                    </div>
+                    <!-- S : content header -->
+                    <script src="../include/content_hd.js"></script>
+                    <!-- E : content header -->
                     <article class="box_item-progress">
                         <div class="item_progress type1">
                             <p class="txt_item-info">Duration</p>
@@ -198,14 +58,39 @@
                         </div>
                     </article>
 
-                    <article class="box_item-graph">
-                        <div class="box_section-hd">
-                            <p class="tit_item-hd">section</p>
+                    <article class="box_item-data">
+                        <div class="item_data-area graph">
+                            <p class="tit_item-txt">2020 VINFAST Duration </p>
+                            <div class="box_graph">
+                                <div class="box_chart-area" style="border:1px solid red"> <!-- D: 그래프 영역에 퍼블 화면상 임의로 style 넣었습니다. 개발시 삭제해주세요. -->
+                                    Graph 영역입니다.
+                                </div>
+                                <ul class="data_desc">
+                                    <li><span class="txt_sub-info">Mileage</span><strong>54,000M</strong></li>
+                                    <li><span class="txt_sub-info">Time</span><strong>16:49</strong></li>
+                                    <li><span class="txt_sub-info">Mileage</span><strong>245.65</strong></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="box_graph" style="padding:26px 28px"> <!-- style 디자인시안용 / 그래프 대입 후 삭제 -->
-                            Graph Area
+                        <div class="item_data-area donut">
+                            <p class="tit_item-txt">Videos data</p>
+                            <div class="box_donut">
+                                <div class="box_chart-area" style="border:1px solid red"> <!-- D: 그래프 영역에 퍼블 화면상 임의로 style 넣었습니다. 개발시 삭제해주세요. -->
+                                    Donut 차트 영역입니다.
+                                </div>
+                                <ul class="data_desc">
+                                    <li class="data01"><span class="txt_sub-info">32%</span><strong>LUX A Duration</strong></li>
+                                    <li class="data02"><span class="txt_sub-info">43%</span><strong>LUX SA Duration</strong></li>
+                                    <li class="data03"><span class="txt_sub-info">17%</span><strong>Klara S Duration</strong></li>
+                                    <li class="data04"><span class="txt_sub-info">8%</span><strong>Klara S Duration</strong></li>
+                                </ul>
+                            </div>
                         </div>
                     </article>
+
+                    <div class="btn_tb-group">
+                        <button type="button" class="btn_basic">Print</button>
+                    </div>
                 </div>
             </section>
         </div>
