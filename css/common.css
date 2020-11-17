@@ -235,6 +235,7 @@ button[class*="btn_basic"].small, a[class*="btn_basic"].small {min-width:50px}
 button[class*="btn_basic"], a[class*="btn_basic"] {display:inline-block;min-width:70px;padding:0 4px;height:30px;line-height:28px;text-align:center;font-size:14px;font-weight:normal;color:#666;background-color:#fff;border:1px solid #ccc;border-radius:4px}
 button[class*="btn_basic"]:hover, a[class*="btn_basic"]:hover,
 button[class*="btn_basic"]:focus, a[class*="btn_basic"]:focus {color:#111;font-family:'notoSansM','notokrM','sans-serif'}
+button[class*="btn_basic"].type2, a[class*="btn_basic"].type2 {width:100%;min-width:100%}
 button.btn_basic1:disabled {color:#ccc;background:#f8f9fa}
 
 .btn_tb-group {font-size:0;text-align:right}
@@ -293,7 +294,7 @@ button.btn_basic1:disabled {color:#ccc;background:#f8f9fa}
 .btn_gnb-menu .txt_menu-name {display:inline-block;position:relative;width:100%;color:#fff;vertical-align:top;font-size:18px;font-family:'notoSansT','notokrL','sans-serif';line-height:24px}
 .btn_gnb-menu.on .txt_menu-name {font-family:'notoSansR','notokrR','sans-serif'}
 
-.sub_menu-list {display:none;top:0;padding:30px;background:#272b31}
+.box_sub-menu {display:none;top:0;padding:30px;background:#272b31}
 .sub_menu-list li ~ li {margin-top:28px}
 .sub_menu-list .sub_menu-item {position:relative;padding-left:14px;color:#999;line-height:22px;font-size:16px}
 .sub_menu-list .sub_menu-item:before {content:'';display:block;position:absolute;left:0;top:10px;width:3px;height:3px;background:#999}
@@ -301,7 +302,7 @@ button.btn_basic1:disabled {color:#ccc;background:#f8f9fa}
 .sub_menu-list .sub_menu-item:hover:before, .sub_menu-list .sub_menu-item.active:before {background:#fff}
 .sub_menu-list .tit-sub-txt {margin-bottom:5px;color:#fff}
 .sub_menu-list .datepicker_box ~ .datepicker_box {margin-top:10px}
-
+.box_sub-menu .btn_basic.type2 {margin-top:14px;background-color:#666;border-color:#666;color:#fff;font-family:'notoSansT','notokrL','sans-serif'}
 
 /* 햄버거버튼 */
 .btn_gnb-open {position:relative;margin-top:40px;border-top:1px solid #3d4146;padding:30px;width:100%;text-align:left;font-size:18px;font-family:'notoSansT','notokrL','sans-serif';line-height:24px;color:#fff}
