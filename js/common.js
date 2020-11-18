@@ -61,6 +61,10 @@ $(document).ready(function(){
         funcs[j]();
     }
 
+    // alert 창 닫기
+    $('.btn_close').click(function() {
+        $('.box_alert-wrap').fadeOut(300);
+    });
 
     // 햄버거버튼 클릭 시
     $('.btn_gnb-open').click(function(){
